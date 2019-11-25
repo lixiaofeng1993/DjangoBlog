@@ -177,7 +177,7 @@ BOOTSTRAP_COLOR_TYPES = [
 PAGINATE_BY = 10
 # http cache timeout
 CACHE_CONTROL_MAX_AGE = 2592000
-# cache setting
+# cache setting  使用Memcached缓存
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
