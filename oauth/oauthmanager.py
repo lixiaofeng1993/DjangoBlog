@@ -22,7 +22,7 @@ import logging
 import urllib.parse
 from DjangoBlog.utils import parse_dict_to_url, cache_decorator
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 class OAuthAccessTokenException(Exception):

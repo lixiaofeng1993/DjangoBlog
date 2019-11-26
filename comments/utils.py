@@ -17,7 +17,7 @@ from DjangoBlog.utils import send_email
 from DjangoBlog.utils import get_current_site
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 def send_comment_email(comment):

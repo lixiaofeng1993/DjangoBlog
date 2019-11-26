@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 import requests
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 @csrf_exempt

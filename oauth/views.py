@@ -22,7 +22,7 @@ from DjangoBlog.blog_signals import oauth_user_login_signal
 
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 def get_redirecturl(request):

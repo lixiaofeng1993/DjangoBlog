@@ -12,7 +12,7 @@ from DjangoBlog.utils import cache_decorator, cache
 from django.utils.timezone import now
 from mdeditor.fields import MDTextField
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 LINK_SHOW_TYPE = (
     ('i', '首页'),

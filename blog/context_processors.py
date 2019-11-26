@@ -18,7 +18,7 @@ from DjangoBlog.utils import cache, get_blog_setting
 from datetime import datetime
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 def seo_processor(requests):

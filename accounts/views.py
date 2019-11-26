@@ -20,7 +20,7 @@ from django.utils.http import is_safe_url
 from DjangoBlog.utils import send_email, get_md5, get_current_site
 from django.conf import settings
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 # Create your views here.

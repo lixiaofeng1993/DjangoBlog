@@ -17,7 +17,7 @@ from haystack.forms import SearchForm
 from django import forms
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 class BlogSearchForm(SearchForm):

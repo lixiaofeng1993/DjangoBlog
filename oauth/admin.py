@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.utils.html import format_html
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 class OAuthUserAdmin(admin.ModelAdmin):
