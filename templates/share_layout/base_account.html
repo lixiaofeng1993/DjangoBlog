@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="{% static 'blog/img/favicon.png' %}">
     <meta name="robots" content="noindex">
     <title>{{ SITE_NAME }} | {{ SITE_DESCRIPTION }}</title>
     {% load compress %}
@@ -26,6 +26,8 @@
     {% compress js %}
         <script src="{% static 'assets/js/ie10-viewport-bug-workaround.js' %}"></script>
         <script src="{% static 'assets/js/ie-emulation-modes-warning.js' %}"></script>
+        <script src="{% static 'admin/simpleui-x/particles/particles.js' %}"></script>
+        <script src="{% static 'admin/simpleui-x/particles/app.js' %}"></script>
     {% endcompress %}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

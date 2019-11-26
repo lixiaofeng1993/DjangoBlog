@@ -201,12 +201,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_USE_TLS = True
 EMAIL_USE_SSL = True
 
-EMAIL_HOST = 'smtp.mxhichina.com'
+EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = os.environ.get('DJANGO_EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_PASSWORD')
+# EMAIL_HOST_USER = os.environ.get('DJANGO_EMAIL_USER')
+EMAIL_HOST_USER = "954274592@qq.com"
+# EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_PASSWORD')
+EMAIL_HOST_PASSWORD = "hlymvkoqcukvbdif"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-SERVER_EMAIL = os.environ.get('DJANGO_EMAIL_USER')
+# SERVER_EMAIL = os.environ.get('DJANGO_EMAIL_USER')
+SERVER_EMAIL = "lixiaofeng"
 # Setting debug=false did NOT handle except email notifications
 ADMINS = [('admin', 'admin@admin.com')]
 # WX ADMIN password(Two times md5)

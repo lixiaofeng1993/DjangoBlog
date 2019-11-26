@@ -17,7 +17,7 @@
     {% block header %}
     {% endblock %}
     <link rel="profile" href="http://gmpg.org/xfn/11"/>
-
+    <link rel="icon" href="{% static 'blog/img/favicon.png' %}">
     <!--[if lt IE 9]>
     <script src="{% static 'blog/js/html5.js' %}" type="text/javascript"></script>
     <![endif]-->
@@ -38,6 +38,11 @@
         <![endif]-->
         <link rel="stylesheet" href="{% static 'pygments/default.css' %}"/>
         <link rel="stylesheet" href="{% static 'blog/css/nprogress.css' %}">
+        <style type="text/css">
+            body {
+                background-image: url('http://www.easytest.xyz/static/admin/simpleui-x/img/bg.svg');
+            }
+        </style>
         {% block compress_css %}
         {% endblock %}
     {% endcompress %}
@@ -78,6 +83,8 @@
         <script type="text/javascript" src="{% static 'blog/js/nprogress.js' %}"></script>
         <script src="{% static 'blog/js/blog.js' %}" type="application/javascript"></script>
         <script src="{% static 'blog/js/navigation.js' %}" type="application/javascript"></script>
+        <script src="{% static 'admin/simpleui-x/particles/particles.js' %}"></script>
+        <script src="{% static 'admin/simpleui-x/particles/app.js' %}"></script>
         {% block compress_js %}
         {% endblock %}
     {% endcompress %}

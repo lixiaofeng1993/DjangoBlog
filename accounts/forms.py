@@ -17,6 +17,7 @@ from django.forms import widgets
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
+import re
 
 
 class LoginForm(AuthenticationForm):
@@ -40,6 +41,10 @@ class RegisterForm(UserCreationForm):
 
     def clean_email(self):
         email = self.cleaned_data['email']
+        if email == "":
+            raise ValidationError("邮箱不能为空.")
+        # if not re.match("^.+@.+\..+$", email):
+        #     raise ValidationError("邮箱格式不合法.")
         if get_user_model().objects.filter(email=email).exists():
             raise ValidationError("该邮箱已经存在.")
         return email

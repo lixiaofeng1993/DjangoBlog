@@ -3,10 +3,10 @@
 {% block content %}
     <div class="container">
 
-        <h2 class="form-signin-heading text-center">Sign in with your Account</h2>
+        <h2 class="form-signin-heading text-center">对恁的到来表示热烈欢迎！</h2>
 
         <div class="card card-signin">
-            <img class="img-circle profile-img" src="{% static 'blog/img/avatar.png' %}" alt="">
+            <img class="img-circle profile-img" src="{% static 'blog/img/login_img.png' %}" alt="">
             <form class="form-signin" action="{% url 'account:login' %}" method="post">
                 {% csrf_token %}
                 {% comment %}<label for="inputEmail" class="sr-only">Email address</label>
@@ -20,12 +20,12 @@
                 {% endfor %}
 
                 <input type="hidden" name="next" value="{{ redirect_to }}">
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
 
                 <div class="checkbox">
                     {% comment %}<a class="pull-right">Need help?</a>{% endcomment %}
                     <label>
-                        <input type="checkbox" value="remember-me"> Stay signed in
+                        <input type="checkbox" value="remember-me"> 保持状态
                     </label>
                 </div>
                 {% load oauth_tags %}
@@ -34,9 +34,9 @@
         </div>
 
         <p class="text-center">
-            <a href="{% url "account:register" %}">Create Account</a>
+            <a href="{% url "account:register" %}">注册</a>
             |
-            <a href="/">Home Page</a>
+            <a href="/">博客首页</a>
         </p>
 
     </div> <!-- /container -->

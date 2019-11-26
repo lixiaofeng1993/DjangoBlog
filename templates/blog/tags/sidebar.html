@@ -22,13 +22,13 @@
     {% endif %}
     {% if most_read_articles %}
 
-        <aside id="views-4" class="widget widget_views"><h3 class="widget-title">Views</h3>
+        <aside id="views-4" class="widget widget_views"><h3 class="widget-title">浏览排行</h3>
             <ul>
                 {% for a in most_read_articles %}
                     <li>
                         <a href="{{ a.get_absolute_url }}" title="{{ a.title }}">
                             {{ a.title }}
-                        </a> - {{ a.views }} views
+                        </a> - {{ a.views }} reading
                     </li>
                 {% endfor %}
             </ul>
@@ -104,21 +104,21 @@
             </div>
         </aside>
     {% endif %}
-    <aside id="text-2" class="widget widget_text"><h3 class="widget-title">欢迎您star或者fork本站源代码</h3>
-        <div class="textwidget">
-
-            <p><a href="https://github.com/liangliangyy/DjangoBlog" rel="nofollow"><img
-                    src="https://resource.lylinux.net/img.shields.io/github/stars/liangliangyy/djangoblog.svg?style=social&amp;label=Star"
-                    alt="GitHub stars"></a> <a href="https://github.com/liangliangyy/DjangoBlog" rel="nofollow"><img
-                    src="https://resource.lylinux.net/img.shields.io/github/forks/liangliangyy/djangoblog.svg?style=social&amp;label=Fork"
-                    alt="GitHub forks"></a></p>
-        </div>
-    </aside>
+    {#    <aside id="text-2" class="widget widget_text"><h3 class="widget-title">欢迎您star或者fork本站源代码</h3>#}
+    {#        <div class="textwidget">#}
+    {##}
+    {#            <p><a href="https://github.com/liangliangyy/DjangoBlog" rel="nofollow"><img#}
+    {#                    src="https://resource.lylinux.net/img.shields.io/github/stars/liangliangyy/djangoblog.svg?style=social&amp;label=Star"#}
+    {#                    alt="GitHub stars"></a> <a href="https://github.com/liangliangyy/DjangoBlog" rel="nofollow"><img#}
+    {#                    src="https://resource.lylinux.net/img.shields.io/github/forks/liangliangyy/djangoblog.svg?style=social&amp;label=Fork"#}
+    {#                    alt="GitHub forks"></a></p>#}
+    {#        </div>#}
+    {#    </aside>#}
     <aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">功能</h3>
         <ul>
-            <li><a href="/admin/" rel="nofollow">管理站点</a></li>
+            <li><a href="/admin/" rel="nofollow">站点管理</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url "account:logout" %}" rel="nofollow">登出</a>
+                <li><a href="{% url "account:logout" %}" rel="nofollow">退出</a>
                 </li>
 
             {% else %}
@@ -126,9 +126,10 @@
             {% endif %}
             {% if user.is_superuser %}
                 <li><a href="{% url "blog:refresh" %}" target="_blank">刷新缓存</a></li>
-                <li><a href="{% url 'owntracks:show_dates' %}" target="_blank">运动轨迹记录</a></li>
+                {#                <li><a href="{% url 'owntracks:show_dates' %}" target="_blank">运动轨迹记录</a></li>#}
             {% endif %}
-            <li><a href="http://gitbook.lylinux.net" target="_blank" rel="nofollow">GitBook</a></li>
+            {#            <li><a href="http://gitbook.lylinux.net" target="_blank" rel="nofollow">GitBook</a></li>#}
+            <li><a href="/admin/" rel="nofollow">EasyTest测试平台</a></li>
         </ul>
     </aside>
     <div id="rocket" class="show" title="点我返回顶部"></div>
