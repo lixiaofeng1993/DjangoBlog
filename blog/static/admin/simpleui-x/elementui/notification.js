@@ -192,14 +192,14 @@ function normalizeComponent (
 /***/ 14:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/popup");
+module.exports = require("element-ui/common/utils/popup");
 
 /***/ }),
 
 /***/ 23:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/vdom");
+module.exports = require("element-ui/common/utils/vdom");
 
 /***/ }),
 
@@ -220,7 +220,7 @@ __webpack_require__.r(__webpack_exports__);
 var external_vue_ = __webpack_require__(7);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/notification/src/main.vue?vue&type=template&id=43dbc3d8&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/notification/src/main.vue?vue&type=template&id=43dbc3d8&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -313,7 +313,7 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/notification/src/main.vue?vue&type=template&id=43dbc3d8&
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/notification/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/notification/src/main.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -466,7 +466,7 @@ var typeMap = {
 });
 // CONCATENATED MODULE: ./packages/notification/src/main.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_mainvue_type_script_lang_js_ = (mainvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/notification/src/main.vue
@@ -492,10 +492,10 @@ var component = Object(componentNormalizer["a" /* default */])(
 if (false) { var api; }
 component.options.__file = "packages/notification/src/main.vue"
 /* harmony default export */ var main = (component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/utils/popup"
+// EXTERNAL MODULE: external "element-ui/common/utils/popup"
 var popup_ = __webpack_require__(14);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vdom"
+// EXTERNAL MODULE: external "element-ui/common/utils/vdom"
 var vdom_ = __webpack_require__(23);
 
 // CONCATENATED MODULE: ./packages/notification/src/main.js

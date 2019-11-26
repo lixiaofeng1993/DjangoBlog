@@ -1,8 +1,8 @@
 from django.db.models import Count
 from django.conf import settings
-from lib.public import gr_code, getACodeImage
-from lib.execute import get_total_values
-from lib.except_check import change_info_logic
+from common.public import gr_code, getACodeImage
+from common.execute import get_total_values
+from common.except_check import change_info_logic
 from django.core.cache import cache
 
 import os, time, json, logging, threading
@@ -16,21 +16,21 @@ from accounts.models import BlogUser as User
 # from django.contrib.auth.models import User  # django自带user
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.db.models import Q  # 与或非 查询
-from lib.execute import Test_execute, get_user, is_superuser  # 执行接口
+from common.execute import Test_execute, get_user, is_superuser  # 执行接口
 from djcelery.models import PeriodicTask, CrontabSchedule, IntervalSchedule
 from datetime import timedelta, datetime
-from lib.swagger import AnalysisJson
+from common.swagger import AnalysisJson
 from django.shortcuts import render_to_response
 # from base.page_cache import page_cache  # redis缓存
-from lib.public import DrawPie, paginator, pagination_data
-from lib.error_code import ErrorCode
-from lib.except_check import project_info_logic, sign_info_logic, env_info_logic, interface_info_logic, format_params, \
+from common.public import DrawPie, paginator, pagination_data
+from common.error_code import ErrorCode
+from common.except_check import project_info_logic, sign_info_logic, env_info_logic, interface_info_logic, format_params, \
     case_info_logic, plan_info_logic, header_value_error  # 自定义异常逻辑
 from django.views.generic import ListView
 
 # import paramiko
 # from stat import S_ISDIR as isdir
-# from lib import readConfig
+# from common import readConfig
 
 log = logging.getLogger('log')  # 初始化log
 logs_path = os.path.join(os.getcwd(), 'logs')  # 拼接删除目录完整路径
@@ -1845,7 +1845,7 @@ def document(request):
         request.session['login_from'] = '/base/document_download/'
         return HttpResponseRedirect('/login/')
     else:
-        document_dir = '/var/lib/jenkins/workspace/EasyTest/media/'
+        document_dir = '/var/common/jenkins/workspace/EasyTest/media/'
         # document_dir = r'C:\Users\liyongfeng\Desktop\密钥'
         document_list = os.listdir(document_dir)
         file_list = []

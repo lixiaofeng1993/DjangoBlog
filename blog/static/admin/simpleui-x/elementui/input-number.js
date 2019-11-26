@@ -192,21 +192,21 @@ function normalizeComponent (
 /***/ 11:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/input");
+module.exports = require("element-ui/common/input");
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/dom");
+module.exports = require("element-ui/common/utils/dom");
 
 /***/ }),
 
 /***/ 21:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/focus");
+module.exports = require("element-ui/common/mixins/focus");
 
 /***/ }),
 
@@ -251,7 +251,7 @@ module.exports = require("element-ui/lib/mixins/focus");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/input-number/src/input-number.vue?vue&type=template&id=42f8cf66&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/input-number/src/input-number.vue?vue&type=template&id=42f8cf66&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -398,18 +398,18 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/input-number/src/input-number.vue?vue&type=template&id=42f8cf66&
 
-// EXTERNAL MODULE: external "element-ui/lib/input"
+// EXTERNAL MODULE: external "element-ui/common/input"
 var input_ = __webpack_require__(11);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/focus"
+// EXTERNAL MODULE: external "element-ui/common/mixins/focus"
 var focus_ = __webpack_require__(21);
 var focus_default = /*#__PURE__*/__webpack_require__.n(focus_);
 
 // EXTERNAL MODULE: ./src/directives/repeat-click.js
 var repeat_click = __webpack_require__(30);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/input-number/src/input-number.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/input-number/src/input-number.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -699,7 +699,7 @@ var repeat_click = __webpack_require__(30);
 });
 // CONCATENATED MODULE: ./packages/input-number/src/input-number.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_input_numbervue_type_script_lang_js_ = (input_numbervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/input-number/src/input-number.vue

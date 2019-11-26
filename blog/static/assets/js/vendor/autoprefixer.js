@@ -700,7 +700,7 @@
 
   Browsers = require('./browsers');
 
-  vendor = require('postcss/lib/vendor');
+  vendor = require('postcss/common/vendor');
 
   utils = require('./utils');
 
@@ -1831,7 +1831,7 @@
 
   Declaration = require('../declaration');
 
-  list = require('postcss/lib/list');
+  list = require('postcss/common/list');
 
   Flex = (function(superClass) {
     extend(Flex, superClass);
@@ -1928,7 +1928,7 @@
 
   utils = require('../utils');
 
-  list = require('postcss/lib/list');
+  list = require('postcss/common/list');
 
   isDirection = /top|left|right|bottom/gi;
 
@@ -2731,7 +2731,7 @@
 
   utils = require('./utils');
 
-  vendor = require('postcss/lib/vendor');
+  vendor = require('postcss/common/vendor');
 
   clone = function(obj, parent) {
     var cloned, i, value;
@@ -2865,7 +2865,7 @@
 
   utils = require('./utils');
 
-  vendor = require('postcss/lib/vendor');
+  vendor = require('postcss/common/vendor');
 
   Selector.hack(require('./hacks/fullscreen'));
 
@@ -3217,7 +3217,7 @@
 (function() {
   var Processor, Value, utils, vendor;
 
-  vendor = require('postcss/lib/vendor');
+  vendor = require('postcss/common/vendor');
 
   Value = require('./value');
 
@@ -3659,7 +3659,7 @@
 
   postcss = require('postcss');
 
-  list = require('postcss/lib/list');
+  list = require('postcss/common/list');
 
   split = /\(\s*([^\(\):]+)\s*:([^\)]+)/;
 
@@ -3768,7 +3768,7 @@
 (function() {
   var list;
 
-  list = require('postcss/lib/list');
+  list = require('postcss/common/list');
 
   module.exports = {
     error: function(text) {
@@ -3835,7 +3835,7 @@
 
   utils = require('./utils');
 
-  vendor = require('postcss/lib/vendor');
+  vendor = require('postcss/common/vendor');
 
   Value = (function(superClass) {
     extend(Value, superClass);

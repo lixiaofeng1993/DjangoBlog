@@ -209,7 +209,7 @@ module.exports = require("element-ui/lib/utils/clickoutside");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/clickoutside"
+// EXTERNAL MODULE: external "element-ui/common/utils/clickoutside"
 var clickoutside_ = __webpack_require__(12);
 var clickoutside_default = /*#__PURE__*/__webpack_require__.n(clickoutside_);
 
@@ -221,7 +221,7 @@ var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 var migrating_ = __webpack_require__(10);
 var migrating_default = /*#__PURE__*/__webpack_require__.n(migrating_);
 
-// EXTERNAL MODULE: external "element-ui/lib/button"
+// EXTERNAL MODULE: external "element-ui/common/button"
 var button_ = __webpack_require__(18);
 var button_default = /*#__PURE__*/__webpack_require__.n(button_);
 
@@ -232,7 +232,7 @@ var button_group_default = /*#__PURE__*/__webpack_require__.n(button_group_);
 // EXTERNAL MODULE: external "element-ui/lib/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/dropdown/src/dropdown.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/dropdown/src/dropdown.vue?vue&type=script&lang=js&
 
 
 
@@ -553,7 +553,7 @@ var util_ = __webpack_require__(3);
 });
 // CONCATENATED MODULE: ./packages/dropdown/src/dropdown.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_dropdownvue_type_script_lang_js_ = (dropdownvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/dropdown/src/dropdown.vue

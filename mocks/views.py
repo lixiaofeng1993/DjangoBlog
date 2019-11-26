@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from lib.execute import get_user, is_superuser
+from common.execute import get_user, is_superuser
 from .models import Api
 from base.models import Project
-from lib.common import insert_mock_data, update_mock_data
-from lib.response import VALID, INVALID, EMPTY, NUMBER
-from lib.validator import domain_server
+from common.common import insert_mock_data, update_mock_data
+from common.response import VALID, INVALID, EMPTY, NUMBER
+from common.validator import domain_server
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 import json, re, logging
 

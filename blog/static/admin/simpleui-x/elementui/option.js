@@ -192,7 +192,7 @@ function normalizeComponent (
 /***/ 3:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/util");
+module.exports = require("element-ui/common/utils/util");
 
 /***/ }),
 
@@ -201,7 +201,7 @@ module.exports = require("element-ui/lib/utils/util");
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/option.vue?vue&type=template&id=7a44c642&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/option.vue?vue&type=template&id=7a44c642&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -241,14 +241,14 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/select/src/option.vue?vue&type=template&id=7a44c642&
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
+// EXTERNAL MODULE: external "element-ui/common/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/option.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/option.vue?vue&type=script&lang=js&
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //
@@ -410,7 +410,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 // CONCATENATED MODULE: ./packages/select/src/option.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_optionvue_type_script_lang_js_ = (optionvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/select/src/option.vue
@@ -442,7 +442,7 @@ component.options.__file = "packages/select/src/option.vue"
 /***/ 4:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/emitter");
+module.exports = require("element-ui/common/mixins/emitter");
 
 /***/ }),
 

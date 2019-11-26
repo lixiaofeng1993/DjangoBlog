@@ -192,21 +192,21 @@ function normalizeComponent (
 /***/ 14:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/popup");
+module.exports = require("element-ui/common/utils/popup");
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/dom");
+module.exports = require("element-ui/common/utils/dom");
 
 /***/ }),
 
 /***/ 40:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/after-leave");
+module.exports = require("element-ui/common/utils/after-leave");
 
 /***/ }),
 
@@ -220,7 +220,7 @@ __webpack_require__.r(__webpack_exports__);
 var external_vue_ = __webpack_require__(7);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/loading/src/loading.vue?vue&type=template&id=eee0a7ac&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/loading/src/loading.vue?vue&type=template&id=eee0a7ac&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -281,7 +281,7 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/loading/src/loading.vue?vue&type=template&id=eee0a7ac&
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/loading/src/loading.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/loading/src/loading.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -325,7 +325,7 @@ render._withStripped = true
 });
 // CONCATENATED MODULE: ./packages/loading/src/loading.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_loadingvue_type_script_lang_js_ = (loadingvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/loading/src/loading.vue
@@ -351,13 +351,13 @@ var component = Object(componentNormalizer["a" /* default */])(
 if (false) { var api; }
 component.options.__file = "packages/loading/src/loading.vue"
 /* harmony default export */ var loading = (component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/utils/dom"
+// EXTERNAL MODULE: external "element-ui/common/utils/dom"
 var dom_ = __webpack_require__(2);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/popup"
+// EXTERNAL MODULE: external "element-ui/common/utils/popup"
 var popup_ = __webpack_require__(14);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/after-leave"
+// EXTERNAL MODULE: external "element-ui/common/utils/after-leave"
 var after_leave_ = __webpack_require__(40);
 var after_leave_default = /*#__PURE__*/__webpack_require__.n(after_leave_);
 
@@ -487,7 +487,7 @@ loadingDirective.install = function (Vue) {
 };
 
 /* harmony default export */ var directive = (loadingDirective);
-// EXTERNAL MODULE: external "element-ui/lib/utils/merge"
+// EXTERNAL MODULE: external "element-ui/common/utils/merge"
 var merge_ = __webpack_require__(9);
 var merge_default = /*#__PURE__*/__webpack_require__.n(merge_);
 
@@ -623,7 +623,7 @@ module.exports = require("vue");
 /***/ 9:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/merge");
+module.exports = require("element-ui/common/utils/merge");
 
 /***/ })
 

@@ -191,26 +191,26 @@ function normalizeComponent (
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/dom");
+module.exports = require("element-ui/common/utils/dom");
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/util");
+module.exports = require("element-ui/common/utils/util");
 
 /***/ }),
 /* 4 */,
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/vue-popper");
+module.exports = require("element-ui/common/utils/vue-popper");
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/locale");
+module.exports = require("element-ui/common/mixins/locale");
 
 /***/ }),
 /* 7 */
@@ -518,38 +518,38 @@ function walkTreeNode(root, cb) {
 /* 9 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/merge");
+module.exports = require("element-ui/common/utils/merge");
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/migrating");
+module.exports = require("element-ui/common/mixins/migrating");
 
 /***/ }),
 /* 11 */,
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/clickoutside");
+module.exports = require("element-ui/common/utils/clickoutside");
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/scrollbar");
+module.exports = require("element-ui/common/scrollbar");
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/popup");
+module.exports = require("element-ui/common/utils/popup");
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/resize-event");
+module.exports = require("element-ui/common/utils/resize-event");
 
 /***/ }),
 /* 16 */
@@ -561,7 +561,7 @@ module.exports = require("throttle-debounce/debounce");
 /* 17 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/checkbox");
+module.exports = require("element-ui/common/checkbox");
 
 /***/ }),
 /* 18 */,
@@ -578,7 +578,7 @@ module.exports = require("element-ui/lib/checkbox");
 /* 29 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/tooltip");
+module.exports = require("element-ui/common/tooltip");
 
 /***/ }),
 /* 30 */,
@@ -591,13 +591,13 @@ module.exports = require("element-ui/lib/tooltip");
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/scrollbar-width");
+module.exports = require("element-ui/common/utils/scrollbar-width");
 
 /***/ }),
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/checkbox-group");
+module.exports = require("element-ui/common/checkbox-group");
 
 /***/ }),
 /* 39 */,
@@ -632,7 +632,7 @@ module.exports = require("normalize-wheel");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/table/src/table.vue?vue&type=template&id=493fe34e&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/table/src/table.vue?vue&type=template&id=493fe34e&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1076,14 +1076,14 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/table/src/table.vue?vue&type=template&id=493fe34e&
 
-// EXTERNAL MODULE: external "element-ui/lib/checkbox"
+// EXTERNAL MODULE: external "element-ui/common/checkbox"
 var checkbox_ = __webpack_require__(17);
 var checkbox_default = /*#__PURE__*/__webpack_require__.n(checkbox_);
 
 // EXTERNAL MODULE: external "throttle-debounce"
 var external_throttle_debounce_ = __webpack_require__(42);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/resize-event"
+// EXTERNAL MODULE: external "element-ui/common/utils/resize-event"
 var resize_event_ = __webpack_require__(15);
 
 // EXTERNAL MODULE: external "normalize-wheel"
@@ -1109,11 +1109,11 @@ var mousewheel_mousewheel = function mousewheel(element, callback) {
     mousewheel_mousewheel(el, binding.value);
   }
 });
-// EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
+// EXTERNAL MODULE: external "element-ui/common/mixins/locale"
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/migrating"
+// EXTERNAL MODULE: external "element-ui/common/mixins/migrating"
 var migrating_ = __webpack_require__(10);
 var migrating_default = /*#__PURE__*/__webpack_require__.n(migrating_);
 
@@ -1125,7 +1125,7 @@ var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 var debounce_ = __webpack_require__(16);
 var debounce_default = /*#__PURE__*/__webpack_require__.n(debounce_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/merge"
+// EXTERNAL MODULE: external "element-ui/common/utils/merge"
 var merge_ = __webpack_require__(9);
 var merge_default = /*#__PURE__*/__webpack_require__.n(merge_);
 
@@ -1209,7 +1209,7 @@ var util = __webpack_require__(8);
     }
   }
 });
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./packages/table/src/store/current.js
@@ -2138,7 +2138,7 @@ function mapStates(mapper) {
   });
   return res;
 };
-// EXTERNAL MODULE: external "element-ui/lib/utils/scrollbar-width"
+// EXTERNAL MODULE: external "element-ui/common/utils/scrollbar-width"
 var scrollbar_width_ = __webpack_require__(37);
 var scrollbar_width_default = /*#__PURE__*/__webpack_require__.n(scrollbar_width_);
 
@@ -2407,10 +2407,10 @@ var table_layout_TableLayout = function () {
 }();
 
 /* harmony default export */ var table_layout = (table_layout_TableLayout);
-// EXTERNAL MODULE: external "element-ui/lib/utils/dom"
+// EXTERNAL MODULE: external "element-ui/common/utils/dom"
 var dom_ = __webpack_require__(2);
 
-// EXTERNAL MODULE: external "element-ui/lib/tooltip"
+// EXTERNAL MODULE: external "element-ui/common/tooltip"
 var tooltip_ = __webpack_require__(29);
 var tooltip_default = /*#__PURE__*/__webpack_require__.n(tooltip_);
 
@@ -3014,7 +3014,7 @@ var table_body_extends = Object.assign || function (target) { for (var i = 1; i 
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/table/src/filter-panel.vue?vue&type=template&id=7f2c919f&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/table/src/filter-panel.vue?vue&type=template&id=7f2c919f&
 var filter_panelvue_type_template_id_7f2c919f_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -3163,14 +3163,14 @@ filter_panelvue_type_template_id_7f2c919f_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/table/src/filter-panel.vue?vue&type=template&id=7f2c919f&
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vue-popper"
+// EXTERNAL MODULE: external "element-ui/common/utils/vue-popper"
 var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/popup"
+// EXTERNAL MODULE: external "element-ui/common/utils/popup"
 var popup_ = __webpack_require__(14);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/clickoutside"
+// EXTERNAL MODULE: external "element-ui/common/utils/clickoutside"
 var clickoutside_ = __webpack_require__(12);
 var clickoutside_default = /*#__PURE__*/__webpack_require__.n(clickoutside_);
 
@@ -3202,15 +3202,15 @@ var dropdowns = [];
     }
   }
 });
-// EXTERNAL MODULE: external "element-ui/lib/checkbox-group"
+// EXTERNAL MODULE: external "element-ui/common/checkbox-group"
 var checkbox_group_ = __webpack_require__(38);
 var checkbox_group_default = /*#__PURE__*/__webpack_require__.n(checkbox_group_);
 
-// EXTERNAL MODULE: external "element-ui/lib/scrollbar"
+// EXTERNAL MODULE: external "element-ui/common/scrollbar"
 var scrollbar_ = __webpack_require__(13);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/table/src/filter-panel.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/table/src/filter-panel.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -3408,7 +3408,7 @@ var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 });
 // CONCATENATED MODULE: ./packages/table/src/filter-panel.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_filter_panelvue_type_script_lang_js_ = (filter_panelvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/table/src/filter-panel.vue
@@ -4139,7 +4139,7 @@ var table_footer_extends = Object.assign || function (target) { for (var i = 1; 
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/table/src/table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/table/src/table.vue?vue&type=script&lang=js&
 var tablevue_type_script_lang_js_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 //

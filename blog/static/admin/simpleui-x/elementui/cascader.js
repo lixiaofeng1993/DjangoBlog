@@ -192,14 +192,14 @@ function normalizeComponent (
 /***/ 10:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/migrating");
+module.exports = require("element-ui/common/mixins/migrating");
 
 /***/ }),
 
 /***/ 11:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/input");
+module.exports = require("element-ui/common/input");
 
 /***/ }),
 
@@ -209,7 +209,7 @@ module.exports = require("element-ui/lib/input");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/cascader/src/cascader.vue?vue&type=template&id=032537a6&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/cascader/src/cascader.vue?vue&type=template&id=032537a6&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -515,66 +515,66 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/cascader/src/cascader.vue?vue&type=template&id=032537a6&
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vue-popper"
+// EXTERNAL MODULE: external "element-ui/common/utils/vue-popper"
 var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/clickoutside"
+// EXTERNAL MODULE: external "element-ui/common/utils/clickoutside"
 var clickoutside_ = __webpack_require__(12);
 var clickoutside_default = /*#__PURE__*/__webpack_require__.n(clickoutside_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
+// EXTERNAL MODULE: external "element-ui/common/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
+// EXTERNAL MODULE: external "element-ui/common/mixins/locale"
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/migrating"
+// EXTERNAL MODULE: external "element-ui/common/mixins/migrating"
 var migrating_ = __webpack_require__(10);
 var migrating_default = /*#__PURE__*/__webpack_require__.n(migrating_);
 
-// EXTERNAL MODULE: external "element-ui/lib/input"
+// EXTERNAL MODULE: external "element-ui/common/input"
 var input_ = __webpack_require__(11);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 
-// EXTERNAL MODULE: external "element-ui/lib/tag"
+// EXTERNAL MODULE: external "element-ui/common/tag"
 var tag_ = __webpack_require__(36);
 var tag_default = /*#__PURE__*/__webpack_require__.n(tag_);
 
-// EXTERNAL MODULE: external "element-ui/lib/scrollbar"
+// EXTERNAL MODULE: external "element-ui/common/scrollbar"
 var scrollbar_ = __webpack_require__(13);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
-// EXTERNAL MODULE: external "element-ui/lib/cascader-panel"
+// EXTERNAL MODULE: external "element-ui/common/cascader-panel"
 var cascader_panel_ = __webpack_require__(50);
 var cascader_panel_default = /*#__PURE__*/__webpack_require__.n(cascader_panel_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/aria-utils"
+// EXTERNAL MODULE: external "element-ui/common/utils/aria-utils"
 var aria_utils_ = __webpack_require__(39);
 var aria_utils_default = /*#__PURE__*/__webpack_require__.n(aria_utils_);
 
-// EXTERNAL MODULE: external "element-ui/lib/locale"
+// EXTERNAL MODULE: external "element-ui/common/locale"
 var lib_locale_ = __webpack_require__(20);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/types"
+// EXTERNAL MODULE: external "element-ui/common/utils/types"
 var types_ = __webpack_require__(19);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/shared"
+// EXTERNAL MODULE: external "element-ui/common/utils/shared"
 var shared_ = __webpack_require__(22);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/resize-event"
+// EXTERNAL MODULE: external "element-ui/common/utils/resize-event"
 var resize_event_ = __webpack_require__(15);
 
 // EXTERNAL MODULE: external "throttle-debounce/debounce"
 var debounce_ = __webpack_require__(16);
 var debounce_default = /*#__PURE__*/__webpack_require__.n(debounce_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/cascader/src/cascader.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/cascader/src/cascader.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1279,7 +1279,7 @@ var InputSizeMap = {
 });
 // CONCATENATED MODULE: ./packages/cascader/src/cascader.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_cascadervue_type_script_lang_js_ = (cascadervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/cascader/src/cascader.vue
@@ -1320,21 +1320,21 @@ cascader.install = function (Vue) {
 /***/ 12:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/clickoutside");
+module.exports = require("element-ui/common/utils/clickoutside");
 
 /***/ }),
 
 /***/ 13:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/scrollbar");
+module.exports = require("element-ui/common/scrollbar");
 
 /***/ }),
 
 /***/ 15:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/resize-event");
+module.exports = require("element-ui/common/utils/resize-event");
 
 /***/ }),
 
@@ -1348,70 +1348,70 @@ module.exports = require("throttle-debounce/debounce");
 /***/ 19:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/types");
+module.exports = require("element-ui/common/utils/types");
 
 /***/ }),
 
 /***/ 20:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/locale");
+module.exports = require("element-ui/common/locale");
 
 /***/ }),
 
 /***/ 22:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/shared");
+module.exports = require("element-ui/common/utils/shared");
 
 /***/ }),
 
 /***/ 3:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/util");
+module.exports = require("element-ui/common/utils/util");
 
 /***/ }),
 
 /***/ 36:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/tag");
+module.exports = require("element-ui/common/tag");
 
 /***/ }),
 
 /***/ 39:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/aria-utils");
+module.exports = require("element-ui/common/utils/aria-utils");
 
 /***/ }),
 
 /***/ 4:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/emitter");
+module.exports = require("element-ui/common/mixins/emitter");
 
 /***/ }),
 
 /***/ 5:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/vue-popper");
+module.exports = require("element-ui/common/utils/vue-popper");
 
 /***/ }),
 
 /***/ 50:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/cascader-panel");
+module.exports = require("element-ui/common/cascader-panel");
 
 /***/ }),
 
 /***/ 6:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/locale");
+module.exports = require("element-ui/common/mixins/locale");
 
 /***/ })
 

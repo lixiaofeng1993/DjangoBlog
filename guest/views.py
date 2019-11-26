@@ -2,9 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required  # 验证用户是否登录的装饰器
 from django.db.models import Q  # 与或非 查询
-from lib.public import paginator  # 分页封装，每页显示10条
+from common.public import paginator  # 分页封装，每页显示10条
 from base.models import Event, Guest
-from lib.execute import get_user
+from common.execute import get_user
 import logging
 
 log = logging.getLogger('log')  # 初始化log

@@ -192,14 +192,14 @@ function normalizeComponent (
 /***/ 19:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/types");
+module.exports = require("element-ui/common/utils/types");
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/dom");
+module.exports = require("element-ui/common/utils/dom");
 
 /***/ }),
 
@@ -213,14 +213,14 @@ module.exports = require("throttle-debounce/throttle");
 /***/ 3:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/util");
+module.exports = require("element-ui/common/utils/util");
 
 /***/ }),
 
 /***/ 6:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/locale");
+module.exports = require("element-ui/common/mixins/locale");
 
 /***/ }),
 
@@ -230,7 +230,7 @@ module.exports = require("element-ui/lib/mixins/locale");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/image/src/main.vue?vue&type=template&id=44d84a7c&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/image/src/main.vue?vue&type=template&id=44d84a7c&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -289,7 +289,7 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/image/src/main.vue?vue&type=template&id=44d84a7c&
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/image/src/image-viewer.vue?vue&type=template&id=5e73b307&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/image/src/image-viewer.vue?vue&type=template&id=5e73b307&
 var image_viewervue_type_template_id_5e73b307_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -409,13 +409,13 @@ image_viewervue_type_template_id_5e73b307_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/image/src/image-viewer.vue?vue&type=template&id=5e73b307&
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/dom"
+// EXTERNAL MODULE: external "element-ui/common/utils/dom"
 var dom_ = __webpack_require__(2);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/image/src/image-viewer.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/image/src/image-viewer.vue?vue&type=script&lang=js&
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 //
@@ -739,7 +739,7 @@ var mousewheelEventName = Object(util_["isFirefox"])() ? 'DOMMouseScroll' : 'mou
 });
 // CONCATENATED MODULE: ./packages/image/src/image-viewer.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_image_viewervue_type_script_lang_js_ = (image_viewervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/image/src/image-viewer.vue
@@ -765,18 +765,18 @@ var component = Object(componentNormalizer["a" /* default */])(
 if (false) { var api; }
 component.options.__file = "packages/image/src/image-viewer.vue"
 /* harmony default export */ var image_viewer = (component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
+// EXTERNAL MODULE: external "element-ui/common/mixins/locale"
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/types"
+// EXTERNAL MODULE: external "element-ui/common/utils/types"
 var types_ = __webpack_require__(19);
 
 // EXTERNAL MODULE: external "throttle-debounce/throttle"
 var throttle_ = __webpack_require__(25);
 var throttle_default = /*#__PURE__*/__webpack_require__.n(throttle_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/image/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/image/src/main.vue?vue&type=script&lang=js&
 //
 //
 //

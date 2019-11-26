@@ -192,35 +192,35 @@ function normalizeComponent (
 /***/ 11:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/input");
+module.exports = require("element-ui/common/input");
 
 /***/ }),
 
 /***/ 12:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/clickoutside");
+module.exports = require("element-ui/common/utils/clickoutside");
 
 /***/ }),
 
 /***/ 18:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/button");
+module.exports = require("element-ui/common/button");
 
 /***/ }),
 
 /***/ 4:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/emitter");
+module.exports = require("element-ui/common/mixins/emitter");
 
 /***/ }),
 
 /***/ 5:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/vue-popper");
+module.exports = require("element-ui/common/utils/vue-popper");
 
 /***/ }),
 
@@ -230,7 +230,7 @@ module.exports = require("element-ui/lib/utils/vue-popper");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/main.vue?vue&type=template&id=55c8ade7&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/main.vue?vue&type=template&id=55c8ade7&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -688,7 +688,7 @@ var Color = function () {
 
 /* harmony default export */ var src_color = (Color);
 ;
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/picker-dropdown.vue?vue&type=template&id=06601625&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/picker-dropdown.vue?vue&type=template&id=06601625&
 var picker_dropdownvue_type_template_id_06601625_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -820,7 +820,7 @@ picker_dropdownvue_type_template_id_06601625_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/color-picker/src/components/picker-dropdown.vue?vue&type=template&id=06601625&
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/sv-panel.vue?vue&type=template&id=d8583596&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/sv-panel.vue?vue&type=template&id=d8583596&
 var sv_panelvue_type_template_id_d8583596_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -901,7 +901,7 @@ var isDragging = false;
     }
   });
 });
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/sv-panel.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/sv-panel.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1005,7 +1005,7 @@ var isDragging = false;
 });
 // CONCATENATED MODULE: ./packages/color-picker/src/components/sv-panel.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_sv_panelvue_type_script_lang_js_ = (sv_panelvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/color-picker/src/components/sv-panel.vue
@@ -1031,7 +1031,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 if (false) { var api; }
 component.options.__file = "packages/color-picker/src/components/sv-panel.vue"
 /* harmony default export */ var sv_panel = (component.exports);
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/hue-slider.vue?vue&type=template&id=5cdc43b1&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/hue-slider.vue?vue&type=template&id=5cdc43b1&
 var hue_slidervue_type_template_id_5cdc43b1_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1065,7 +1065,7 @@ hue_slidervue_type_template_id_5cdc43b1_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/color-picker/src/components/hue-slider.vue?vue&type=template&id=5cdc43b1&
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/hue-slider.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/hue-slider.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1216,7 +1216,7 @@ var hue_slider_component = Object(componentNormalizer["a" /* default */])(
 if (false) { var hue_slider_api; }
 hue_slider_component.options.__file = "packages/color-picker/src/components/hue-slider.vue"
 /* harmony default export */ var hue_slider = (hue_slider_component.exports);
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/alpha-slider.vue?vue&type=template&id=068c66cb&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/alpha-slider.vue?vue&type=template&id=068c66cb&
 var alpha_slidervue_type_template_id_068c66cb_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1253,7 +1253,7 @@ alpha_slidervue_type_template_id_068c66cb_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/color-picker/src/components/alpha-slider.vue?vue&type=template&id=068c66cb&
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/alpha-slider.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/alpha-slider.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1413,7 +1413,7 @@ var alpha_slider_component = Object(componentNormalizer["a" /* default */])(
 if (false) { var alpha_slider_api; }
 alpha_slider_component.options.__file = "packages/color-picker/src/components/alpha-slider.vue"
 /* harmony default export */ var alpha_slider = (alpha_slider_component.exports);
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/predefine.vue?vue&type=template&id=06e03093&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/predefine.vue?vue&type=template&id=06e03093&
 var predefinevue_type_template_id_06e03093_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1448,7 +1448,7 @@ predefinevue_type_template_id_06e03093_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/color-picker/src/components/predefine.vue?vue&type=template&id=06e03093&
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/predefine.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/predefine.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1535,23 +1535,23 @@ var predefine_component = Object(componentNormalizer["a" /* default */])(
 if (false) { var predefine_api; }
 predefine_component.options.__file = "packages/color-picker/src/components/predefine.vue"
 /* harmony default export */ var predefine = (predefine_component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/utils/vue-popper"
+// EXTERNAL MODULE: external "element-ui/common/utils/vue-popper"
 var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
+// EXTERNAL MODULE: external "element-ui/common/mixins/locale"
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: external "element-ui/lib/input"
+// EXTERNAL MODULE: external "element-ui/common/input"
 var input_ = __webpack_require__(11);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 
-// EXTERNAL MODULE: external "element-ui/lib/button"
+// EXTERNAL MODULE: external "element-ui/common/button"
 var button_ = __webpack_require__(18);
 var button_default = /*#__PURE__*/__webpack_require__.n(button_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/components/picker-dropdown.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/components/picker-dropdown.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1705,15 +1705,15 @@ var picker_dropdown_component = Object(componentNormalizer["a" /* default */])(
 if (false) { var picker_dropdown_api; }
 picker_dropdown_component.options.__file = "packages/color-picker/src/components/picker-dropdown.vue"
 /* harmony default export */ var picker_dropdown = (picker_dropdown_component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/utils/clickoutside"
+// EXTERNAL MODULE: external "element-ui/common/utils/clickoutside"
 var clickoutside_ = __webpack_require__(12);
 var clickoutside_default = /*#__PURE__*/__webpack_require__.n(clickoutside_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
+// EXTERNAL MODULE: external "element-ui/common/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/color-picker/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/color-picker/src/main.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1943,7 +1943,7 @@ main.install = function (Vue) {
 /***/ 6:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/locale");
+module.exports = require("element-ui/common/mixins/locale");
 
 /***/ }),
 

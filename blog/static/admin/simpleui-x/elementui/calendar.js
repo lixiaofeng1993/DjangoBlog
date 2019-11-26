@@ -216,7 +216,7 @@ module.exports = require("element-ui/lib/mixins/locale");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/calendar/src/main.vue?vue&type=template&id=6d9756be&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/calendar/src/main.vue?vue&type=template&id=6d9756be&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -342,14 +342,14 @@ render._withStripped = true
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/date"
+// EXTERNAL MODULE: external "element-ui/common/utils/date"
 var date_ = __webpack_require__(24);
 var date_default = /*#__PURE__*/__webpack_require__.n(date_);
 
 // EXTERNAL MODULE: external "element-ui/lib/utils/date-util"
 var date_util_ = __webpack_require__(1);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/calendar/src/date-table.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/calendar/src/date-table.vue?vue&type=script&lang=js&
 
 
 
@@ -597,7 +597,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 if (false) { var api; }
 component.options.__file = "packages/calendar/src/date-table.vue"
 /* harmony default export */ var date_table = (component.exports);
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/calendar/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/calendar/src/main.vue?vue&type=script&lang=js&
 //
 //
 //

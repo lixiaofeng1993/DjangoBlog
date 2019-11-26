@@ -4,12 +4,12 @@ from __future__ import absolute_import
 from DjangoBlog.celery import app
 # from celery import shared_task
 import time, logging, os
-from lib.public import DrawPie, remove_logs
+from common.public import DrawPie, remove_logs
 from django.conf import settings
 from base.models import Plan, Report, User
 from datetime import datetime
-from lib.execute import Test_execute
-from lib.send_email import send_email
+from common.execute import Test_execute
+from common.send_email import send_email
 
 log = logging.getLogger('log')
 

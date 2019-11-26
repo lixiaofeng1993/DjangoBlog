@@ -93,17 +93,17 @@ module.exports =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/resize-event"
+// EXTERNAL MODULE: external "element-ui/common/utils/resize-event"
 var resize_event_ = __webpack_require__(15);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/scrollbar-width"
+// EXTERNAL MODULE: external "element-ui/common/utils/scrollbar-width"
 var scrollbar_width_ = __webpack_require__(37);
 var scrollbar_width_default = /*#__PURE__*/__webpack_require__.n(scrollbar_width_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/dom"
+// EXTERNAL MODULE: external "element-ui/common/utils/dom"
 var dom_ = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./packages/scrollbar/src/util.js
@@ -394,28 +394,28 @@ main.install = function (Vue) {
 /***/ 15:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/resize-event");
+module.exports = require("element-ui/common/utils/resize-event");
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/dom");
+module.exports = require("element-ui/common/utils/dom");
 
 /***/ }),
 
 /***/ 3:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/util");
+module.exports = require("element-ui/common/utils/util");
 
 /***/ }),
 
 /***/ 37:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/scrollbar-width");
+module.exports = require("element-ui/common/utils/scrollbar-width");
 
 /***/ })
 

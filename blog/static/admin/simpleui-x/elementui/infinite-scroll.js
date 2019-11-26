@@ -97,10 +97,10 @@ __webpack_require__.r(__webpack_exports__);
 var debounce_ = __webpack_require__(16);
 var debounce_default = /*#__PURE__*/__webpack_require__.n(debounce_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/types"
+// EXTERNAL MODULE: external "element-ui/common/utils/types"
 var types_ = __webpack_require__(19);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/dom"
+// EXTERNAL MODULE: external "element-ui/common/utils/dom"
 var dom_ = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./packages/infinite-scroll/src/main.js
@@ -283,14 +283,14 @@ module.exports = require("throttle-debounce/debounce");
 /***/ 19:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/types");
+module.exports = require("element-ui/common/utils/types");
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/dom");
+module.exports = require("element-ui/common/utils/dom");
 
 /***/ })
 

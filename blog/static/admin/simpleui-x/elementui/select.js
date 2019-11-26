@@ -192,25 +192,25 @@ function normalizeComponent (
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/util");
+module.exports = require("element-ui/common/utils/util");
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/emitter");
+module.exports = require("element-ui/common/mixins/emitter");
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/vue-popper");
+module.exports = require("element-ui/common/utils/vue-popper");
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/locale");
+module.exports = require("element-ui/common/mixins/locale");
 
 /***/ }),
 /* 7 */,
@@ -220,26 +220,26 @@ module.exports = require("element-ui/lib/mixins/locale");
 /* 11 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/input");
+module.exports = require("element-ui/common/input");
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/clickoutside");
+module.exports = require("element-ui/common/utils/clickoutside");
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/scrollbar");
+module.exports = require("element-ui/common/scrollbar");
 
 /***/ }),
 /* 14 */,
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/resize-event");
+module.exports = require("element-ui/common/utils/resize-event");
 
 /***/ }),
 /* 16 */
@@ -254,19 +254,19 @@ module.exports = require("throttle-debounce/debounce");
 /* 20 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/locale");
+module.exports = require("element-ui/common/locale");
 
 /***/ }),
 /* 21 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/focus");
+module.exports = require("element-ui/common/mixins/focus");
 
 /***/ }),
 /* 22 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/shared");
+module.exports = require("element-ui/common/utils/shared");
 
 /***/ }),
 /* 23 */,
@@ -280,7 +280,7 @@ module.exports = require("element-ui/lib/utils/shared");
 /* 31 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/scroll-into-view");
+module.exports = require("element-ui/common/utils/scroll-into-view");
 
 /***/ }),
 /* 32 */,
@@ -289,7 +289,7 @@ module.exports = require("element-ui/lib/utils/scroll-into-view");
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/option.vue?vue&type=template&id=7a44c642&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/option.vue?vue&type=template&id=7a44c642&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -329,14 +329,14 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/select/src/option.vue?vue&type=template&id=7a44c642&
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
+// EXTERNAL MODULE: external "element-ui/common/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/option.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/option.vue?vue&type=script&lang=js&
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 //
@@ -498,7 +498,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 // CONCATENATED MODULE: ./packages/select/src/option.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_optionvue_type_script_lang_js_ = (optionvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/select/src/option.vue
@@ -531,7 +531,7 @@ component.options.__file = "packages/select/src/option.vue"
 /* 36 */
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/tag");
+module.exports = require("element-ui/common/tag");
 
 /***/ }),
 /* 37 */,
@@ -562,7 +562,7 @@ module.exports = require("element-ui/lib/tag");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/select.vue?vue&type=template&id=0e4aade6&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/select.vue?vue&type=template&id=0e4aade6&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1029,23 +1029,23 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/select/src/select.vue?vue&type=template&id=0e4aade6&
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
+// EXTERNAL MODULE: external "element-ui/common/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/focus"
+// EXTERNAL MODULE: external "element-ui/common/mixins/focus"
 var focus_ = __webpack_require__(21);
 var focus_default = /*#__PURE__*/__webpack_require__.n(focus_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
+// EXTERNAL MODULE: external "element-ui/common/mixins/locale"
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: external "element-ui/lib/input"
+// EXTERNAL MODULE: external "element-ui/common/input"
 var input_ = __webpack_require__(11);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/select-dropdown.vue?vue&type=template&id=06828748&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/select-dropdown.vue?vue&type=template&id=06828748&
 var select_dropdownvue_type_template_id_06828748_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -1067,11 +1067,11 @@ select_dropdownvue_type_template_id_06828748_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/select/src/select-dropdown.vue?vue&type=template&id=06828748&
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vue-popper"
+// EXTERNAL MODULE: external "element-ui/common/utils/vue-popper"
 var vue_popper_ = __webpack_require__(5);
 var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/select-dropdown.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/select-dropdown.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -1150,7 +1150,7 @@ var vue_popper_default = /*#__PURE__*/__webpack_require__.n(vue_popper_);
 });
 // CONCATENATED MODULE: ./packages/select/src/select-dropdown.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_select_dropdownvue_type_script_lang_js_ = (select_dropdownvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/select/src/select-dropdown.vue
@@ -1179,11 +1179,11 @@ component.options.__file = "packages/select/src/select-dropdown.vue"
 // EXTERNAL MODULE: ./packages/select/src/option.vue + 4 modules
 var src_option = __webpack_require__(33);
 
-// EXTERNAL MODULE: external "element-ui/lib/tag"
+// EXTERNAL MODULE: external "element-ui/common/tag"
 var tag_ = __webpack_require__(36);
 var tag_default = /*#__PURE__*/__webpack_require__.n(tag_);
 
-// EXTERNAL MODULE: external "element-ui/lib/scrollbar"
+// EXTERNAL MODULE: external "element-ui/common/scrollbar"
 var scrollbar_ = __webpack_require__(13);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
@@ -1191,21 +1191,21 @@ var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 var debounce_ = __webpack_require__(16);
 var debounce_default = /*#__PURE__*/__webpack_require__.n(debounce_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/clickoutside"
+// EXTERNAL MODULE: external "element-ui/common/utils/clickoutside"
 var clickoutside_ = __webpack_require__(12);
 var clickoutside_default = /*#__PURE__*/__webpack_require__.n(clickoutside_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/resize-event"
+// EXTERNAL MODULE: external "element-ui/common/utils/resize-event"
 var resize_event_ = __webpack_require__(15);
 
-// EXTERNAL MODULE: external "element-ui/lib/locale"
+// EXTERNAL MODULE: external "element-ui/common/locale"
 var lib_locale_ = __webpack_require__(20);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/scroll-into-view"
+// EXTERNAL MODULE: external "element-ui/common/utils/scroll-into-view"
 var scroll_into_view_ = __webpack_require__(31);
 var scroll_into_view_default = /*#__PURE__*/__webpack_require__.n(scroll_into_view_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./packages/select/src/navigation-mixin.js
@@ -1272,10 +1272,10 @@ var util_ = __webpack_require__(3);
     }
   }
 });
-// EXTERNAL MODULE: external "element-ui/lib/utils/shared"
+// EXTERNAL MODULE: external "element-ui/common/utils/shared"
 var shared_ = __webpack_require__(22);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/select/src/select.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/select/src/select.vue?vue&type=script&lang=js&
 //
 //
 //

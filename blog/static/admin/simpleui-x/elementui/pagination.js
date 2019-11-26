@@ -230,7 +230,7 @@ module.exports = require("element-ui/lib/mixins/locale");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/pagination/src/pager.vue?vue&type=template&id=7274f267&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/pagination/src/pager.vue?vue&type=template&id=7274f267&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -311,7 +311,7 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/pagination/src/pager.vue?vue&type=template&id=7274f267&
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/pagination/src/pager.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/pagination/src/pager.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -508,7 +508,7 @@ var select_default = /*#__PURE__*/__webpack_require__.n(select_);
 var option_ = __webpack_require__(44);
 var option_default = /*#__PURE__*/__webpack_require__.n(option_);
 
-// EXTERNAL MODULE: external "element-ui/lib/input"
+// EXTERNAL MODULE: external "element-ui/common/input"
 var input_ = __webpack_require__(11);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 

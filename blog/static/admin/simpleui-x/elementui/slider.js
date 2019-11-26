@@ -192,21 +192,21 @@ function normalizeComponent (
 /***/ 29:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/tooltip");
+module.exports = require("element-ui/common/tooltip");
 
 /***/ }),
 
 /***/ 4:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/emitter");
+module.exports = require("element-ui/common/mixins/emitter");
 
 /***/ }),
 
 /***/ 49:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/input-number");
+module.exports = require("element-ui/common/input-number");
 
 /***/ }),
 
@@ -216,7 +216,7 @@ module.exports = require("element-ui/lib/input-number");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/slider/src/main.vue?vue&type=template&id=32708644&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/slider/src/main.vue?vue&type=template&id=32708644&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -351,11 +351,11 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/slider/src/main.vue?vue&type=template&id=32708644&
 
-// EXTERNAL MODULE: external "element-ui/lib/input-number"
+// EXTERNAL MODULE: external "element-ui/common/input-number"
 var input_number_ = __webpack_require__(49);
 var input_number_default = /*#__PURE__*/__webpack_require__.n(input_number_);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/slider/src/button.vue?vue&type=template&id=e72d2ad2&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/slider/src/button.vue?vue&type=template&id=e72d2ad2&
 var buttonvue_type_template_id_e72d2ad2_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -463,11 +463,11 @@ buttonvue_type_template_id_e72d2ad2_render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/slider/src/button.vue?vue&type=template&id=e72d2ad2&
 
-// EXTERNAL MODULE: external "element-ui/lib/tooltip"
+// EXTERNAL MODULE: external "element-ui/common/tooltip"
 var tooltip_ = __webpack_require__(29);
 var tooltip_default = /*#__PURE__*/__webpack_require__.n(tooltip_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/slider/src/button.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/slider/src/button.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -696,7 +696,7 @@ var tooltip_default = /*#__PURE__*/__webpack_require__.n(tooltip_);
 });
 // CONCATENATED MODULE: ./packages/slider/src/button.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_buttonvue_type_script_lang_js_ = (buttonvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/slider/src/button.vue
@@ -743,11 +743,11 @@ component.options.__file = "packages/slider/src/button.vue"
     );
   }
 });
-// EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
+// EXTERNAL MODULE: external "element-ui/common/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/slider/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/slider/src/main.vue?vue&type=script&lang=js&
 //
 //
 //

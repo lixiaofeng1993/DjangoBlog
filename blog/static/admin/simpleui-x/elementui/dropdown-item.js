@@ -192,7 +192,7 @@ function normalizeComponent (
 /***/ 4:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/emitter");
+module.exports = require("element-ui/common/mixins/emitter");
 
 /***/ }),
 
@@ -202,7 +202,7 @@ module.exports = require("element-ui/lib/mixins/emitter");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/dropdown/src/dropdown-item.vue?vue&type=template&id=6359102a&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/dropdown/src/dropdown-item.vue?vue&type=template&id=6359102a&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -231,11 +231,11 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/dropdown/src/dropdown-item.vue?vue&type=template&id=6359102a&
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/emitter"
+// EXTERNAL MODULE: external "element-ui/common/mixins/emitter"
 var emitter_ = __webpack_require__(4);
 var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/dropdown/src/dropdown-item.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/dropdown/src/dropdown-item.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -274,7 +274,7 @@ var emitter_default = /*#__PURE__*/__webpack_require__.n(emitter_);
 });
 // CONCATENATED MODULE: ./packages/dropdown/src/dropdown-item.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_dropdown_itemvue_type_script_lang_js_ = (dropdown_itemvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/dropdown/src/dropdown-item.vue

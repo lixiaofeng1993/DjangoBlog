@@ -8,15 +8,15 @@
 '''
 import sys
 
-sys.path.insert(0, r'/var/lib/jenkins/workspace/DjangoBlog')
+sys.path.insert(0, r'/var/common/jenkins/workspace/DjangoBlog')
 sys.path.insert(0, r'D:\DjangoBlog')
 
 from locust import HttpLocust, TaskSet, task, Locust, events
 from locust.clients import HttpSession
 import queue, json, subprocess, os
-from lib.sql_parameter import get_parameters
-from lib.public import get_extract
-from lib.random_params import random_params
+from common.sql_parameter import get_parameters
+from common.public import get_extract
+from common.random_params import random_params
 import logging
 
 log = logging.getLogger('log')

@@ -192,56 +192,56 @@ function normalizeComponent (
 /***/ 11:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/input");
+module.exports = require("element-ui/common/input");
 
 /***/ }),
 
 /***/ 14:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/popup");
+module.exports = require("element-ui/common/utils/popup");
 
 /***/ }),
 
 /***/ 18:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/button");
+module.exports = require("element-ui/common/button");
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/dom");
+module.exports = require("element-ui/common/utils/dom");
 
 /***/ }),
 
 /***/ 20:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/locale");
+module.exports = require("element-ui/common/locale");
 
 /***/ }),
 
 /***/ 23:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/vdom");
+module.exports = require("element-ui/common/utils/vdom");
 
 /***/ }),
 
 /***/ 47:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/aria-dialog");
+module.exports = require("element-ui/common/utils/aria-dialog");
 
 /***/ }),
 
 /***/ 6:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/locale");
+module.exports = require("element-ui/common/mixins/locale");
 
 /***/ }),
 
@@ -262,7 +262,7 @@ __webpack_require__.r(__webpack_exports__);
 var external_vue_ = __webpack_require__(7);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/message-box/src/main.vue?vue&type=template&id=6b29b012&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/message-box/src/main.vue?vue&type=template&id=6b29b012&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -554,33 +554,33 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/message-box/src/main.vue?vue&type=template&id=6b29b012&
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/popup"
+// EXTERNAL MODULE: external "element-ui/common/utils/popup"
 var popup_ = __webpack_require__(14);
 var popup_default = /*#__PURE__*/__webpack_require__.n(popup_);
 
-// EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
+// EXTERNAL MODULE: external "element-ui/common/mixins/locale"
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// EXTERNAL MODULE: external "element-ui/lib/input"
+// EXTERNAL MODULE: external "element-ui/common/input"
 var input_ = __webpack_require__(11);
 var input_default = /*#__PURE__*/__webpack_require__.n(input_);
 
-// EXTERNAL MODULE: external "element-ui/lib/button"
+// EXTERNAL MODULE: external "element-ui/common/button"
 var button_ = __webpack_require__(18);
 var button_default = /*#__PURE__*/__webpack_require__.n(button_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/dom"
+// EXTERNAL MODULE: external "element-ui/common/utils/dom"
 var dom_ = __webpack_require__(2);
 
-// EXTERNAL MODULE: external "element-ui/lib/locale"
+// EXTERNAL MODULE: external "element-ui/common/locale"
 var lib_locale_ = __webpack_require__(20);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/aria-dialog"
+// EXTERNAL MODULE: external "element-ui/common/utils/aria-dialog"
 var aria_dialog_ = __webpack_require__(47);
 var aria_dialog_default = /*#__PURE__*/__webpack_require__.n(aria_dialog_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/message-box/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/message-box/src/main.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -917,7 +917,7 @@ var typeMap = {
 });
 // CONCATENATED MODULE: ./packages/message-box/src/main.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_mainvue_type_script_lang_js_ = (mainvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/message-box/src/main.vue
@@ -943,11 +943,11 @@ var component = Object(componentNormalizer["a" /* default */])(
 if (false) { var api; }
 component.options.__file = "packages/message-box/src/main.vue"
 /* harmony default export */ var main = (component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/utils/merge"
+// EXTERNAL MODULE: external "element-ui/common/utils/merge"
 var merge_ = __webpack_require__(9);
 var merge_default = /*#__PURE__*/__webpack_require__.n(merge_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/vdom"
+// EXTERNAL MODULE: external "element-ui/common/utils/vdom"
 var vdom_ = __webpack_require__(23);
 
 // CONCATENATED MODULE: ./packages/message-box/src/main.js
@@ -1180,7 +1180,7 @@ main_MessageBox.close = function () {
 /***/ 9:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/merge");
+module.exports = require("element-ui/common/utils/merge");
 
 /***/ })
 

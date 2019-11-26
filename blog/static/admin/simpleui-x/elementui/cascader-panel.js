@@ -192,21 +192,21 @@ function normalizeComponent (
 /***/ 13:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/scrollbar");
+module.exports = require("element-ui/common/scrollbar");
 
 /***/ }),
 
 /***/ 17:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/checkbox");
+module.exports = require("element-ui/common/checkbox");
 
 /***/ }),
 
 /***/ 22:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/shared");
+module.exports = require("element-ui/common/utils/shared");
 
 /***/ }),
 
@@ -220,28 +220,28 @@ module.exports = require("babel-helper-vue-jsx-merge-props");
 /***/ 3:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/util");
+module.exports = require("element-ui/common/utils/util");
 
 /***/ }),
 
 /***/ 31:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/scroll-into-view");
+module.exports = require("element-ui/common/utils/scroll-into-view");
 
 /***/ }),
 
 /***/ 39:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/aria-utils");
+module.exports = require("element-ui/common/utils/aria-utils");
 
 /***/ }),
 
 /***/ 51:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/radio");
+module.exports = require("element-ui/common/radio");
 
 /***/ }),
 
@@ -251,7 +251,7 @@ module.exports = require("element-ui/lib/radio");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/cascader-panel/src/cascader-panel.vue?vue&type=template&id=34932346&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/cascader-panel/src/cascader-panel.vue?vue&type=template&id=34932346&
 var cascader_panelvue_type_template_id_34932346_render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -283,22 +283,22 @@ cascader_panelvue_type_template_id_34932346_render._withStripped = true
 var external_babel_helper_vue_jsx_merge_props_ = __webpack_require__(26);
 var external_babel_helper_vue_jsx_merge_props_default = /*#__PURE__*/__webpack_require__.n(external_babel_helper_vue_jsx_merge_props_);
 
-// EXTERNAL MODULE: external "element-ui/lib/scrollbar"
+// EXTERNAL MODULE: external "element-ui/common/scrollbar"
 var scrollbar_ = __webpack_require__(13);
 var scrollbar_default = /*#__PURE__*/__webpack_require__.n(scrollbar_);
 
-// EXTERNAL MODULE: external "element-ui/lib/checkbox"
+// EXTERNAL MODULE: external "element-ui/common/checkbox"
 var checkbox_ = __webpack_require__(17);
 var checkbox_default = /*#__PURE__*/__webpack_require__.n(checkbox_);
 
-// EXTERNAL MODULE: external "element-ui/lib/radio"
+// EXTERNAL MODULE: external "element-ui/common/radio"
 var radio_ = __webpack_require__(51);
 var radio_default = /*#__PURE__*/__webpack_require__.n(radio_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/util"
+// EXTERNAL MODULE: external "element-ui/common/utils/util"
 var util_ = __webpack_require__(3);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/cascader-panel/src/cascader-node.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/cascader-panel/src/cascader-node.vue?vue&type=script&lang=js&
 
 
 
@@ -571,7 +571,7 @@ var stopPropagation = function stopPropagation(e) {
 });
 // CONCATENATED MODULE: ./packages/cascader-panel/src/cascader-node.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_cascader_nodevue_type_script_lang_js_ = (cascader_nodevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/cascader-panel/src/cascader-node.vue
@@ -597,11 +597,11 @@ var component = Object(componentNormalizer["a" /* default */])(
 if (false) { var api; }
 component.options.__file = "packages/cascader-panel/src/cascader-node.vue"
 /* harmony default export */ var cascader_node = (component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/mixins/locale"
+// EXTERNAL MODULE: external "element-ui/common/mixins/locale"
 var locale_ = __webpack_require__(6);
 var locale_default = /*#__PURE__*/__webpack_require__.n(locale_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/cascader-panel/src/cascader-menu.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/cascader-panel/src/cascader-menu.vue?vue&type=script&lang=js&
 
 
 
@@ -774,7 +774,7 @@ var cascader_menu_component = Object(componentNormalizer["a" /* default */])(
 if (false) { var cascader_menu_api; }
 cascader_menu_component.options.__file = "packages/cascader-panel/src/cascader-menu.vue"
 /* harmony default export */ var cascader_menu = (cascader_menu_component.exports);
-// EXTERNAL MODULE: external "element-ui/lib/utils/shared"
+// EXTERNAL MODULE: external "element-ui/common/utils/shared"
 var shared_ = __webpack_require__(22);
 
 // CONCATENATED MODULE: ./packages/cascader-panel/src/node.js
@@ -1064,19 +1064,19 @@ var store_Store = function () {
 }();
 
 /* harmony default export */ var src_store = (store_Store);
-// EXTERNAL MODULE: external "element-ui/lib/utils/merge"
+// EXTERNAL MODULE: external "element-ui/common/utils/merge"
 var merge_ = __webpack_require__(9);
 var merge_default = /*#__PURE__*/__webpack_require__.n(merge_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/aria-utils"
+// EXTERNAL MODULE: external "element-ui/common/utils/aria-utils"
 var aria_utils_ = __webpack_require__(39);
 var aria_utils_default = /*#__PURE__*/__webpack_require__.n(aria_utils_);
 
-// EXTERNAL MODULE: external "element-ui/lib/utils/scroll-into-view"
+// EXTERNAL MODULE: external "element-ui/common/utils/scroll-into-view"
 var scroll_into_view_ = __webpack_require__(31);
 var scroll_into_view_default = /*#__PURE__*/__webpack_require__.n(scroll_into_view_);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/cascader-panel/src/cascader-panel.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/cascader-panel/src/cascader-panel.vue?vue&type=script&lang=js&
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 //
@@ -1541,14 +1541,14 @@ cascader_panel.install = function (Vue) {
 /***/ 6:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/mixins/locale");
+module.exports = require("element-ui/common/mixins/locale");
 
 /***/ }),
 
 /***/ 9:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/utils/merge");
+module.exports = require("element-ui/common/utils/merge");
 
 /***/ })
 

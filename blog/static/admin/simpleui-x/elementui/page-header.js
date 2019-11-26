@@ -195,7 +195,7 @@ function normalizeComponent (
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/page-header/src/main.vue?vue&type=template&id=5070954c&
+// CONCATENATED MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/page-header/src/main.vue?vue&type=template&id=5070954c&
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -235,10 +235,10 @@ render._withStripped = true
 
 // CONCATENATED MODULE: ./packages/page-header/src/main.vue?vue&type=template&id=5070954c&
 
-// EXTERNAL MODULE: external "element-ui/lib/locale"
+// EXTERNAL MODULE: external "element-ui/common/locale"
 var locale_ = __webpack_require__(20);
 
-// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/lib!./node_modules/_vue-loader@15.7.1@vue-loader/lib??vue-loader-options!./packages/page-header/src/main.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/_babel-loader@7.1.5@babel-loader/common!./node_modules/_vue-loader@15.7.1@vue-loader/common??vue-loader-options!./packages/page-header/src/main.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -270,7 +270,7 @@ var locale_ = __webpack_require__(20);
 });
 // CONCATENATED MODULE: ./packages/page-header/src/main.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_mainvue_type_script_lang_js_ = (mainvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/lib/runtime/componentNormalizer.js
+// EXTERNAL MODULE: ./node_modules/_vue-loader@15.7.1@vue-loader/common/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./packages/page-header/src/main.vue
@@ -311,7 +311,7 @@ main.install = function (Vue) {
 /***/ 20:
 /***/ (function(module, exports) {
 
-module.exports = require("element-ui/lib/locale");
+module.exports = require("element-ui/common/locale");
 
 /***/ })
 
