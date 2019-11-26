@@ -53,7 +53,12 @@ INSTALLED_APPS = [
     'oauth',
     'servermanager',
     'owntracks',
-    'compressor'
+    'compressor',
+
+    'base',
+    'guest',
+    'mocks',
+    'djcelery'
 ]
 
 MIDDLEWARE = [
@@ -321,3 +326,16 @@ SIMPLEUI_STATIC_OFFLINE = True  # 访问静态文件
 # SIMPLEUI_HOME_PAGE = 'http://39.105.136.231'
 # SIMPLEUI_HOME_TITLE = 'EasyTest-后台管理'
 SIMPLEUI_HOME_ICON = 'fa fa-user'
+
+# 定时任务
+import djcelery
+
+djcelery.setup_loader()
+BROKER_URL = 'redis://127.0.0.1:6379/0'
+# broker_pool_limit=None
+# BROKER_POOL_LIMIT=None
+CELERY_IMPORTS = ('base.tasks')
+CELERY_TIMEZONE = 'Asia/Shanghai'
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+# CELERY_ENABLE_UTC = False
+# DJANGO_CELERY_BEAT_TZ_AWARE = False

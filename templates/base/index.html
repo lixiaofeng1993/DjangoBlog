@@ -1,0 +1,413 @@
+{% extends "base/base.html" %}
+{% load static from staticfiles %}
+
+{% block css %}
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .panel-tbody {
+            float: left;
+            margin: 1% 1%;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        .img_qr {
+            width: 15%;
+            margin: 0 40%;
+        }
+
+        .btn-primary {
+            margin-left: 20%;
+        }
+
+        #main {
+            height: 40em;
+            width: 100%;
+            left: 0;
+        }
+
+        .small-qcode {
+            display: none;
+        }
+
+        .sure-btn {
+            color: #3b98c8;
+            float: left;
+            margin-left: 2%;
+        }
+
+        .sure-btn:hover {
+            color: red;
+        }
+
+        .whether {
+            position: absolute;
+            right: 20%;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <p><span>首页数据控制</span>
+                <a href="javascript:void(0)" class="index_data sure-btn"><i
+                        class="fa fa-toggle-off fa-1x">&nbsp;&nbsp;</i></a>
+                <span style="color: #555; font-size: 12px;margin-left: 10%">同时在线人数：</span><span
+                        style="color: red">{{ online_ips }}</span> <span
+                        style="color: #555; font-size: 12px">  ，造作呀！快活呀！</span>
+                <span
+                        style="color: #555; font-size: 12px">【默认服务器宣】</span>
+            </p>
+
+            <div class="panel" style="height: 100%">
+                <div class="panel-body">
+                    <div class="panel-tbody-index">
+                        <br>
+                        <h5>快捷入口</h5>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-product-hunt"></i>&nbsp;项目</p>
+                            <div style="text-align: center"><a href="/base/project/">{{ project_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-envira"></i>&nbsp;环境</p>
+                            <div style="text-align: center"><a href="/base/env/">{{ env_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-pinterest-square"></i>&nbsp;接口</p>
+                            <div style="text-align: center"><a href="/base/interface/">{{ interface_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-suitcase"></i>&nbsp;用例</p>
+                            <div style="text-align: center"><a href="/base/case/">{{ case_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-paper-plane"></i>&nbsp;计划</p>
+                            <div style="text-align: center"><a href="/base/plan/">{{ plan_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-pencil"></i>&nbsp;签名</p>
+                            <div style="text-align: center"><a href="/base/sign/">{{ sign_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-bar-chart"></i>&nbsp;报告</p>
+                            <div style="text-align: center"><a href="/base/report_page/">{{ report_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-tasks"></i>&nbsp;任务</p>
+                            <div style="text-align: center"><a href="/base/timing_task/">{{ task_num }}</a></div>
+                        </div>
+                        <div class="panel-tbody">
+                            <p><i class="fa fa-user-secret"></i>&nbsp;用户</p>
+                            <div style="text-align: center"><a href="/base/user/">{{ user_num }}</a></div>
+                        </div>
+                    </div>
+                    {#                    <div class="whether" onclick="whether()">#}
+                    {#                    </div>#}
+
+                    <iframe class="whether" name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=112"
+                            width="110" height="150" frameborder="0" marginwidth="0" marginheight="0"
+                            allowtransparency="true"
+                            scrolling="no"></iframe>
+                </div>
+                <div class="panel-body">
+                    <h5>用例执行统计</h5><br>
+                    <div id="main"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="qcode">
+                        <h5>二维码</h5>
+                        <br>
+                        <div class="left" style="float: left;margin-left: 5%">
+                            <p class="">url：</p><input type="text" id="qcode" class="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="small-qcode">
+                        <h5>小程序码</h5>
+                        <br>
+                        <div class="left" style="float: left;margin-left: 5%">
+                            <p class="">appid：</p>
+                            <input type="text" id="appid" class="" placeholder="">
+                            <p class="">appsecret：</p>
+                            <input type="text" id="appsecret" class="" placeholder="">
+                            <p class="">url：</p>
+                            <input type="text" id="small-qcode" class="" placeholder="">
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" id="submit" class="sure-btn"><i class="fa fa-gavel"></i>&nbsp;确定
+                        </a>
+                        <a href="javascript:void(0)" class="switch sure-btn"><i class="fa fa-exchange"></i>&nbsp;切换</a>
+                    </div>
+                    <div class="img_qr">
+                    </div>
+                </div>
+                <br>
+                {#                <div class="panel-body">#}
+                {#                    <h5>格式化JSON</h5>#}
+                {#                    <br>#}
+                {#                    <iframe src="https://www.json.cn/" height="750" width="1550" frameborder="0"#}
+                {#                            scrolling="0"></iframe>#}
+                {#                </div>#}
+                <div class="panel-body">
+                    <h5>未完待续，持续开发中...</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {#    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>#}
+    {#    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>#}
+    {#    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>#}
+    {#    <script type="text/javascript"#}
+    {#            src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>#}
+    {#    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>#}
+    {#    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>#}
+    {#    <script type="text/javascript"#}
+    {#            src="http://api.map.baidu.com/api?v=2.0&ak=QI0Gwkg9y0oaZmyMRc58dp5uQXsgloBh"></script>#}
+    {#    <script type="text/javascript"#}
+    {#            src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>#}
+    {#    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>#}
+    <script type="text/javascript" src="/static/echarts/bmap.min.js"></script>
+    <script type="text/javascript" src="/static/echarts/china.js"></script>
+    <script type="text/javascript" src="/static/echarts/dataTool.min.js"></script>
+    <script type="text/javascript" src="/static/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="/static/echarts/world.js"></script>
+    <script>
+        var dom = document.getElementById("main");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        app.title = '折柱混合';
+
+        option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                feature: {
+                    dataView: {show: false, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            legend: {
+                data: ['失败用例', '成功用例', '通过率', '错误用例']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: [],
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '个数',
+                    min: 0,
+                    max: 100,
+                    interval: 10,
+                    axisLabel: {
+                        formatter: '{value} '
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '成功率',
+                    min: 0,
+                    max: 100,
+                    interval: 10,
+                    axisLabel: {
+                        formatter: '% {value}'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '失败用例',
+                    type: 'bar',
+                    data: []
+                },
+                {
+                    name: '通过率',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: []
+                },
+                {
+                    name: '成功用例',
+                    type: 'bar',
+                    data: []
+                },
+                {
+                    name: '错误用例',
+                    type: 'bar',
+                    data: []
+                }
+            ]
+        };
+        if (option && typeof option === "object") {
+            var xAxis_data = get_date_xAxis();
+            option.xAxis[0].data = xAxis_data;
+            option.series[0].data = {{ total.fail }};
+            option.series[1].data = {{ total.percent }};
+            option.series[2].data = {{ total.pass }};
+            option.series[3].data = {{ total.error }};
+
+            var max_fail = Math.max.apply(null, option.series[0].data);
+            var max_pass = Math.max.apply(null, option.series[2].data);
+            var max_error = Math.max.apply(null, option.series[3].data);
+
+            if (Math.max(max_fail, max_error, max_pass) > 100) {
+                option.yAxis[0].max = Math.max(max_fail, max_error, max_pass) + 10;
+                option.yAxis[0].interval = parseInt(Math.max(max_fail, max_error, max_pass) / 10);
+            }
+            myChart.setOption(option, true);
+        }
+
+        function get_date_xAxis() {
+            var data = [];
+            for (var i = 0; i < 12; i++) {
+                data[i] = getDay(i)
+            }
+            return data.reverse();
+        }
+
+        function getDay(day) {
+            var today = new Date();
+            var targetday_milliseconds = today.getTime() + 1000 * 60 * 60 * 24 * day * -1;
+            today.setTime(targetday_milliseconds); //注意，这行是关键代码
+            var tYear = today.getFullYear();
+            var tMonth = today.getMonth();
+            var tDate = today.getDate();
+            tMonth = doHandleMonth(tMonth + 1);
+            tDate = doHandleMonth(tDate);
+            return tYear + "-" + tMonth + "-" + tDate;
+        }
+
+        function doHandleMonth(month) {
+            var m = month;
+            if (month.toString().length === 1) {
+                m = "0" + month;
+            }
+            return m;
+        }
+    </script>
+    <script type="text/javascript">
+        $('.index_data').click(function () {
+            var index = $('.index_data').find('i');
+            var i = index.attr("class");
+            if (i.indexOf('off') == -1) {
+                index.removeClass();
+                index.addClass('fa fa-toggle-off fa-1x');
+                var off = 0;
+            } else {
+                index.removeClass();
+                index.addClass('fa fa-toggle-on fa-1x');
+                var off = 1;
+            }
+            $.ajax({
+                type: 'get',
+                url: "/index_data/",
+                data: {
+                    "off": off
+                },
+                success: function (data) {
+                    $('.panel-tbody-index').empty();
+                    html = '<div class="panel-tbody-index"><br><h5>快捷入口</h5><div class="panel-tbody"><p><i class="fa fa-product-hunt"></i>&nbsp;项目</p><div style="text-align: center"><a href="/base/project/">' + data.project_num + '</a></div></div>' +
+                        '<div class="panel-tbody"><p><i class="fa fa-envira"></i>&nbsp;环境</p><div style="text-align: center"><a href="/base/env/">' + data.env_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-pinterest-square"></i>&nbsp;接口</p>' +
+                        '<div style="text-align: center"><a href="/base/interface/">' + data.interface_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-suitcase"></i>&nbsp;用例</p><div style="text-align: center"><a href="/base/case/">' + data.case_num + '</a></div>' +
+                        '</div><div class="panel-tbody"><p><i class="fa fa-paper-plane"></i>&nbsp;计划</p><div style="text-align: center"><a href="/base/plan/">' + data.plan_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-pencil"></i>&nbsp;签名</p><div style="text-align: center"><a href="/base/sign/">' + data.sign_num + '</a></div></div>' +
+                        '<div class="panel-tbody"><p><i class="fa fa-bar-chart"></i>&nbsp;报告</p><div style="text-align: center"><a href="/base/report_page/">' + data.report_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-tasks"></i>&nbsp;任务</p>' +
+                        '<div style="text-align: center"><a href="/base/timing_task/">' + data.task_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-user-secret"></i>&nbsp;用户</p><div style="text-align: center"><a href="/base/user/">' + data.user_num + '</a></div>' +
+                        '</div></div>' + '</div>';
+                    $('.panel-tbody-index').append(html)
+                }
+            })
+        });
+
+        $('#submit').click(function () {
+            var url = $("#qcode").val();
+            var path = $("#small-qcode").val();
+            var appid = $("#appid").val();
+            var appsecret = $("#appsecret").val();
+            console.log(url);
+            $.ajax({
+                url: '/index/?' + Math.random(),
+                cache: false,
+                type: 'post',
+                data: {'url': url, 'appid': appid, 'appsecret': appsecret, 'path': path},
+                success: function (data) {
+                    if (data == '0') {
+                        alert('用户未登录！');
+                        location.reload()
+                    } else if (data == '1') {
+                        alert('输入框不能为空！')
+                    } else if (data == '2') {
+                        alert('返回token异常！')
+                    } else {
+                        console.log(data);
+                        html = '<img src="/media/' + data + '"><br>' + '<a href="/img_download?log_file=' + data + '" class="btn btn-primary"><i class="fa fa-cloud-download"></i>&nbsp;下载二维码</a>';
+                        $('.img_qr').empty();
+                        $('.img_qr').append(html);
+                    }
+                }
+            })
+        });
+        $('.switch').click(function () {
+            var isShow = $(".qcode").is(":visible");
+            if (isShow) {
+                $('.qcode').hide();
+                $("#qcode").val("");
+                $('.small-qcode').show();
+            } else {
+                $('.qcode').show();
+                $('.small-qcode').hide();
+                $("#small-qcode").val("");
+                $("#appid").val("");
+                $("#appsecret").val("");
+            }
+        });
+        // 回车提交搜索
+        $(document).keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#submit").trigger("click");
+            }
+        });
+
+        {#        window.onload = function whether() {#}
+        {#            $('.whether').empty();#}
+        {#            $.ajax({#}
+        {#                type: 'get',#}
+        {#                url: "/get_whether/",#}
+        {#                success: function (data) {#}
+        {#                    if (data == '0') {#}
+        {#                        alert('请求天气接口发生错误！')#}
+        {#                    } else {#}
+        {#                        html = '<p> 城市：' + data.city + '</p><p> 时间：' + data.now + '</p><p> 天气：' + data.weather + '</p><p> 气温：' + data.temp1 + '/' + data.temp2 + '</p>';#}
+        {#                        $('.whether').append(html);#}
+        {#                    }#}
+        {#                }, error: function () {#}
+        {#                    alert("获取天气信息失败！");#}
+        {#                }#}
+        {#            })#}
+        {#        };#}
+    </script>
+{% endblock %}

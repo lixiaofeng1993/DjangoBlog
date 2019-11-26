@@ -1,0 +1,455 @@
+{% extends "../../base.html" %}
+
+{% block css %}
+    <style>
+        .bgRed {
+            background-color: #b2dba1;
+        }
+
+        #cen {
+            text-align: center;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        tr:hover {
+            background-color: #e7e7e7;
+        }
+
+        #case_name {
+            max-width: 200px;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        #case_name:hover {
+            white-space: normal;
+            overflow: auto;
+        }
+
+        .btn-primary:hover {
+            color: red;
+        }
+
+        .spinner1 {
+            width: 40px;
+            height: 40px;
+            margin: 100px auto;
+            background-color: lightgreen;
+            display: none;
+            border-radius: 100%;
+            -webkit-animation: scaleout 1.0s infinite ease-in-out;
+            animation: scaleout 1.0s infinite ease-in-out;
+        }
+
+        @-webkit-keyframes scaleout {
+            0% {
+                -webkit-transform: scale(0.0)
+            }
+            100% {
+                -webkit-transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes scaleout {
+            0% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            100% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+
+        #interface_res {
+            max-width: 100%;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        #interface_res:hover {
+            white-space: normal;
+            overflow: auto;
+        }
+
+        /* 搜索按钮*/
+        #search {
+            display: inline;
+            margin-left: 10%;
+        }
+
+        #search input {
+            border: 2px solid #20B2AA;
+            border-radius: 20px;
+            background: transparent;
+            top: 0;
+            right: 0;
+        }
+
+        #search-btn {
+            border-color: #1dc5a3;
+            background-color: #1dc5a3;
+            border-radius: 2px;
+            border: none;
+            color: white;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        #search-btn:hover {
+            color: red;
+        }
+
+        xmp, pre, plaintext {
+            white-space:normal;
+        }
+    </style>
+{% endblock %}
+
+{% block crumbs %}
+    <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="/yqjr/index">主页</a>
+                </li>
+                <li class="active">
+                    <a class="this">用例管理</a>
+                </li>
+                <li class="active">
+                    <a class="this-page">用例管理</a>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <a href="/base/case_add/" class="btn btn-primary"><i class="fa fa-plus-circle"></i>&nbsp;添加用例</a>&nbsp;&nbsp;&nbsp;
+                    <a href="/base/case_logs/" class="btn btn-primary"><i class="fa fa-file-text-o"></i>&nbsp;用例运行日志</a>
+                    <div id="search">
+                        <input type="search" id="search-input" name="search" placeholder="用例名称">
+                        <button id="search-btn" class="search-btn" onclick="search()"><i class="fa fa-search"></i>&nbsp;查询
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered" id="table-search">
+                        <thead>
+                        <tr>
+                            <th id="cen">ID</th>
+                            <th id="cen">用例名称</th>
+                            <th id="cen">所属项目</th>
+                            <th id="cen">描述</th>
+                            <th id="cen">更新时间</th>
+                            <th id="cen">更新用户</th>
+                            <th id="cen">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for case in object_list %}
+                            <tr>
+                                <td id="cen">{{ case.case_id }}</td>
+                                <td id="case_name"><a href="/base/case_update?case_id={{ case.case_id }}"
+                                                      class="">{{ case.case_name }}</a></td>
+                                <td id="cen" prj_id="{{ case.project.prj_id }}">{{ case.project }}</td>
+                                <td>{{ case.description }}</td>
+                                <td id="cen">{{ case.update_time }}</td>
+                                <td id="cen">{{ case.update_user }}</td>
+                                <td id="cen">
+                                    <a href="#" class="layui-btn layui-btn-danger layui-btn-xs"
+                                       onclick="debug_button(this);"
+                                       data-toggle="modal" data-target="#runCaseForm"><i class="fa fa-recycle"></i>&nbsp;&nbsp;&nbsp;
+                                    </a>
+                                    <a href="/base/case_copy?case_id={{ case.case_id }}"
+                                       class="layui-btn layui-btn-danger layui-btn-xs"
+                                       onclick="return copy_btn()"><i class="fa fa-files-o"></i>&nbsp;&nbsp;&nbsp;</a>
+                                    <a href="/base/case_delete?case_id={{ case.case_id }}"
+                                       class="layui-btn layui-btn-danger layui-btn-xs"
+                                       onclick="return delete_btn()"><img src="/static/admin/img/icon-deletelink.svg"/>&nbsp;&nbsp;&nbsp;
+                                    </a>
+                                </td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <div class="modal fade" id="runCaseForm" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title">用例运行</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-horizontal" method="post" action="">
+                                        <div class="form-group">
+                                            <input type="hidden" id="debug_case_id" name="case_id">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">用例名称</label>
+                                            <div class="col-sm-8"><span id="case_name_"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">请选择测试环境</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control m-b" id="debug_env_id" name="env_id">
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"> 实际返回结果</label>
+                                            <div class="spinner1"></div>
+                                            <div class="col-sm-8" id="result">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" id="cancel_run" class="btn btn-default"
+                                                    data-dismiss="modal"><i
+                                                    class="fa fa-mail-reply-all"></i>&nbsp;取消
+                                            </button>
+                                            <button type="button" onclick="run_button()" class="btn btn-primary"
+                                                    id="debug"><i
+                                                    class="fa fa-circle-o-notch"></i>&nbsp;调试
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if is_paginated %}
+                    <ul class="pagination">
+                        {% if first %}
+                            <li class="page"><a href="?page=1">1</a></li>
+                        {% endif %}
+                        {% if left %}
+                            {% if left_has_more %}
+                                <li class="page"><a href="javascript:void(0)">...</a></li>
+                            {% endif %}
+                            {% for i in left %}
+                                <li class="page"><a href="?page={{ i }}">{{ i }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                        <li class="page"><a href="javascript:void(0)" class="active"> {{ page_obj.number }}</a></li>
+                        {% if right %}
+                            {% for i in right %}
+                                <li class="page"><a href="?page={{ i }}">{{ i }}</a></li>
+                            {% endfor %}
+                            {% if right_has_more %}
+                                <li class="page"><a href="javascript:void(0)">...</a></li>
+                            {% endif %}
+                        {% endif %}
+                        {% if last %}
+                            <li class="page"><a
+                                    href="?page={{ paginator.num_pages }}">{{ paginator.num_pages }}</a>
+                            </li>
+                        {% endif %}
+
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        //删除
+        function delete_btn() {
+            if (window.confirm("你确定要删除吗？")) {
+                return true;//确定返回真
+            }
+            else {
+                return false;//取消返回假
+            }
+        }
+        //copy
+        function copy_btn() {
+            if (window.confirm("你确定要复制这条用例吗？")) {
+                return true;//确定返回真
+            }
+            else {
+                return false;//取消返回假
+            }
+        }
+        function debug_button(obj) {
+            $('#result').empty();
+            var case_id = obj.parentNode.parentNode.children[0].innerText;
+            var case_name = obj.parentNode.parentNode.children[1].innerText;
+            var prj_id = obj.parentNode.parentNode.children[2].getAttribute("prj_id");
+
+            $("#debug_case_id").val(case_id);
+            $("#cancel_run").html("取消");
+            $("#cancel_run").attr("class", "btn btn-default");
+            $('#case_name_').empty();
+            $.ajax({
+                type: "get",
+                url: "/base/findata/",
+                data: {
+                    "prj_id": prj_id,
+                    "type": "get_env_by_prj_id"
+                },
+                success: function (data) {
+                    var listdata = eval(data);
+                    $("#debug_env_id").empty();
+                    $('#case_name_').append(case_name);
+                    $(listdata).each(function (i, item) {
+                        $("#debug_env_id").append("<option value=" + item.env_id + ">" + item.env_name + "</option>");
+                    })
+                },
+                error: function () {
+                    alert("获取测试环境失败！");
+                }
+            });
+        }
+        // 运行case
+        function run_button() {
+            $('#result').empty();
+            $('.spinner1').show();
+            $.ajax({
+                    type: 'post',
+                    url: "/base/case_run/",
+                    data: {
+                        "case_id": $("#debug_case_id").val(),
+                        "env_id": $("#debug_env_id").val()
+                    },
+                    success: function (res) {
+                        console.log(res);
+                        if (res.hasOwnProperty('error')) {
+                            html = '<p style="font-family: Consolas;font-size:12px;color:red;margin:5% 10%">' + res['error'] + '</p>';
+                            if (res.hasOwnProperty('msg')) {
+                                _html = '<p style="font-family: Consolas;font-size:12px;color:#666;margin:5% 10%"> msg:  ' + res['msg'] + '</p>';
+                                $("#result").append(html + _html);
+                            } else {
+                                $("#result").append(html);
+                            }
+                            $('.spinner1').hide();
+                        }
+                        else {
+                            $('.spinner1').hide();
+                            var data = res['step_list'];
+                            for (i in data) {
+                                html = '<h5>' + (parseInt(i) + 1) + '. ' + data[i].if_name + '</h5><p style="font-family: Consolas;font-size:12px" id="interface_res">' + '请求方式：' + data[i].method + '，请求url：' + data[i].url + '</p><p style="font-family: Consolas;font-size:12px" id="interface_res">' + '请求参数：' + JSON.stringify(data[i].body) + '</p><p style="font-family: Consolas;font-size:12px" id="interface_res">' + '检查点：' + data[i].checkpoint + '</p><p style="font-family: Consolas;font-size:12px" id="interface_res">' + '接口返回信息：<xmp style="font-family: Consolas;font-size:12px" id="interface_res">' + JSON.stringify(data[i].res_content) + '</xmp></p>';
+                                if (data[i].hasOwnProperty('error')) {
+                                    _html = '<p style="font-family: Consolas;font-size:12px;color:red">' + '测试结果：' + data[i].error + '</p>'
+                                } else {
+                                    if (data[i].result.indexOf('error') == -1) {
+                                        if (data[i].result.indexOf('fail') == -1) {
+                                            _html = '<p style="font-family: Consolas;font-size:12px;color:green">' + '测试结果：' + data[i].msg + '</p>'
+                                        } else {
+                                            _html = '<p style="font-family: Consolas;font-size:12px;color:orange">' + '测试结果：' + data[i].msg + '</p>'
+                                        }
+                                    } else {
+                                        _html = '<p style="font-family: Consolas;font-size:12px;color:red">' + '测试结果：' + data[i].msg + '</p>'
+                                    }
+                                }
+
+                                $('#result').append(html + _html)
+                            }
+                            $("#cancel_run").html("完成");
+                            $("#cancel_run").attr("class", "btn btn-primary");
+                        }
+                    },
+                    error: function () {
+                        $('.spinner1').hide();
+                        html = '<p style="font-family: Consolas;font-size:12px;color:red;margin:5% 10%">' + '调用接口失败!!!' + '</p>';
+                        $("#result").append(html);
+                        $("#cancel_run").html("完成");
+                        $("#cancel_run").attr("class", "btn btn-danger");
+                    }
+                }
+            )
+            ;
+        }
+        // 回车提交搜索
+        $(document).keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#debug").trigger("click");
+            }
+        });
+        // 搜索功能
+        function search() {
+            var search = $("#search-input").val();
+            $.ajax({
+                url: "/base/case_search/",
+                type: "post",
+                data: {"search": search},
+                success: function (data) {
+                    console.log('-------------------->', data);
+                    if (data == '1') {
+                        alert('查询结果为空！');
+                        $('#search-input').focus()
+                    }
+                    else if (data == '0') {
+                        location.reload();
+                    }
+                    else if (data == '2') {
+                        alert('用户未登录！');
+                        location.reload()
+                    }
+                    else {
+                        $('#table-search').empty();
+                        var datas = eval(data);
+                        for (i in datas) {
+                            if (datas[i].is_sign == 0) {
+                                is_sign = '不签名'
+                            } else {
+                                is_sign = '签名'
+                            }
+                            if (i == 0) {
+                                html = '<thead> <tr> <th id="cen">ID</th> <th id="cen">用例名称</th> <th id="cen">所属项目</th> <th id="cen">描述</th> <th id="cen">更新时间</th> <th id="cen">更新用户</th> <th id="cen">操作</th> </tr> </thead> ' +
+                                    '<tbody> <tr> <td id="cen">' + datas[i].case_id + '</td> <td id="case_name"><a href="/base/case_update?case_id=' + datas[i].case_id + '" class="">' + datas[i].case_name + '</a></td> <td id="cen" prj_id="' + datas[i].prj_id + '">' + datas[i].project + '</td> <td>' + datas[i].description + '</td> <td id="cen">' + datas[i].update_time + '</td> <td id="cen">' + datas[i].update_user + '</td> <td id="cen"> <a href="#" class="layui-btn layui-btn-danger layui-btn-xs" onclick="debug_button(this);" data-toggle="modal" data-target="#runCaseForm"><i class="fa fa-recycle"></i>&nbsp;&nbsp;&nbsp; </a>' +
+                                    '<a href="/base/case_copy?case_id=' + datas[i].case_id + '" class="layui-btn layui-btn-danger layui-btn-xs" onclick="return copy_btn()"><i class="fa fa-files-o"></i>&nbsp;&nbsp;&nbsp;</a>' +
+                                    ' <a href="/base/case_delete?case_id=' + datas[i].case_id + '" class="layui-btn layui-btn-danger layui-btn-xs" onclick="return delete_btn()"><img src="/static/admin/img/icon-deletelink.svg"/>&nbsp;&nbsp;&nbsp; </a> </td> </tr> </tbody>';
+                            } else {
+                                html = '<thead style="display: none"> <tr> <th id="cen">ID</th> <th id="cen">用例名称</th> <th id="cen">所属项目</th> <th id="cen">描述</th> <th id="cen">更新时间</th> <th id="cen">更新用户</th> <th id="cen">操作</th> </tr> </thead> ' +
+                                    '<tbody> <tr> <td id="cen">' + datas[i].case_id + '</td> <td id="case_name"><a href="/base/case_update?case_id=' + datas[i].case_id + '" class="">' + datas[i].case_name + '</a></td> <td id="cen" prj_id="' + datas[i].prj_id + '">' + datas[i].project + '</td> <td>' + datas[i].description + '</td> <td id="cen">' + datas[i].update_time + '</td> <td id="cen">' + datas[i].update_user + '</td> <td id="cen"> <a href="#" class="layui-btn layui-btn-danger layui-btn-xs" onclick="debug_button(this);" data-toggle="modal" data-target="#runCaseForm"><i class="fa fa-recycle"></i>&nbsp;&nbsp;&nbsp; </a>' +
+                                    '<a href="/base/case_copy?case_id=' + datas[i].case_id + '" class="layui-btn layui-btn-danger layui-btn-xs" onclick="return copy_btn()"><i class="fa fa-files-o"></i>&nbsp;&nbsp;&nbsp;</a>' +
+                                    ' <a href="/base/case_delete?case_id=' + datas[i].case_id + '" class="layui-btn layui-btn-danger layui-btn-xs" onclick="return delete_btn()"><img src="/static/admin/img/icon-deletelink.svg"/>&nbsp;&nbsp;&nbsp; </a> </td> </tr> </tbody>';
+                            }
+                            $('.pagination').empty();
+                            $('#table-search').append(html);
+                        }
+                    }
+                },
+                error: function () {
+                    alert('error')
+                }
+            })
+        }
+
+        // 回车提交搜索
+        $(document).keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#search-btn").trigger("click");
+            }
+        });
+    </script>
+{% endblock %}

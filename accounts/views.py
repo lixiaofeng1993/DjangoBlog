@@ -96,7 +96,6 @@ class LoginView(FormView):
         if redirect_to is None:
             redirect_to = '/'
         kwargs['redirect_to'] = redirect_to
-
         return super(LoginView, self).get_context_data(**kwargs)
 
     def form_valid(self, form):
@@ -107,8 +106,8 @@ class LoginView(FormView):
             if cache and cache is not None:
                 cache.clear()
             logger.info(self.redirect_field_name)
-
             auth.login(self.request, form.get_user())
+            self.request.session["user_id"] = 1
             return super(LoginView, self).form_valid(form)
             # return HttpResponseRedirect('/')
         else:

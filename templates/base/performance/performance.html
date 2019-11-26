@@ -1,0 +1,129 @@
+{% extends "../../base.html" %}
+
+{% block css %}
+    <style>
+        #search-btn {
+            border-color: #1dc5a3;
+            background-color: #1dc5a3;
+            border-radius: 2px;
+            border: none;
+            color: white;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        #search-btn:hover {
+            color: red;
+        }
+    </style>
+{% endblock %}
+
+{% block crumbs %}
+    <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="/yqjr/index">主页</a>
+                </li>
+                <li class="active">
+                    <a class="this">性能测试</a>
+                </li>
+                <li class="active">
+                    <a class="this-page">性能测试</a>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <button id="search-btn" class="start-master" onclick="master()"><i
+                            class="fa fa-try"></i>&nbsp;启动master
+                    </button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button id="search-btn" class="start-slave" onclick="slave()"><i
+                            class="fa fa-try"></i>&nbsp;启动slave
+                    </button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button id="search-btn" class="stop-master" onclick="stop()"><i
+                            class="fa fa-try"></i>&nbsp;停止master
+                    </button>
+                    &nbsp;&nbsp;&nbsp;
+                </div>
+                <iframe src="http://www.easytest.xyz:8089/" height="750" width="1600" frameborder="0"
+                        scrolling="0"></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+
+        function master() {
+            $.ajax({
+                url: "/base/start_locust/",
+                type: "get",
+                data: {
+                    "make": 'master'
+                },
+                success: function (data) {
+                    console.log(data);
+                    if (data == 'ok') {
+                        alert("执行成功！");
+                        window.location.reload();
+                    } else {
+                        alert("出现异常，请联系管理员！");
+                    }
+
+
+                }
+            })
+        }
+        function slave() {
+            $.ajax({
+                url: "/base/start_locust/",
+                type: "get",
+                data: {
+                    "make": 'slave'
+                },
+                success: function (data) {
+                    if (data == 'ok') {
+                        alert("执行成功！");
+                        window.location.reload();
+                    } else {
+                        alert("出现异常，请联系管理员！");
+                    }
+                }
+            })
+
+        }
+        function stop() {
+            $.ajax({
+                url: "/base/start_locust/",
+                type: "get",
+                data: {
+                    "make": 'stop'
+                },
+                success: function (data) {
+                    if (data == 'ok') {
+                        alert("执行成功！");
+                        window.location.reload();
+                    } else {
+                        alert("出现异常，请联系管理员！");
+                    }
+                }
+            })
+
+        }
+    </script>
+{% endblock %}
