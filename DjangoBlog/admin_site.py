@@ -24,6 +24,8 @@ from oauth.admin import *
 from servermanager.admin import *
 from comments.admin import *
 from owntracks.admin import *
+from base.admin import *
+from guest.admin import *
 
 
 class DjangoBlogAdminSite(AdminSite):
@@ -36,15 +38,15 @@ class DjangoBlogAdminSite(AdminSite):
     def has_permission(self, request):
         return request.user.is_superuser
 
-    # def get_urls(self):
-    #     urls = super().get_urls()
-    #     from django.urls import path
-    #     from blog.views import refresh_memcache
-    #
-    #     my_urls = [
-    #         path('refresh/', self.admin_view(refresh_memcache), name="refresh"),
-    #     ]
-    #     return urls + my_urls
+        # def get_urls(self):
+        #     urls = super().get_urls()
+        #     from django.urls import path
+        #     from blog.views import refresh_memcache
+        #
+        #     my_urls = [
+        #         path('refresh/', self.admin_view(refresh_memcache), name="refresh"),
+        #     ]
+        #     return urls + my_urls
 
 
 admin_site = DjangoBlogAdminSite(name='admin')
@@ -71,3 +73,13 @@ admin_site.register(OwnTrackLog, OwnTrackLogsAdmin)
 admin_site.register(Site, SiteAdmin)
 
 admin_site.register(LogEntry, LogEntryAdmin)
+
+admin_site.register(Project, ProjectAdmin)
+admin_site.register(Environment, EnvAdmin)
+admin_site.register(Interface, InterfaceAdmin)
+admin_site.register(Case, CaseAdmin)
+admin_site.register(Plan, PlanAdmin)
+admin_site.register(Report, ReportAdmin)
+admin_site.register(Sign, SignAdmin)
+admin_site.register(Event, EventAdmin)  # 使用EventAdmin类在admin中注册models
+admin_site.register(Guest, GuestAdmin)  # 使用GuestAdmin类在admin中注册models

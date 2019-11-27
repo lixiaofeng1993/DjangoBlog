@@ -8,7 +8,7 @@ cffi==1.13.1
 chardet==3.0.4
 coverage==4.5.4
 cryptography==2.8
-Django==2.2.6
+Django==2.1.7
 django-appconf==1.0.3
 django-autoslug==1.9.6
 django-compressor==2.3
@@ -59,3 +59,7 @@ simpleui==3.2
 faker
 httprunner==2.2.5
 flask
+django-celery==3.3.1
+django-redis=4.0.0
+celery-with-redis==3.0
+qrcode==6.1

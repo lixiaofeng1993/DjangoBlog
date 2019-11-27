@@ -27,7 +27,7 @@ DEBUG = True
 TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['*', '127.0.0.1', 'example.com']
+ALLOWED_HOSTS = ['*', '127.0.0.1', '39.105.136.231', 'example.com']
 # Application definition
 
 
@@ -37,7 +37,8 @@ SITE_ROOT = os.path.abspath(os.path.join(SITE_ROOT, '../'))
 INSTALLED_APPS = [
     # 'django.contrib.admin',
     'simpleui',
-    'django.contrib.admin.apps.SimpleAdminConfig',
+    # 'django.contrib.admin.apps.SimpleAdminConfig',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -58,7 +59,8 @@ INSTALLED_APPS = [
     'base',
     'guest',
     'mocks',
-    'djcelery'
+    'djcelery',
+    'bootstrap3'
 ]
 
 MIDDLEWARE = [
@@ -68,7 +70,7 @@ MIDDLEWARE = [
     # 'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.cache.FetchFromCacheMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -319,7 +321,7 @@ COMPRESS_JS_FILTERS = [
 ]
 
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
-if not  os.path.exists(MEDIA_ROOT):
+if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
 MEDIA_URL = '/media/'
 

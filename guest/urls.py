@@ -14,7 +14,6 @@ app_name = "guest"
 urlpatterns = [
     # web
     url(r'^event_manage/$', view=views.event_manage, name='event_manage'),  # 发布会管理
-    url(r'^accounts/login/$', view=views.index),  # 验证用户是否登录，未登录跳转到登录页
     url(r'^search_name/$', view=views.search_name, name='search_name'),  # 发布会搜索
     url(r'^guest_manage/$', view=views.guest_manage, name='guest_manage'),  # 嘉宾管理
     url(r'^search_guest/$', view=views.search_guest, name='search_guest'),  # 嘉宾搜索

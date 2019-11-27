@@ -72,7 +72,8 @@
                         <h5>快捷入口</h5>
                         <div class="panel-tbody">
                             <p><i class="fa fa-product-hunt"></i>&nbsp;项目</p>
-                            <div style="text-align: center"><a href="{% url 'base:project' %}">{{ project_num }}</a></div>
+                            <div style="text-align: center"><a href="{% url 'base:project' %}">{{ project_num }}</a>
+                            </div>
                         </div>
                         <div class="panel-tbody">
                             <p><i class="fa fa-envira"></i>&nbsp;环境</p>
@@ -80,7 +81,8 @@
                         </div>
                         <div class="panel-tbody">
                             <p><i class="fa fa-pinterest-square"></i>&nbsp;接口</p>
-                            <div style="text-align: center"><a href="{% url 'base:interface' %}">{{ interface_num }}</a></div>
+                            <div style="text-align: center"><a href="{% url 'base:interface' %}">{{ interface_num }}</a>
+                            </div>
                         </div>
                         <div class="panel-tbody">
                             <p><i class="fa fa-suitcase"></i>&nbsp;用例</p>
@@ -96,11 +98,13 @@
                         </div>
                         <div class="panel-tbody">
                             <p><i class="fa fa-bar-chart"></i>&nbsp;报告</p>
-                            <div style="text-align: center"><a href="{% url 'base:report_page' %}">{{ report_num }}</a></div>
+                            <div style="text-align: center"><a href="{% url 'base:report_page' %}">{{ report_num }}</a>
+                            </div>
                         </div>
                         <div class="panel-tbody">
                             <p><i class="fa fa-tasks"></i>&nbsp;任务</p>
-                            <div style="text-align: center"><a href="{% url 'base:timing_task' %}">{{ task_num }}</a></div>
+                            <div style="text-align: center"><a href="{% url 'base:timing_task' %}">{{ task_num }}</a>
+                            </div>
                         </div>
                     </div>
                     {#                    <div class="whether" onclick="whether()">#}
@@ -303,7 +307,7 @@
             }
             $.ajax({
                 type: 'get',
-                url: "/index_data/",
+                url: "/base/index_data/",
                 data: {
                     "off": off
                 },
@@ -314,8 +318,7 @@
                         '<div style="text-align: center"><a href="/base/interface/">' + data.interface_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-suitcase"></i>&nbsp;用例</p><div style="text-align: center"><a href="/base/case/">' + data.case_num + '</a></div>' +
                         '</div><div class="panel-tbody"><p><i class="fa fa-paper-plane"></i>&nbsp;计划</p><div style="text-align: center"><a href="/base/plan/">' + data.plan_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-pencil"></i>&nbsp;签名</p><div style="text-align: center"><a href="/base/sign/">' + data.sign_num + '</a></div></div>' +
                         '<div class="panel-tbody"><p><i class="fa fa-bar-chart"></i>&nbsp;报告</p><div style="text-align: center"><a href="/base/report_page/">' + data.report_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-tasks"></i>&nbsp;任务</p>' +
-                        '<div style="text-align: center"><a href="/base/timing_task/">' + data.task_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-user-secret"></i>&nbsp;用户</p><div style="text-align: center"><a href="/base/user/">' + data.user_num + '</a></div>' +
-                        '</div></div>' + '</div>';
+                        '<div style="text-align: center"><a href="/base/timing_task/">' + data.task_num + '</a></div></div>' + '</div></div>' + '</div>';
                     $('.panel-tbody-index').append(html)
                 }
             })
@@ -328,10 +331,16 @@
             var appsecret = $("#appsecret").val();
             console.log(url);
             $.ajax({
-                url: '/index/?' + Math.random(),
+                url: '/base/index/?' + Math.random(),
                 cache: false,
                 type: 'post',
-                data: {'url': url, 'appid': appid, 'appsecret': appsecret, 'path': path},
+                data: {
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    'url': url,
+                    'appid': appid,
+                    'appsecret': appsecret,
+                    'path': path
+                },
                 success: function (data) {
                     if (data == '0') {
                         alert('用户未登录！');
@@ -342,7 +351,7 @@
                         alert('返回token异常！')
                     } else {
                         console.log(data);
-                        html = '<img src="/media/' + data + '"><br>' + '<a href="/img_download?log_file=' + data + '" class="btn btn-primary"><i class="fa fa-cloud-download"></i>&nbsp;下载二维码</a>';
+                        html = '<img src="/media/' + data + '"><br>' + '<a href="/base/img_download?log_file=' + data + '" class="btn btn-primary"><i class="fa fa-cloud-download"></i>&nbsp;下载二维码</a>';
                         $('.img_qr').empty();
                         $('.img_qr').append(html);
                     }

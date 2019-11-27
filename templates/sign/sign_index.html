@@ -6,6 +6,9 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{% static 'blog/img/favicon.png' %}">
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <!-- 加载bootstrap3的应用、CSS。JavaScript文件-->
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
     <title>签到</title>
 </head>
 <body role="document">

@@ -13,7 +13,3 @@ class GuestAdmin(admin.ModelAdmin):
     list_display = ['realname', 'phone', 'email', 'sign', 'create_time', 'event']
     search_fields = ['realname', 'phone']  # 搜索栏
     list_filter = ['sign']  # 过滤器
-
-
-admin.site.register(Event, EventAdmin)  # 使用EventAdmin类在admin中注册models
-admin.site.register(Guest, GuestAdmin)  # 使用GuestAdmin类在admin中注册models

@@ -7022,6 +7022,9 @@
             background-color: gold;
         }
 
+        body {
+            background-image: url('http://www.easytest.xyz/static/admin/simpleui-x/img/bg.svg');
+        }
     </style>
 </head>
 <body class="gray-bg">
@@ -7319,7 +7322,7 @@
         $.ajax({
             type: "post",
             url: "/base/report_search/",
-            data: {csrfmiddlewaretoken: '{{ csrf_token }}',"result": result.text(), "report_id": report_id},
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}', "result": result.text(), "report_id": report_id},
             success: function (data) {
                 {#                console.log(data);#}
                 {#                console.log(typeof data);#}

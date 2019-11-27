@@ -10,7 +10,7 @@ import os, time, json, logging, threading
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .tasks import delete_logs, run_plan, stop_locust
+from .tasks import delete_logs, stop_locust
 from django.http import StreamingHttpResponse
 from base.models import Project, Sign, Environment, Interface, Case, Plan, Report, LocustReport
 from accounts.models import BlogUser as User
@@ -1386,14 +1386,15 @@ def plan_run(request):
                 report = Report(plan=plan, report_name=report_name, content=content, case_num=case_num,
                                 pass_num=pass_num, fail_num=fail_num, error_num=error_num, pic_name=pic_name,
                                 totalTime=totalTime, startTime=start_time, update_user=username, make=1,
-                                report_path=report_path)
+                                report_path=report_path, update_time=timezone.now())
             elif run_mode == '0':
                 report = Report(plan=plan, report_name=report_name, content=content, case_num=case_num,
                                 pass_num=pass_num, fail_num=fail_num, error_num=error_num, pic_name=pic_name,
-                                totalTime=totalTime, startTime=start_time, update_user=username, make=0, report_path='')
+                                totalTime=totalTime, startTime=start_time, update_user=username, make=0, report_path='',
+                                update_time=timezone.now())
             report.save()
             Plan.objects.filter(plan_id=plan_id).update(update_user=username, update_time=timezone.now())
-            return HttpResponse(" 执行成功！")
+            return HttpResponse(plan.plan_name + " 执行成功！")
 
 
 def timing_task(request):
@@ -2059,7 +2060,8 @@ def index(request):
         online_ips = cache.get("online_ips", [])
         if online_ips:
             online_ips = list(cache.get_many(online_ips).keys())
-        cache.set(ip, 0, 5 * 60)
+        cache.set(ip, 0, 60 * 60)
+
         if ip not in online_ips:
             online_ips.append(ip)
         cache.set("online_ips", online_ips)

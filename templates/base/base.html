@@ -20,7 +20,11 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
-
+    <style type="text/css">
+        body {
+            background-image: url('http://www.easytest.xyz/static/admin/simpleui-x/img/bg.svg');
+        }
+    </style>
     {% block css %}{% endblock %}
 
 </head>
@@ -32,7 +36,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="brand">
             <a href="{% url 'base:index' %}"><img src="{% static 'blog/img/logo.png' %}" alt="Klorofil Logo"
-                                   class="img-responsive logo"></a>
+                                                  class="img-responsive logo"></a>
         </div>
         <div class="container-fluid">
             <div class="navbar-btn">
@@ -41,10 +45,14 @@
             <div id="navbar-menu1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><img src="{% static 'blog/img/userImg.jpeg' %}"
-                                                                                        class="img-circle" alt="Avatar">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><img
+                                src="{% static 'blog/img/userImg.jpeg' %}"
+                                class="img-circle" alt="Avatar">
                             <span>{{ user }}</span> <i class="icon-submenu fa fa-caret-down"></i></a>
                         <ul class="dropdown-menu">
+                            <li><a href="/" target="_blank"><i
+                                    class="fa fa-rouble"></i> <span>前往首页</span></a>
+                            </li>
                             <li><a href="javascript:void(0)" onclick="changePassword()"><i
                                     class="fa fa-minus-square"></i> <span>修改密码</span></a>
                             </li>
@@ -56,21 +64,18 @@
                             <li><a href="{% url 'mocks:mock_api' %}"><i
                                     class="fa fa-pinterest-square"></i> <span>Mocks服务</span></a>
                             </li>
-                            <li><a href="http://www.easytest.xyz:8080" target="_blank"><i
-                                    class="fa fa-rocket"></i> <span>jenkins部署</span></a>
-                            </li>
-                            <li><a href="http://www.easytest.xyz:8888/3ee201dc" target="_blank"><i
-                                    class="fa fa-compass"></i> <span>宝塔监控</span></a>
-                            </li>
-                            <li><a href="https://github.com/lixiaofeng1993/EasyTest" target="_blank"><i
-                                    class="fa fa-github"></i> <span>Github地址</span></a>
-                            </li>
-                            <li><a href="https://www.cnblogs.com/changqing8023" target="_blank"><i
-                                    class="fa fa-rouble"></i> <span>博客园地址</span></a>
-                            </li>
-                            <li><a href="/" target="_blank"><i
-                                    class="fa fa-rouble"></i> <span>blog首页</span></a>
-                            </li>
+                            {#                            <li><a href="http://www.easytest.xyz:8080" target="_blank"><i#}
+                            {#                                    class="fa fa-rocket"></i> <span>jenkins部署</span></a>#}
+                            {#                            </li>#}
+                            {#                            <li><a href="http://www.easytest.xyz:8888/3ee201dc" target="_blank"><i#}
+                            {#                                    class="fa fa-compass"></i> <span>宝塔监控</span></a>#}
+                            {#                            </li>#}
+                            {#                            <li><a href="https://github.com/lixiaofeng1993/EasyTest" target="_blank"><i#}
+                            {#                                    class="fa fa-github"></i> <span>Github地址</span></a>#}
+                            {#                            </li>#}
+                            {#                            <li><a href="https://www.cnblogs.com/changqing8023" target="_blank"><i#}
+                            {#                                    class="fa fa-rouble"></i> <span>博客园地址</span></a>#}
+                            {#                            </li>#}
                         </ul>
                     </li>
                 </ul>
@@ -238,15 +243,16 @@
         var new_password = prompt('新密码');
         $.ajax({
             type: "post",
-            url: "/change_password/",
+            url: "/base/change_password/",
             data: {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
                 "new_password": new_password
             },
             success: function (data) {
                 if (new_password) {
                     if (data['msg'] == 'success') {
                         alert('修改密码成功！');
-                        window.location.replace("/login_action/");
+                        window.location.replace("/login/");
                     } else {
                         alert(data['msg'])
                     }

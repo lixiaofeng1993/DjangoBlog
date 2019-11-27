@@ -19,6 +19,7 @@ from django.views.decorators.debug import sensitive_post_parameters
 from django.utils.http import is_safe_url
 from DjangoBlog.utils import send_email, get_md5, get_current_site
 from django.conf import settings
+from .models import BlogUser
 
 logger = logging.getLogger("log")
 
@@ -100,14 +101,14 @@ class LoginView(FormView):
 
     def form_valid(self, form):
         form = AuthenticationForm(data=self.request.POST, request=self.request)
-
         if form.is_valid():
             from DjangoBlog.utils import cache
             if cache and cache is not None:
                 cache.clear()
             logger.info(self.redirect_field_name)
             auth.login(self.request, form.get_user())
-            self.request.session["user_id"] = 1
+            user = BlogUser.objects.get(email=form.get_user())
+            self.request.session["user_id"] = user.id
             return super(LoginView, self).form_valid(form)
             # return HttpResponseRedirect('/')
         else:

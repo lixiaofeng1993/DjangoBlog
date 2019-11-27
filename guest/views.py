@@ -10,10 +10,6 @@ import logging
 log = logging.getLogger('log')  # 初始化log
 
 
-def index(request):
-    return render(request, 'sign/login.html')
-
-
 # 发布会管理
 @login_required
 def event_manage(request):
@@ -36,7 +32,7 @@ def search_name(request):
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
         request.session['login_from'] = '/base/project/'
-        return render(request, 'user/login_action.html')
+        return render(request, 'account/login.html')
     else:
         username = request.session.get('user', '')
         search_name = request.GET.get('name', '')
@@ -53,7 +49,7 @@ def guest_manage(request):
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
         request.session['login_from'] = '/base/project/'
-        return render(request, 'user/login_action.html')
+        return render(request, 'account/login.html')
     else:
         username = request.session.get('user', '')
         guest_list = Guest.objects.all()
@@ -68,7 +64,7 @@ def search_guest(request):
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
         request.session['login_from'] = '/base/project/'
-        return render(request, 'user/login_action.html')
+        return render(request, 'account/login.html')
     else:
         username = request.session.get('user', '')
         search_guest = request.GET.get('name', '')
@@ -91,7 +87,7 @@ def sign_index(request, eid):
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
         request.session['login_from'] = '/base/project/'
-        return render(request, 'user/login_action.html')
+        return render(request, 'account/login.html')
     else:
         event = get_object_or_404(Event, id=eid)  # 如果查询不存在，返回404异常
         return render(request, 'sign/sign_index.html', {'event': event})
@@ -103,7 +99,7 @@ def sign_index_action(request, eid):
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
         request.session['login_from'] = '/base/project/'
-        return render(request, 'user/login_action.html')
+        return render(request, 'account/login.html')
     else:
         event = get_object_or_404(Event, id=eid)
         phone = request.POST.get('phone', '')
@@ -126,7 +122,7 @@ def delete_all(request):
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
         request.session['login_from'] = '/base/project/'
-        return render(request, 'user/login_action.html')
+        return render(request, 'account/login.html')
     else:
         Event.objects.all().delete()
         Guest.objects.all().delete()

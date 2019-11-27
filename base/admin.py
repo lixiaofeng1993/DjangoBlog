@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Sign, Project, Environment, Interface, Case, Plan, Report
 
+
 class LocustAdmin(admin.ModelAdmin):
     list_display = ["id", "current_response_time_percentile_50", "current_response_time_percentile_95", "fail_ratio",
                     "total_rps", "user_count", "errors", "slaves", "stats", "update_time", "update_user"]
@@ -51,12 +52,3 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ["prj_id", "prj_name", "sign", "description", "user", "update_time"]
     list_filter = ["update_time"]
     search_fields = ["prj_name", "user"]
-
-
-admin.site.register(Project, ProjectAdmin)
-admin.site.register(Environment, EnvAdmin)
-admin.site.register(Interface, InterfaceAdmin)
-admin.site.register(Case, CaseAdmin)
-admin.site.register(Plan, PlanAdmin)
-admin.site.register(Report, ReportAdmin)
-admin.site.register(Sign, SignAdmin)

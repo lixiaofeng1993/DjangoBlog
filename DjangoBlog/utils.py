@@ -25,7 +25,7 @@ import requests
 import uuid
 import os
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 def get_max_articleid_commentid():

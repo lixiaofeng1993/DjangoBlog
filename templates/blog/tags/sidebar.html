@@ -28,7 +28,7 @@
                     <li>
                         <a href="{{ a.get_absolute_url }}" title="{{ a.title }}">
                             {{ a.title }}
-                        </a> - {{ a.views }} reading
+                        </a> - {{ a.views }} 人看过
                     </li>
                 {% endfor %}
             </ul>
@@ -117,6 +117,14 @@
     <aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">功能</h3>
         <ul>
             <li><a href="/admin/" rel="nofollow">站点管理</a></li>
+            {#            <li><a href="http://gitbook.lylinux.net" target="_blank" rel="nofollow">GitBook</a></li>#}
+            <li><a href="{% url 'base:index' %}" rel="nofollow" target="_blank"
+                   style="color: red;font-weight: 700">测试平台</a></li>
+            <li><a href="http://www.easytest.xyz:8080" rel="nofollow" target="_blank">jenkins</a></li>
+            <li><a href="https://github.com/lixiaofeng1993?tab=repositories" rel="nofollow" target="_blank">GitHub</a>
+            </li>
+            <li><a href="http://www.easytest.xyz:8888/3ee201dc" rel="nofollow" target="_blank">宝塔监控</a></li>
+            <li><a href="https://www.cnblogs.com/changqing8023" rel="nofollow" target="_blank">博客园</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url "account:logout" %}" rel="nofollow">退出</a>
                 </li>
@@ -128,8 +136,6 @@
                 <li><a href="{% url "blog:refresh" %}" target="_blank">刷新缓存</a></li>
                 {#                <li><a href="{% url 'owntracks:show_dates' %}" target="_blank">运动轨迹记录</a></li>#}
             {% endif %}
-            {#            <li><a href="http://gitbook.lylinux.net" target="_blank" rel="nofollow">GitBook</a></li>#}
-            <li><a href="{% url 'base:index' %}" rel="nofollow">EasyTest测试平台</a></li>
         </ul>
     </aside>
     <div id="rocket" class="show" title="点我返回顶部"></div>
