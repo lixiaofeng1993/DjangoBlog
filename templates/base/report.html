@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load static %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -12,10 +12,10 @@
     <link href="{% static 'animate.css/animate.min.css' %}" rel="stylesheet">
     {#    <link href="https://cdn.bootcss.com/chosen/1.8.2/chosen.css" rel="stylesheet">#}
     <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/img/E_fa.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'blog/img/favicon.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.5/chosen.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/img/E_fa.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <base target="_blank">
     <style type="text/css">
         h1, h2, h3, h4, h5, h6 {
@@ -7319,7 +7319,7 @@
         $.ajax({
             type: "post",
             url: "/base/report_search/",
-            data: {"result": result.text(), "report_id": report_id},
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}',"result": result.text(), "report_id": report_id},
             success: function (data) {
                 {#                console.log(data);#}
                 {#                console.log(typeof data);#}

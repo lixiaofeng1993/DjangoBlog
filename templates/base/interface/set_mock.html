@@ -1,4 +1,4 @@
-{% extends "../../base.html" %}
+{% extends "base/base.html" %}
 
 {% block css %}
     <style>
@@ -27,13 +27,13 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li>
-                    <a href="/yqjr/index">主页</a>
+                    <a href="{% url 'base:index' %}">主页</a>
                 </li>
                 <li class="active">
                     <a class="this">基础信息</a>
                 </li>
                 <li class="active">
-                    <a class="this-page" href="/base/interface/">接口管理</a>
+                    <a class="this-page" href="{% url 'base:interface' %}">接口管理</a>
                 </li>
                 <li class="active">
                     <a class="">设置接口mock</a>
@@ -168,7 +168,7 @@
             $.ajax({
                 url: "/base/set_mock/",
                 type: "post",
-                data: {"content": content_json, "if_id": if_id},
+                data: {csrfmiddlewaretoken: '{{ csrf_token }}', "content": content_json, "if_id": if_id},
                 success: function () {
                     alert('保存成功！');
                     window.location.replace("/base/interface/");

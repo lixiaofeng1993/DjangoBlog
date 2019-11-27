@@ -76,7 +76,7 @@
                         </div>
                         <div class="panel-tbody">
                             <p><i class="fa fa-envira"></i>&nbsp;环境</p>
-                            <div style="text-align: center"><a href="{% url 'base:env' %}">{{ env_num }}</a></div>
+                            <div style="text-align: center"><a href="{% url 'base:env_temp' %}">{{ env_num }}</a></div>
                         </div>
                         <div class="panel-tbody">
                             <p><i class="fa fa-pinterest-square"></i>&nbsp;接口</p>
@@ -310,7 +310,7 @@
                 success: function (data) {
                     $('.panel-tbody-index').empty();
                     html = '<div class="panel-tbody-index"><br><h5>快捷入口</h5><div class="panel-tbody"><p><i class="fa fa-product-hunt"></i>&nbsp;项目</p><div style="text-align: center"><a href="/base/project/">' + data.project_num + '</a></div></div>' +
-                        '<div class="panel-tbody"><p><i class="fa fa-envira"></i>&nbsp;环境</p><div style="text-align: center"><a href="/base/env/">' + data.env_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-pinterest-square"></i>&nbsp;接口</p>' +
+                        '<div class="panel-tbody"><p><i class="fa fa-envira"></i>&nbsp;环境</p><div style="text-align: center"><a href="/base/env_temp/">' + data.env_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-pinterest-square"></i>&nbsp;接口</p>' +
                         '<div style="text-align: center"><a href="/base/interface/">' + data.interface_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-suitcase"></i>&nbsp;用例</p><div style="text-align: center"><a href="/base/case/">' + data.case_num + '</a></div>' +
                         '</div><div class="panel-tbody"><p><i class="fa fa-paper-plane"></i>&nbsp;计划</p><div style="text-align: center"><a href="/base/plan/">' + data.plan_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-pencil"></i>&nbsp;签名</p><div style="text-align: center"><a href="/base/sign/">' + data.sign_num + '</a></div></div>' +
                         '<div class="panel-tbody"><p><i class="fa fa-bar-chart"></i>&nbsp;报告</p><div style="text-align: center"><a href="/base/report_page/">' + data.report_num + '</a></div></div><div class="panel-tbody"><p><i class="fa fa-tasks"></i>&nbsp;任务</p>' +

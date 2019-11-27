@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'sign_update/', view=views.sign_update, name='sign_update'),
     url(r'sign_delete/', view=views.sign_delete, name='sign_delete'),
     # 测试环境
-    url(r'env/', view=views.EnvIndex.as_view(), name='env'),
+    url(r'env_temp/', view=views.EnvIndex.as_view(), name='env_temp'),
     url(r'env_add/', view=views.env_add, name='env_add'),
     url(r'env_update/', view=views.env_update, name='env_update'),
     url(r'env_delete/', view=views.env_delete, name='env_delete'),

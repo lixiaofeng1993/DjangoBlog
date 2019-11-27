@@ -1,4 +1,4 @@
-{% extends "../../base.html" %}
+{% extends "base/base.html" %}
 
 {% block css %}
     <style>
@@ -65,13 +65,13 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li>
-                    <a href="/yqjr/index">主页</a>
+                    <a href="{% url 'base:index' %}">主页</a>
                 </li>
                 <li class="active">
                     <a class="this">基础信息</a>
                 </li>
                 <li class="active">
-                    <a class="this-page" href="/base/case/">用例管理</a>
+                    <a class="this-page" href="{% url 'base:case' %}">用例管理</a>
                 </li>
                 <li class="active">
                     <a class="">用例编辑</a>
@@ -369,16 +369,6 @@
                                             var header = header_table + "</tbody></table>";
                                         } else {
                                             for (var he in eval(header_json)) {
-                                                {#                                                if (header_json[he].search('$') != -1) {#}
-                                                {#                                                    var key = header_json[he].split(',')[0];#}
-                                                {#                                                    var value = ''#}
-                                                {#                                                } else {#}
-                                                {#                                                    var key = header_json[he].split(',')[0];#}
-                                                {#                                                    var value = header_json[he].split(',')[1];#}
-                                                {#                                                }#}
-                                                {#                                                if (typeof(value) == 'undefined') {#}
-                                                {#                                                    value = ' '#}
-                                                {#                                                }#}
                                                 var tr_he = "<tr><td>#</td><td name='var_name' contenteditable='true'>" + he + "</td><td contenteditable='true' name='var_value'>" + header_json[he] + "</td><td><button class='btn btn-xs btn-outline btn-danger' type='button' onclick='del_step(this);'>&nbsp;<i class='fa fa-close'></i>&nbsp;删除行 </button> </td></tr>";
                                                 header_table = header_table + tr_he;
                                                 var header = header_table + "</tbody></table>";
@@ -658,6 +648,7 @@
                     url: "/base/case_update/",
                     type: "post",
                     data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
                         "case_id": case_id,
                         "case_name": case_name,
                         "prj_id": prj_id,

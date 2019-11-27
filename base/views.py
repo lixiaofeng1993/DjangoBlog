@@ -5,6 +5,7 @@ from common.execute import get_total_values
 from common.except_check import change_info_logic
 from django.core.cache import cache
 
+from django.utils import timezone
 import os, time, json, logging, threading
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -24,7 +25,8 @@ from django.shortcuts import render_to_response
 # from base.page_cache import page_cache  # redis缓存
 from common.public import DrawPie, paginator, pagination_data
 from common.error_code import ErrorCode
-from common.except_check import project_info_logic, sign_info_logic, env_info_logic, interface_info_logic, format_params, \
+from common.except_check import project_info_logic, sign_info_logic, env_info_logic, interface_info_logic, \
+    format_params, \
     case_info_logic, plan_info_logic, header_value_error  # 自定义异常逻辑
 from django.views.generic import ListView
 
@@ -132,7 +134,7 @@ def project_update(request):
                 sign = Sign.objects.get(sign_id=sign_id)
                 user = User.objects.get(id=user_id)
                 Project.objects.filter(prj_id=prj_id).update(prj_name=prj_name, description=description, sign=sign,
-                                                             user=user, update_time=datetime.now())
+                                                             user=user, update_time=timezone.now())
                 log.info('edit project   {}  success. project info: {} // {} '.format(prj_name, description, sign))
                 return HttpResponseRedirect("/base/project/")
         elif request.method == 'GET':
@@ -241,7 +243,7 @@ def sign_update(request):
                 description = request.POST['description']
                 username = request.session.get('user', '')
                 Sign.objects.filter(sign_id=sign_id).update(sign_name=sign_name, description=description,
-                                                            update_time=datetime.now(), update_user=username)
+                                                            update_time=timezone.now(), update_user=username)
                 log.info('edit sign   {}  success.  sign info： {} '.format(sign_name, description))
                 return HttpResponseRedirect("/base/sign/")
         elif request.method == 'GET':
@@ -274,7 +276,7 @@ def sign_delete(request):
 @method_decorator(login_required, name='dispatch')
 class EnvIndex(ListView):
     model = Environment
-    template_name = 'base/env/index.html'
+    template_name = 'base/env_temp/index.html'
     context_object_name = 'object_list'
     paginate_by = 10
 
@@ -304,7 +306,7 @@ def set_headers(request):
     """
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
-        request.session['login_from'] = '/base/env/'
+        request.session['login_from'] = '/base/env_temp/'
         return HttpResponseRedirect('/login/')
     else:
         if request.method == 'GET':
@@ -320,8 +322,8 @@ def set_headers(request):
                 else:
                     return JsonResponse('0', safe=False)
             else:
-                info = {'env_id': env_id, 'env_name': env_name, 'env': set_header}
-                return render(request, "base/env/set_headers.html", info)
+                info = {'env_id': env_id, 'env_name': env_name, 'env_temp': set_header}
+                return render(request, "base/env_temp/set_headers.html", info)
         elif request.method == 'POST':
             content = request.POST.get('content', '')
 
@@ -331,12 +333,12 @@ def set_headers(request):
                 return HttpResponse(msg)
             else:
                 env_id = request.POST.get('env_id', '')
-                now_time = datetime.now()
+                now_time = timezone.now()
                 username = request.session.get('user', '')
                 Environment.objects.filter(env_id=env_id).update(set_headers=content, update_time=now_time,
                                                                  update_user=username)
-                log.info('env {} set headers success. headers info: {} '.format(env_id, content))
-                return HttpResponseRedirect("/base/env/")
+                log.info('env_temp {} set headers success. headers info: {} '.format(env_id, content))
+                return HttpResponseRedirect("/base/env_temp/")
 
 
 def set_mock(request):
@@ -347,7 +349,7 @@ def set_mock(request):
     """
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
-        request.session['login_from'] = '/base/env/'
+        request.session['login_from'] = '/base/env_temp/'
         return HttpResponseRedirect('/login/')
     else:
         if request.method == 'GET':
@@ -363,12 +365,12 @@ def set_mock(request):
                 else:
                     return JsonResponse('0', safe=False)
             else:
-                info = {'if_id': if_id, 'if_name': if_name, 'env': set_mock}
+                info = {'if_id': if_id, 'if_name': if_name, 'env_temp': set_mock}
                 return render(request, "base/interface/set_mock.html", info)
         elif request.method == 'POST':
             content = request.POST.get('content', '')
             if_id = request.POST.get('if_id', '')
-            now_time = datetime.now()
+            now_time = timezone.now()
             username = request.session.get('user', '')
             Interface.objects.filter(if_id=if_id).update(set_mock=content, update_time=now_time, update_user=username)
             log.info('interface {} set mock success. mock info: {} '.format(if_id, content))
@@ -383,7 +385,7 @@ def env_add(request):
     """
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
-        request.session['login_from'] = '/base/env/'
+        request.session['login_from'] = '/base/env_temp/'
         return HttpResponseRedirect('/login/')
     else:
         if request.method == 'POST':
@@ -393,9 +395,9 @@ def env_add(request):
 
             msg = env_info_logic(env_name, url)
             if msg != 'ok':
-                log.error('env add error：{}'.format(msg))
+                log.error('env_temp add error：{}'.format(msg))
                 info = {'error': msg, "prj_list": prj_list}
-                return render(request, 'base/env/add.html', info)
+                return render(request, 'base/env_temp/add.html', info)
             else:
                 prj_id = request.POST['prj_id']
                 project = Project.objects.get(prj_id=prj_id)
@@ -408,13 +410,13 @@ def env_add(request):
                 env = Environment(env_name=env_name, url=url, project=project, private_key=private_key,
                                   description=description, is_swagger=is_swagger, update_user=username)
                 env.save()
-                log.info('add env   {}  success.  env info： {} // {} // {} // {} // {} '
+                log.info('add env_temp   {}  success.  env_temp info： {} // {} // {} // {} // {} '
                          .format(env_name, project, url, private_key, description, is_swagger))
-                return HttpResponseRedirect("/base/env/")
+                return HttpResponseRedirect("/base/env_temp/")
         elif request.method == 'GET':
             prj_list = is_superuser(user_id)
             info = {"prj_list": prj_list}
-            return render(request, "base/env/add.html", info)
+            return render(request, "base/env_temp/add.html", info)
 
 
 def env_update(request):
@@ -425,7 +427,7 @@ def env_update(request):
     """
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
-        request.session['login_from'] = '/base/env/'
+        request.session['login_from'] = '/base/env_temp/'
         return HttpResponseRedirect('/login/')
     else:
         if request.method == 'POST':
@@ -436,10 +438,10 @@ def env_update(request):
 
             msg = env_info_logic(env_name, url, env_id)
             if msg != 'ok':
-                log.error('env update error：{}'.format(msg))
+                log.error('env_temp update error：{}'.format(msg))
                 env = Environment.objects.get(env_id=env_id)
-                info = {'error': msg, "env": env, "prj_list": prj_list}
-                return render(request, 'base/env/update.html', info)
+                info = {'error': msg, "env_temp": env, "prj_list": prj_list}
+                return render(request, 'base/env_temp/update.html', info)
             else:
                 prj_id = request.POST['prj_id']
                 project = Project.objects.get(prj_id=prj_id)
@@ -452,17 +454,17 @@ def env_update(request):
                     Environment.objects.filter(is_swagger=1).update(is_swagger=0)
                 Environment.objects.filter(env_id=env_id).update(env_name=env_name, url=url, project=project,
                                                                  private_key=private_key, description=description,
-                                                                 update_time=datetime.now(), is_swagger=is_swagger,
+                                                                 update_time=timezone.now(), is_swagger=is_swagger,
                                                                  update_user=username)
-                log.info('edit env   {}  success.  env info： {} // {} // {} // {} // {}'
+                log.info('edit env_temp   {}  success.  env_temp info： {} // {} // {} // {} // {}'
                          .format(env_name, project, url, private_key, description, is_swagger))
-                return HttpResponseRedirect("/base/env/")
+                return HttpResponseRedirect("/base/env_temp/")
         elif request.method == 'GET':
             prj_list = is_superuser(user_id)
             env_id = request.GET['env_id']
             env = Environment.objects.get(env_id=env_id)
-            info = {"env": env, "prj_list": prj_list}
-            return render(request, "base/env/update.html", info)
+            info = {"env_temp": env, "prj_list": prj_list}
+            return render(request, "base/env_temp/update.html", info)
 
 
 def env_delete(request):
@@ -473,14 +475,14 @@ def env_delete(request):
     """
     user_id = request.session.get('user_id', '')
     if not get_user(user_id):
-        request.session['login_from'] = '/base/env/'
+        request.session['login_from'] = '/base/env_temp/'
         return HttpResponseRedirect('/login/')
     else:
         if request.method == 'GET':
             env_id = request.GET['env_id']
             Environment.objects.filter(env_id=env_id).delete()
             log.info('用户 {} 删除环境 {} 成功.'.format(user_id, env_id))
-            return HttpResponseRedirect("base/env/")
+            return HttpResponseRedirect("base/env_temp/")
 
 
 # 接口列表
@@ -699,7 +701,7 @@ def interface_update(request):
                                                              is_sign=is_sign, description=description,
                                                              request_header_param=request_header_data,
                                                              request_body_param=request_body_data, set_mock=mock,
-                                                             update_time=datetime.now(), update_user=username)
+                                                             update_time=timezone.now(), update_user=username)
                 log.info(
                     'edit interface  {}  success.  interface info： {} // {} // {} // {} // {} // {} // {} // {} // {} //  '.format(
                         if_name, project, url, method, data_type, is_sign, description, request_header_data,
@@ -775,7 +777,7 @@ def interface_delete(request):
 class BatchInterface(threading.Thread):
     def run(self):
         for key, value in self.interface.items():
-            log.info(datetime.now().strftime('%Y-%m-%d %H:%M:%S') + " {} ==== BatchInterface ".format(self.getName(), ))
+            log.info(timezone.now().strftime('%Y-%m-%d %H:%M:%S') + " {} ==== BatchInterface ".format(self.getName(), ))
             if_name = value.get('name', '').strip()
             method = value.get('method', '')
             prj_list = is_superuser(self.user_id, type='list')
@@ -820,7 +822,7 @@ class BatchInterface(threading.Thread):
                                                                       request_header_param=json.dumps(
                                                                           request_header_data),
                                                                       request_body_param=json.dumps(request_body_data),
-                                                                      update_time=datetime.now(), update_user=username)
+                                                                      update_time=timezone.now(), update_user=username)
                 log.warning('接口名称已存在，更新接口参数中... ==> {}'.format(if_name))
             else:
                 log.info('接口名称：{}， 正在批量导入中...'.format(if_name))
@@ -961,7 +963,7 @@ def case_update(request):
                 username = request.session.get('user', '')
                 Case.objects.filter(case_id=case_id).update(case_name=case_name, project=project,
                                                             description=description,
-                                                            content=content, update_time=datetime.now(),
+                                                            content=content, update_time=timezone.now(),
                                                             update_user=username)
                 log.info('edit case   {}  success. case info: {} // {} // {}'
                          .format(case_name, project, description, content))
@@ -1007,7 +1009,7 @@ def case_copy(request):
             project = case_.project
             description = case_.description
             username = request.session.get('user', '')
-            case = Case(case_name=case_name, project=project, description=description, update_time=datetime.now(),
+            case = Case(case_name=case_name, project=project, description=description, update_time=timezone.now(),
                         content=content, update_user=username)
             case.save()
             log.info('copy case   {}  success. case info: {} // {} '.format(case_name, project, content))
@@ -1254,7 +1256,7 @@ def plan_update(request):
                                                             environment=environment,
                                                             description=description, content=content,
                                                             is_locust=is_locust,
-                                                            is_task=is_task, update_time=datetime.now(),
+                                                            is_task=is_task, update_time=timezone.now(),
                                                             update_user=username)
                 log.info(
                     'edit plan   {}  success. plan info: {} // {} // {} // {}'.format(plan_name, project, environment,
@@ -1379,7 +1381,7 @@ def plan_run(request):
             totalTime = str(end_time - begin_time)[:6] + ' s'
             pic_name = DrawPie(pass_num, fail_num, error_num)
             report_name = plan.plan_name + "-" + str(start_time).replace(':', '-')
-            username = request.session.get('user', '')
+            username = request.session.get('user', 'lixiaofeng')
             if run_mode == '1':
                 report = Report(plan=plan, report_name=report_name, content=content, case_num=case_num,
                                 pass_num=pass_num, fail_num=fail_num, error_num=error_num, pic_name=pic_name,
@@ -1390,8 +1392,8 @@ def plan_run(request):
                                 pass_num=pass_num, fail_num=fail_num, error_num=error_num, pic_name=pic_name,
                                 totalTime=totalTime, startTime=start_time, update_user=username, make=0, report_path='')
             report.save()
-            Plan.objects.filter(plan_id=plan_id).update(update_user=username, update_time=datetime.now())
-            return HttpResponse(plan.plan_name + " 执行成功！")
+            Plan.objects.filter(plan_id=plan_id).update(update_user=username, update_time=timezone.now())
+            return HttpResponse(" 执行成功！")
 
 
 def timing_task(request):
@@ -1685,7 +1687,7 @@ class StartLocust(threading.Thread):
 
     def run(self):
         log.info(
-            datetime.now().strftime('%Y-%m-%d %H:%M:%S') + " {} ==== StartLocust ========= {}".format(self.getName(),
+            timezone.now().strftime('%Y-%m-%d %H:%M:%S') + " {} ==== StartLocust ========= {}".format(self.getName(),
                                                                                                       self.make))
         if self.make == 'master':
             p = os.base('/home/lixiaofeng/./locust_run.sh')

@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load static %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -12,10 +12,10 @@
     <link href="{% static 'animate.css/animate.min.css' %}" rel="stylesheet">
     {#    <link href="https://cdn.bootcss.com/chosen/1.8.2/chosen.css" rel="stylesheet">#}
     <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/img/E_fa.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'blog/img/favicon.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.5/chosen.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/img/E_fa.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <base target="_blank">
     <style type="text/css">
         h1, h2, h3, h4, h5, h6 {
@@ -7132,29 +7132,29 @@
                 <div class="ibox-content">
                     <div class="input-group panel-heading"
                          style="width: 100%; background-color: #1ab394; margin-bottom: 10px; text-align: left; font-family: Consolas;">
-{#                        <label style="color: snow; float: left;padding-top: inherit">结果搜索:</label>#}
-{#                        <select class="chosen-select form-control" data-placeholder="----------"#}
-{#                                style="width: 300px;" name="filterResult" id="filterResult" onchange="query()">#}
-{#                            <option value="" hassubinfo='true'>----------</option>#}
-{#                            <option value="" hassubinfo='true'>pass</option>#}
-{#                            <option value="" hassubinfo='true'>fail</option>#}
-{#                            <option value="" hassubinfo='true'>error</option>#}
-                            {#                        </select>#}
-                            <div style="float: right">
-                                <label class="form-control">
-                                    <span class="text-navy">用例数: </span><span class="text-navy b-r"
-                                                                              id="filterAll">{{ case_num }}</span><span> | </span>
-                                    <span style="color: green">接口成功: </span><span style="color: green"
-                                                                                  id="filterOk">{{ pass_num }}</span><span> | </span>
-                                    <span class="text-danger" style="color: orange">接口失败: </span><span
-                                        class="text-danger"
-                                        id="filterFail">{{ fail_num }}</span><span> | </span>
-                                    <span class="text-error">接口错误: </span><span class="text-error"
-                                                                                id="filterError">{{ error_num }}</span><span> | </span>
-                                    {#                                <span class="text-warning">接口跳过: </span><span class="text-warning"#}
-                                    {#                                                                              id="filterSkip">0</span>#}
-                                </label>
-                            </div>
+                        {#                        <label style="color: snow; float: left;padding-top: inherit">结果搜索:</label>#}
+                        {#                        <select class="chosen-select form-control" data-placeholder="----------"#}
+                        {#                                style="width: 300px;" name="filterResult" id="filterResult" onchange="query()">#}
+                        {#                            <option value="" hassubinfo='true'>----------</option>#}
+                        {#                            <option value="" hassubinfo='true'>pass</option>#}
+                        {#                            <option value="" hassubinfo='true'>fail</option>#}
+                        {#                            <option value="" hassubinfo='true'>error</option>#}
+                        {#                        </select>#}
+                        <div style="float: right">
+                            <label class="form-control">
+                                <span class="text-navy">用例数: </span><span class="text-navy b-r"
+                                                                          id="filterAll">{{ case_num }}</span><span> | </span>
+                                <span style="color: green">接口成功: </span><span style="color: green"
+                                                                              id="filterOk">{{ pass_num }}</span><span> | </span>
+                                <span class="text-danger" style="color: orange">接口失败: </span><span
+                                    class="text-danger"
+                                    id="filterFail">{{ fail_num }}</span><span> | </span>
+                                <span class="text-error">接口错误: </span><span class="text-error"
+                                                                            id="filterError">{{ error_num }}</span><span> | </span>
+                                {#                                <span class="text-warning">接口跳过: </span><span class="text-warning"#}
+                                {#                                                                              id="filterSkip">0</span>#}
+                            </label>
+                        </div>
                     </div>
                     <table class="table table-bordered">
                         <thead>
@@ -7339,7 +7339,7 @@
         $.ajax({
             type: "post",
             url: "/base/report_search/",
-            data: {"result": result.text(), "report_id": report_id},
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}', "result": result.text(), "report_id": report_id},
             success: function (data) {
                 console.log(data);
                 console.log(typeof data);

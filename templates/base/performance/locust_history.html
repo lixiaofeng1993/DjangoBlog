@@ -1,4 +1,4 @@
-{% extends "../../base.html" %}
+{% extends "base/base.html" %}
 
 {% block css %}
     <style>
@@ -51,13 +51,13 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li>
-                    <a href="/yqjr/index">主页</a>
+                    <a href="{% url 'base:index' %}">主页</a>
                 </li>
                 <li class="active">
-                    <a class="this" href="/base/performance_report/">性能测试</a>
+                    <a class="this" href="{% url 'base:performance' %}">性能测试</a>
                 </li>
                 <li class="active">
-                    <a class="this-page" href="/base/performance_report/">聚合报告</a>
+                    <a class="this-page" href="{% url 'base:performance_report' %}">聚合报告</a>
                 </li>
                 <li class="active">
                     <a class="this-page">历史数据</a>
@@ -73,7 +73,7 @@
         <div class="col-md-12">
             <div class="panel">
                 <div class="panel-heading">
-                    <a href="/base/performance_delete/" class="btn btn-danger">清除数据</a>
+                    <a href="{% url 'base:performance_delete' %}" class="btn btn-danger">清除数据</a>
                 </div>
                 <div class="spinner"></div>
                 <div class="panel-body">
@@ -110,15 +110,6 @@
                         {% endfor %}
                         </tbody>
                     </table>
-                    {#                    <div id="input-timed">#}
-                    {#                        <p><span style="margin: 5px 10%">状态：{{ info.state }}</span><span style="margin-right:10%">Total RPS: {{ info.total_rps }}</span><span#}
-                    {#                                style="margin-right:10%">失败率: {{ info.fail_ratio }}</span><span#}
-                    {#                                style="margin-right:10%">用户数: {{ info.user_count }}</span></p>#}
-                    {#                        <p><span#}
-                    {#                                style="margin: 5px 10%">50% 百分比：{{ info.current_response_time_percentile_50 }}</span><span#}
-                    {#                                style="margin-right:10%">50% 百分比: {{ info.current_response_time_percentile_95 }}</span>#}
-                    {#                        </p>#}
-                    {#                    </div>#}
 
                 </div>
 
