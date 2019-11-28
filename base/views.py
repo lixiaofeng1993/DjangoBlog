@@ -26,8 +26,7 @@ from django.shortcuts import render_to_response
 from common.public import DrawPie, paginator, pagination_data
 from common.error_code import ErrorCode
 from common.except_check import project_info_logic, sign_info_logic, env_info_logic, interface_info_logic, \
-    format_params, \
-    case_info_logic, plan_info_logic, header_value_error  # 自定义异常逻辑
+    format_params, case_info_logic, plan_info_logic, header_value_error  # 自定义异常逻辑
 from django.views.generic import ListView
 
 # import paramiko

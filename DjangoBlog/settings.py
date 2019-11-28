@@ -325,12 +325,6 @@ if not os.path.exists(MEDIA_ROOT):
     os.mkdir(MEDIA_ROOT)
 MEDIA_URL = '/media/'
 
-# simpleui 设置
-SIMPLEUI_STATIC_OFFLINE = True  # 访问静态文件
-# SIMPLEUI_HOME_PAGE = 'http://39.105.136.231'
-# SIMPLEUI_HOME_TITLE = 'EasyTest-后台管理'
-SIMPLEUI_HOME_ICON = 'fa fa-user'
-
 # 定时任务
 import djcelery
 
@@ -343,3 +337,203 @@ CELERY_TIMEZONE = 'Asia/Shanghai'
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 # CELERY_ENABLE_UTC = False
 # DJANGO_CELERY_BEAT_TZ_AWARE = False
+
+# simpleui 设置
+SIMPLEUI_STATIC_OFFLINE = True  # 访问静态文件
+# SIMPLEUI_HOME_PAGE = 'http://39.105.136.231'
+# SIMPLEUI_HOME_TITLE = 'EasyTest-后台管理'
+SIMPLEUI_HOME_ICON = 'fa fa-user'
+
+SIMPLEUI_CONFIG = {
+    'system_keep': False,
+    'menus': [
+        {
+            'app': ' accounts',
+            'name': '账户管理',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': '用户',
+                'icon': 'fa fa-user',
+                'url': 'accounts/bloguser/'
+            }]
+        },
+        {
+            'app': ' base',
+            'name': '测试平台',
+            'icon': 'fas fa-user-shield',
+            'models': [
+                {
+                    'name': '项目管理',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/project/'
+                },
+                {
+                    'name': '测试环境',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/environment/'
+                },
+                {
+                    'name': '接口管理',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/interface/'
+                },
+                {
+                    'name': '测试用例',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/case/'
+                },
+                {
+                    'name': '测试计划',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/plan/'
+                },
+                {
+                    'name': '签名管理',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/sign/'
+                },
+                {
+                    'name': '测试报告',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/report/'
+                }, {
+                    'name': '发布会',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/event/'
+                }, {
+                    'name': '发布会嘉宾',
+                    'icon': 'fa fa-product-hunt fa-fw',
+                    'url': 'base/guest/'
+                },
+            ]
+        },
+        {
+            'app': ' blog',
+            'name': '博客管理',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': '侧边栏',
+                'icon': 'fa fa-user',
+                'url': 'blog/sidebar/'
+            }, {
+                'name': '分类',
+                'icon': 'fa fa-user',
+                'url': 'blog/category/'
+            }, {
+                'name': '友情链接',
+                'icon': 'fa fa-user',
+                'url': 'blog/links/'
+            }, {
+                'name': '文章管理',
+                'icon': 'fa fa-user',
+                'url': 'blog/article/'
+            }, {
+                'name': '标签管理',
+                'icon': 'fa fa-user',
+                'url': 'blog/tag/'
+            }, {
+                'name': '网站配置',
+                'icon': 'fa fa-user',
+                'url': 'blog/blogsettings/'
+            },
+            ]
+        },
+        {
+            'app': 'comments',
+            'name': '评论管理',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': '评论管理',
+                'icon': 'fa fa-user',
+                'url': 'comments/comment/'
+            }]
+        },
+        {
+            'app': 'djcelery',
+            'name': '定时任务',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': 'Crontabs',
+                'icon': 'fa fa-user',
+                'url': 'djcelery/crontabschedule/'
+            }, {
+                'name': 'Intervals',
+                'icon': 'fa fa-user',
+                'url': 'djcelery/intervalschedule/'
+            }, {
+                'name': 'Periodic tasks',
+                'icon': 'fa fa-user',
+                'url': 'djcelery/periodictask/'
+            }, {
+                'name': ' Periodic taskss',
+                'icon': 'fa fa-user',
+                'url': 'djcelery/periodictasks/'
+            }, {
+                'name': 'Workers',
+                'icon': 'fa fa-user',
+                'url': 'djcelery/workerstate/'
+            },
+            ]
+        },
+        {
+            'app': ' oauth',
+            'name': 'oauth配置',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': 'Oauth用户',
+                'icon': 'fa fa-user',
+                'url': 'oauth/oauthuser/'
+            }, {
+                'name': 'Oauth配置',
+                'icon': 'fa fa-user',
+                'url': 'oauth/oauthconfig/'
+            },
+            ]
+        },
+        {
+            'app': ' owntracks',
+            'name': 'Owntracks',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': 'OwnTrackLogs',
+                'icon': 'fa fa-user',
+                'url': 'owntracks/owntracklog/'
+            }]
+        },
+        {
+            'app': ' servermanager',
+            'name': '服务器管理',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': ' 命令',
+                'icon': 'fa fa-user',
+                'url': 'servermanager/commands/'
+            }, {
+                'name': ' 邮件发送log',
+                'icon': 'fa fa-user',
+                'url': 'servermanager/emailsendlog/'
+            },
+            ]
+        },
+        {
+            'app': 'sites',
+            'name': '站点管理',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': '站点管理',
+                'icon': 'fa fa-user',
+                'url': 'sites/site/'
+            }]
+        },
+        {
+            'app': 'admin',
+            'name': '日志管理',
+            'icon': 'fas fa-user-shield',
+            'models': [{
+                'name': '日志管理',
+                'icon': 'fa fa-user',
+                'url': 'admin/logentry/'
+            }]
+        },
+    ]
+}
