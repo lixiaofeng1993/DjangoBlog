@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'n9ceqv38)#&mwuat@(mjb_p%em$e8$qyr#fw9ot!=ba6lijx-6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # DEBUG = False
 TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 
@@ -164,12 +164,11 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # Allow user login with username and password
 AUTHENTICATION_BACKENDS = ['accounts.user_login_backend.EmailOrUsernameModelBackend']
 
-STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
+# STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
+STATIC_ROOT = '/var/static/static/'
 
 STATIC_URL = '/static/'
-STATICFILES = os.path.join(BASE_DIR, 'blog/static')
-print(STATICFILES, 111111111111111111111)
-
+STATICFILES = os.path.join(BASE_DIR, 'static')
 
 AUTH_USER_MODEL = 'accounts.BlogUser'
 LOGIN_URL = '/login/'
