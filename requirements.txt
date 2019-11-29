@@ -63,3 +63,6 @@ django-celery==3.3.1
 django-redis==4.0.0
 celery-with-redis==3.0
 qrcode==6.1
+django-bootstrap3
+matplotlib
+pycrypto==2.6.1
