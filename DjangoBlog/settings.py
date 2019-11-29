@@ -108,7 +108,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',
         # 'USER': os.environ.get('DJANGO_MYSQL_USER'),
-        'USER': "blog",
+        'USER': "root",
         # 'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD'),
         'PASSWORD': "123456",
         # 'HOST': os.environ.get('DJANGO_MYSQL_HOST'),
@@ -167,7 +167,7 @@ AUTHENTICATION_BACKENDS = ['accounts.user_login_backend.EmailOrUsernameModelBack
 STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
 
 STATIC_URL = '/static/'
-STATICFILES = os.path.join(BASE_DIR, 'blog/static')
+STATICFILES = os.path.join(BASE_DIR, 'static')
 
 AUTH_USER_MODEL = 'accounts.BlogUser'
 LOGIN_URL = '/login/'
