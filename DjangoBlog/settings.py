@@ -167,7 +167,7 @@ AUTHENTICATION_BACKENDS = ['accounts.user_login_backend.EmailOrUsernameModelBack
 STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
 
 STATIC_URL = '/static/'
-STATICFILES = os.path.join(BASE_DIR, 'static')
+STATICFILES = os.path.join(BASE_DIR, 'blog/static')
 
 AUTH_USER_MODEL = 'accounts.BlogUser'
 LOGIN_URL = '/login/'
