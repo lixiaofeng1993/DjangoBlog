@@ -66,3 +66,5 @@ qrcode==6.1
 django-bootstrap3
 matplotlib
 pycrypto==2.6.1
+supervisor
+flower
