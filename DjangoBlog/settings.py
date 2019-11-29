@@ -168,6 +168,8 @@ STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
 
 STATIC_URL = '/static/'
 STATICFILES = os.path.join(BASE_DIR, 'static')
+print(STATICFILES, 111111111111111111111)
+
 
 AUTH_USER_MODEL = 'accounts.BlogUser'
 LOGIN_URL = '/login/'
