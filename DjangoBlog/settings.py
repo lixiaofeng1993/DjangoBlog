@@ -108,7 +108,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',
         # 'USER': os.environ.get('DJANGO_MYSQL_USER'),
-        'USER': "blog",
+        'USER': "root",
         # 'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD'),
         'PASSWORD': "123456",
         # 'HOST': os.environ.get('DJANGO_MYSQL_HOST'),
@@ -327,15 +327,15 @@ if not os.path.exists(MEDIA_ROOT):
 MEDIA_URL = '/media/'
 
 # 定时任务
-import djcelery
-
-djcelery.setup_loader()
-BROKER_URL = 'redis://127.0.0.1:6379/0'
-# broker_pool_limit=None
-# BROKER_POOL_LIMIT=None
-CELERY_IMPORTS = ('base.tasks')
-CELERY_TIMEZONE = 'Asia/Shanghai'
-CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+# import djcelery
+#
+# djcelery.setup_loader()
+# BROKER_URL = 'redis://127.0.0.1:6379/0'
+# # broker_pool_limit=None
+# # BROKER_POOL_LIMIT=None
+# CELERY_IMPORTS = ('base.tasks')
+# CELERY_TIMEZONE = 'Asia/Shanghai'
+# CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 # CELERY_ENABLE_UTC = False
 # DJANGO_CELERY_BEAT_TZ_AWARE = False
 
@@ -449,33 +449,33 @@ SIMPLEUI_CONFIG = {
                 'url': 'comments/comment/'
             }]
         },
-        {
-            'app': 'djcelery',
-            'name': '定时任务',
-            'icon': 'fas fa-user-shield',
-            'models': [{
-                'name': 'Crontabs',
-                'icon': 'fa fa-user',
-                'url': 'djcelery/crontabschedule/'
-            }, {
-                'name': 'Intervals',
-                'icon': 'fa fa-user',
-                'url': 'djcelery/intervalschedule/'
-            }, {
-                'name': 'Periodic tasks',
-                'icon': 'fa fa-user',
-                'url': 'djcelery/periodictask/'
-            }, {
-                'name': ' Periodic taskss',
-                'icon': 'fa fa-user',
-                'url': 'djcelery/periodictasks/'
-            }, {
-                'name': 'Workers',
-                'icon': 'fa fa-user',
-                'url': 'djcelery/workerstate/'
-            },
-            ]
-        },
+        # {
+        #     'app': 'djcelery',
+        #     'name': '定时任务',
+        #     'icon': 'fas fa-user-shield',
+        #     'models': [{
+        #         'name': 'Crontabs',
+        #         'icon': 'fa fa-user',
+        #         'url': 'djcelery/crontabschedule/'
+        #     }, {
+        #         'name': 'Intervals',
+        #         'icon': 'fa fa-user',
+        #         'url': 'djcelery/intervalschedule/'
+        #     }, {
+        #         'name': 'Periodic tasks',
+        #         'icon': 'fa fa-user',
+        #         'url': 'djcelery/periodictask/'
+        #     }, {
+        #         'name': ' Periodic taskss',
+        #         'icon': 'fa fa-user',
+        #         'url': 'djcelery/periodictasks/'
+        #     }, {
+        #         'name': 'Workers',
+        #         'icon': 'fa fa-user',
+        #         'url': 'djcelery/workerstate/'
+        #     },
+        #     ]
+        # },
         {
             'app': ' oauth',
             'name': 'oauth配置',

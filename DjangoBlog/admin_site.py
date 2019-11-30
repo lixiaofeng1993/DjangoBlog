@@ -18,7 +18,7 @@ from django.contrib.sites.admin import SiteAdmin
 from django.contrib.admin.models import LogEntry
 from django.contrib.sites.models import Site
 from DjangoBlog.logentryadmin import LogEntryAdmin
-from djcelery.models import PeriodicTask, CrontabSchedule, IntervalSchedule, PeriodicTasks, WorkerState
+# from djcelery.models import PeriodicTask, CrontabSchedule, IntervalSchedule, PeriodicTasks, WorkerState
 from blog.admin import *
 from accounts.admin import *
 from oauth.admin import *
@@ -86,8 +86,8 @@ admin_site.register(Sign, SignAdmin)
 admin_site.register(Event, EventAdmin)
 admin_site.register(Guest, GuestAdmin)
 
-admin_site.register(PeriodicTask)
-admin_site.register(CrontabSchedule)
-admin_site.register(IntervalSchedule)
-admin_site.register(PeriodicTasks)
-admin_site.register(WorkerState)
+# admin_site.register(PeriodicTask)
+# admin_site.register(CrontabSchedule)
+# admin_site.register(IntervalSchedule)
+# admin_site.register(PeriodicTasks)
+# admin_site.register(WorkerState)
