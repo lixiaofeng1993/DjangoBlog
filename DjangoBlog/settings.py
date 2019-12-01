@@ -351,59 +351,59 @@ SIMPLEUI_CONFIG = {
         {
             'app': ' accounts',
             'name': '账户管理',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': '用户',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'accounts/bloguser/'
             }]
         },
         {
             'app': ' base',
             'name': '测试平台',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [
                 {
                     'name': '项目管理',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/project/'
                 },
                 {
                     'name': '测试环境',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/environment/'
                 },
                 {
                     'name': '接口管理',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/interface/'
                 },
                 {
                     'name': '测试用例',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/case/'
                 },
                 {
                     'name': '测试计划',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/plan/'
                 },
                 {
                     'name': '签名管理',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/sign/'
                 },
                 {
                     'name': '测试报告',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/report/'
                 }, {
                     'name': '发布会',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/event/'
                 }, {
                     'name': '发布会嘉宾',
-                    'icon': 'fa fa-product-hunt fa-fw',
+                    # 'icon': 'fa fa-product-hunt fa-fw',
                     'url': 'base/guest/'
                 },
             ]
@@ -411,30 +411,30 @@ SIMPLEUI_CONFIG = {
         {
             'app': ' blog',
             'name': '博客管理',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': '侧边栏',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'blog/sidebar/'
             }, {
                 'name': '分类',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'blog/category/'
             }, {
                 'name': '友情链接',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'blog/links/'
             }, {
                 'name': '文章管理',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'blog/article/'
             }, {
                 'name': '标签管理',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'blog/tag/'
             }, {
                 'name': '网站配置',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'blog/blogsettings/'
             },
             ]
@@ -442,10 +442,10 @@ SIMPLEUI_CONFIG = {
         {
             'app': 'comments',
             'name': '评论管理',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': '评论管理',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'comments/comment/'
             }]
         },
@@ -479,14 +479,14 @@ SIMPLEUI_CONFIG = {
         {
             'app': ' oauth',
             'name': 'oauth配置',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': 'Oauth用户',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'oauth/oauthuser/'
             }, {
                 'name': 'Oauth配置',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'oauth/oauthconfig/'
             },
             ]
@@ -494,24 +494,24 @@ SIMPLEUI_CONFIG = {
         {
             'app': ' owntracks',
             'name': 'Owntracks',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': 'OwnTrackLogs',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'owntracks/owntracklog/'
             }]
         },
         {
             'app': ' servermanager',
             'name': '服务器管理',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': ' 命令',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'servermanager/commands/'
             }, {
                 'name': ' 邮件发送log',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'servermanager/emailsendlog/'
             },
             ]
@@ -519,20 +519,20 @@ SIMPLEUI_CONFIG = {
         {
             'app': 'sites',
             'name': '站点管理',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': '站点管理',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'sites/site/'
             }]
         },
         {
             'app': 'admin',
             'name': '日志管理',
-            'icon': 'fas fa-user-shield',
+            # 'icon': 'fas fa-user-shield',
             'models': [{
                 'name': '日志管理',
-                'icon': 'fa fa-user',
+                # 'icon': 'fa fa-user',
                 'url': 'admin/logentry/'
             }]
         },
