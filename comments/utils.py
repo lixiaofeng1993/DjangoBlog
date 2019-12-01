@@ -15,6 +15,7 @@
 
 from DjangoBlog.utils import send_email
 from DjangoBlog.utils import get_current_site
+from django.conf import settings
 import logging
 
 logger = logging.getLogger("log")
@@ -22,6 +23,9 @@ logger = logging.getLogger("log")
 
 def send_comment_email(comment):
     site = get_current_site().domain
+
+    if settings.DEBUG:
+        site = '127.0.0.1:8000'
     subject = '感谢您发表的评论'
     article_url = "http://{site}{path}".format(site=site, path=comment.article.get_absolute_url())
     html_content = """
