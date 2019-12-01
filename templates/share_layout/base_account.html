@@ -8,7 +8,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{% static 'blog/img/favicon.png' %}">
+    {#    <link rel="icon" href="{% static 'blog/img/favicon.png' %}">#}
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'blog/img/favicon.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <meta name="robots" content="noindex">
     <title>{{ SITE_NAME }} | {{ SITE_DESCRIPTION }}</title>
     {% load compress %}
