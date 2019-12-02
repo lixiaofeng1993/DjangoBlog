@@ -19,14 +19,15 @@ import time
 from common.public import validators_result, get_extract, get_param, replace_var, \
     extract_variables, call_interface, format_url, format_body
 from common.random_params import random_params
-from common.except_check import env_not_exit, case_is_delete, interface_is_delete, parametric_set_error, AES_length_error, \
+from common.except_check import env_not_exit, case_is_delete, interface_is_delete, parametric_set_error, \
+    AES_length_error, \
     response_value_error, request_api_error, index_error, checkpoint_no_error, eval_set_error, sql_query_error
 from httprunner.api import HttpRunner
 from common.httprunner_execute import HttpRunerMain
 
 # from common.processingJson import write_data
 
-# from common.connectMySql import SqL
+from common.connectMySql import SqL
 
 log = logging.getLogger('log')
 
@@ -45,7 +46,7 @@ class Test_execute():
         self.step_json = []
         self.user_auth = ''  # 用户认证
         self.make = False  # 未设置默认header的情况
-        # self.sql = SqL(job=True)
+        self.sql = SqL(job=True)
 
     @property
     def test_case(self):
@@ -162,13 +163,13 @@ class Test_execute():
                 if self.make:
                     if_dict['header'] = headers
 
-        # if interface.data_type == 'sql':
-        #     for k, v in if_dict['body'].items():
-        #         if 'select' in v:
-        #             if_dict['body'][k] = self.sql.execute_sql(v)
-        #             if not if_dict['body'][k]:
-        #                 if_dict = sql_query_error(if_dict, v)
-        #                 return if_dict
+        if interface.data_type == 'sql':
+            for k, v in if_dict['body'].items():
+                if 'select' in v:
+                    if_dict['body'][k] = self.sql.execute_sql(v)
+                    if not if_dict['body'][k]:
+                        if_dict = sql_query_error(if_dict, v)
+                        return if_dict
 
         if interface.is_sign:  # 接口存在签名时，处理参数
             if self.sign_type == 1:  # md5加密
