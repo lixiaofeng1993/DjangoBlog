@@ -109,6 +109,7 @@ class LoginView(FormView):
             auth.login(self.request, form.get_user())
             user = BlogUser.objects.get(email=form.get_user())
             self.request.session["user_id"] = user.id
+            self.request.session["user"] = user.username
             return super(LoginView, self).form_valid(form)
             # return HttpResponseRedirect('/')
         else:
