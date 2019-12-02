@@ -16,6 +16,29 @@
     <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
     <link rel="stylesheet" href="{% static 'other/demo.css' %}">
     <link rel="stylesheet" href="{% static 'other/loading.css' %}">
+
+    <!-- 粒子动画 -->
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/particles/particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/particles/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/vue.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/elementui/index.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/login.js' %}?_=2.3"></script>
+    <link rel="stylesheet" href="{% static 'admin/simpleui-x/elementui/theme-chalk/index.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/simpleui-x/css/login.css' %}?_=2.1">
+    <style type="text/css">
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
     <!-- GOOGLE FONTS -->
     {#    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">#}
     <!-- ICONS -->
@@ -225,11 +248,6 @@
 <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'vendor/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
 <script src="{% static 'scripts/klorofil-common.js' %}"></script>
-<script src="{% static 'admin/simpleui-x/particles/particles.js' %}"></script>
-<script src="{% static 'admin/simpleui-x/particles/app.js' %}"></script>
-<script src="{% static 'admin/simpleui-x/js/vue.min.js' %}"></script>
-<script src="{% static 'admin/simpleui-x/elementui/index.js' %}"></script>
-<script src="{% static 'admin/simpleui-x/js/login.js' %}"></script>
 <script>
     $(document).ready(function () {
         var a_name = $("a.this").text();
