@@ -462,7 +462,7 @@ def env_update(request):
             prj_list = is_superuser(user_id)
             env_id = request.GET['env_id']
             env = Environment.objects.get(env_id=env_id)
-            info = {"env_temp": env, "prj_list": prj_list}
+            info = {"env": env, "prj_list": prj_list}
             return render(request, "base/env_temp/update.html", info)
 
 
