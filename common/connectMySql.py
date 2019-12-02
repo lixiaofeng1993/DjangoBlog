@@ -26,8 +26,8 @@ class SqL:
                                                 user=readConfig.MySQL_user_job,
                                                 password=readConfig.MySQL_pwd_job, port=int(readConfig.MySQL_port_job),
                                                 use_unicode=True, charset='utf8')
+                    log.info('job 数据库连接成功')
                     break
-                    # log.info('job 数据库连接成功')
                 except Exception as e:
                     log.error('job 数据库链接异常! {}'.format(e))
                     continue
@@ -37,8 +37,8 @@ class SqL:
                                                 user=readConfig.MySQL_user,
                                                 password=readConfig.MySQL_pwd, port=int(readConfig.MySQL_port),
                                                 use_unicode=True, charset='utf8')
+                    log.info('本地 数据库连接成功')
                     break
-                    # log.info('本地 数据库连接成功')
                 except Exception as e:
                     log.error('本地 数据库链接异常! {}'.format(e))
                     continue
