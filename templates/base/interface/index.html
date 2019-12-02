@@ -305,7 +305,7 @@
             $.ajax({
                 url: "/base/interface_search/",
                 type: "post",
-                data: {"search": search},
+                data: {csrfmiddlewaretoken: '{{ csrf_token }}', "search": search},
                 success: function (data) {
                     console.log('-------------------->', data);
                     if (data == '1') {
