@@ -555,8 +555,8 @@ def DrawPie(pass_num=0, fail=0, error=0):
     plt.axis('equal')
     # plt.show()
     # 保存饼图
-    pic_path = settings.MEDIA_ROOT
-    # pic_path = '/var/common/jenkins/workspace/EasyTest/media'
+    # pic_path = settings.MEDIA_ROOT
+    pic_path = '/www/wwwroot/server/DjangoBlog/media'
     imgPath = os.path.join(pic_path, str(now_time) + "pie.png")
     plt.savefig(imgPath)
     plt.tight_layout()

@@ -68,3 +68,4 @@ matplotlib
 pycrypto==2.6.1
 supervisor
 flower
+pymysql==0.9.3
