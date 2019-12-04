@@ -94,8 +94,10 @@ class LoginView(FormView):
 
     def get_context_data(self, **kwargs):
         redirect_to = self.request.GET.get(self.redirect_field_name)
+        logger.info('---------redirect_to---------3----------{}'.format(redirect_to))
         if redirect_to is None:
             redirect_to = '/'
+        logger.info('---------redirect_to---------4----------{}'.format(redirect_to))
         kwargs['redirect_to'] = redirect_to
         return super(LoginView, self).get_context_data(**kwargs)
 
@@ -120,8 +122,10 @@ class LoginView(FormView):
     def get_success_url(self):
 
         redirect_to = self.request.POST.get(self.redirect_field_name)
+        logger.info('---------redirect_to---------1----------{}'.format(redirect_to))
         if not is_safe_url(url=redirect_to, allowed_hosts=[self.request.get_host()]):
             redirect_to = self.success_url
+        logger.info('---------redirect_to---------2----------{}'.format(redirect_to))
         return redirect_to
 
 
