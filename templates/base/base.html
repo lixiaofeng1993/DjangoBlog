@@ -16,21 +16,6 @@
     <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
     <link rel="stylesheet" href="{% static 'other/demo.css' %}">
     <link rel="stylesheet" href="{% static 'other/loading.css' %}">
-
-    <!-- 粒子动画 -->
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/particles/particles.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/particles/app.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/vue.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/elementui/index.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/login.js' %}?_=2.3"></script>
-    <link rel="stylesheet" href="{% static 'admin/simpleui-x/elementui/theme-chalk/index.css' %}">
-    {#    <link rel="stylesheet" href="{% static 'admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css' %}">#}
-    <link rel="stylesheet" href="{% static 'admin/simpleui-x/css/login.css' %}?_=2.1">
-
-    <!-- GOOGLE FONTS -->
-    {#    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">#}
-    <!-- ICONS -->
-    {#    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">#}
     <link rel="apple-touch-icon" sizes="76x76" href="{% static 'blog/img/favicon.png' %}">
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <style type="text/css">
@@ -77,18 +62,6 @@
                             <li><a href="{% url 'mocks:mock_api' %}"><i
                                     class="fa fa-pinterest-square"></i> <span>Mocks服务</span></a>
                             </li>
-                            {#                            <li><a href="http://www.easytest.xyz:8080" target="_blank"><i#}
-                            {#                                    class="fa fa-rocket"></i> <span>jenkins部署</span></a>#}
-                            {#                            </li>#}
-                            {#                            <li><a href="http://www.easytest.xyz:8888/3ee201dc" target="_blank"><i#}
-                            {#                                    class="fa fa-compass"></i> <span>宝塔监控</span></a>#}
-                            {#                            </li>#}
-                            {#                            <li><a href="https://github.com/lixiaofeng1993/EasyTest" target="_blank"><i#}
-                            {#                                    class="fa fa-github"></i> <span>Github地址</span></a>#}
-                            {#                            </li>#}
-                            {#                            <li><a href="https://www.cnblogs.com/changqing8023" target="_blank"><i#}
-                            {#                                    class="fa fa-rouble"></i> <span>博客园地址</span></a>#}
-                            {#                            </li>#}
                         </ul>
                     </li>
                 </ul>
@@ -154,16 +127,6 @@
                             </ul>
                         </div>
                     </li>
-                    {#                    <li>#}
-                    {#                        <a href="#task" data-toggle="collapse" class="collapsed"><i class="fa fa-tasks fa-fw"></i>#}
-                    {#                            <span style="margin-left: 0">定时任务</span> <i#}
-                    {#                                    class="icon-submenu fa fa-chevron-left"></i></a>#}
-                    {#                        <div id="task" class="collapse ">#}
-                    {#                            <ul class="nav">#}
-                    {#                                <li><a href="{% url 'base:timing_task' %}" class="">定时任务</a></li>#}
-                    {#                            </ul>#}
-                    {#                        </div>#}
-                    {#                    </li>#}
                     <li>
                         <a href="#report" data-toggle="collapse" class="collapsed"><i class="fa fa-bar-chart fa-fw"></i>
                             <span style="margin-left: 0">运行报告</span> <i
@@ -174,19 +137,6 @@
                             </ul>
                         </div>
                     </li>
-                    {#                    <li>#}
-                    {#                        <a href="#performance" data-toggle="collapse" class="collapsed"><i class="fa fa-book fa-fw"></i>#}
-                    {#                            <span style="margin-left: 0">性能测试</span> <i#}
-                    {#                                    class="icon-submenu fa fa-chevron-left"></i></a>#}
-                    {#                        <div id="performance" class="collapse ">#}
-                    {#                            <ul class="nav">#}
-                    {#                                <li><a href="{% url 'base:performance' %}" class="">性能测试</a></li>#}
-                    {#                            </ul>#}
-                    {#                            <ul class="nav">#}
-                    {#                                <li><a href="{% url 'base:performance_report' %}" class="">聚合报告</a></li>#}
-                    {#                            </ul>#}
-                    {#                        </div>#}
-                    {#                    </li>#}
 
                     <li>
                         <a href="#sign" data-toggle="collapse" class="collapsed"><i class="fa fa-pencil fa-fw"></i>
@@ -207,9 +157,6 @@
                             <ul class="nav">
                                 <li><a href="{% url 'base:about' %}" class="">关于我们</a></li>
                             </ul>
-                            {#                            <ul class="nav">#}
-                            {#                                <li><a href="{% url 'base:document' %}" class="">文档下载</a></li>#}
-                            {#                            </ul>#}
                         </div>
                     </li>
                 </ul>
@@ -252,32 +199,7 @@
             }
         }
     });
-    function changePassword() {
-        var new_password = prompt('新密码');
-        $.ajax({
-            type: "post",
-            url: "/base/change_password/",
-            data: {
-                csrfmiddlewaretoken: '{{ csrf_token }}',
-                "new_password": new_password
-            },
-            success: function (data) {
-                if (new_password) {
-                    if (data['msg'] == 'success') {
-                        alert('修改密码成功！');
-                        window.location.replace("/login/");
-                    } else {
-                        alert(data['msg'])
-                    }
-                } else if (new_password == '') {
-                    alert('密码不能为空！')
-                } else {
-                    // 点击取消按钮
-                }
 
-            }
-        })
-    }
 
 </script>
 {% block javascript %} {% endblock %}

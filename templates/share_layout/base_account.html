@@ -30,28 +30,6 @@
         <script src="{% static 'assets/js/ie-emulation-modes-warning.js' %}"></script>
     {% endcompress %}
 
-    <!-- 粒子动画 -->
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/particles/particles.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/particles/app.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/vue.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/elementui/index.js' %}"></script>
-    <script type="text/javascript" src="{% static 'admin/simpleui-x/js/login.js' %}?_=2.3"></script>
-    <link rel="stylesheet" href="{% static 'admin/simpleui-x/elementui/theme-chalk/index.css' %}">
-    <link rel="stylesheet" href="{% static 'admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'admin/simpleui-x/css/login.css' %}?_=2.1">
-    <style type="text/css">
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-    </style>
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -61,6 +39,7 @@
 
 <body>
 {% block content %}
+
 {% endblock %}
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
