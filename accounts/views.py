@@ -89,7 +89,7 @@ class LoginView(FormView):
     @method_decorator(csrf_protect)
     @method_decorator(never_cache)
     def dispatch(self, request, *args, **kwargs):
-
+        logger.info('---------redirect_to---------5----------{} - {} - {}'.format(request, *args, **kwargs))
         return super(LoginView, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
