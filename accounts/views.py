@@ -58,6 +58,7 @@ class RegisterView(FormView):
             send_email(emailto=[user.email, ], title='验证您的电子邮箱', content=content)
 
             url = reverse('accounts:result') + '?type=register&id=' + str(user.id)
+            logger.info('有人注册拉！！！==> 访客：{}，已发送验证邮件.'.format(user.username))
             return HttpResponseRedirect(url)
         else:
             return self.render_to_response({
@@ -110,6 +111,7 @@ class LoginView(FormView):
             user = BlogUser.objects.get(email=form.get_user())
             self.request.session["user_id"] = user.id
             self.request.session["user"] = user.email
+            logger.info('有人登录拉！！！===> 访客：{}，登录成功咯.'.format(user.username))
             return super(LoginView, self).form_valid(form)
             # return HttpResponseRedirect('/')
         else:
@@ -150,6 +152,7 @@ def account_result(request):
             恭喜您已经成功的完成邮箱验证，您现在可以使用您的账号来登录本站。
             '''
             title = '验证成功'
+            logger.info('有人验证成功拉！！！===> 访客：{}，验证成功咯.'.format(user.username))
         return render(request, 'account/result.html', {
             'title': title,
             'content': content
