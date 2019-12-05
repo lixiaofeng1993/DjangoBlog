@@ -16,11 +16,22 @@
     <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
     <link rel="stylesheet" href="{% static 'other/demo.css' %}">
     <link rel="stylesheet" href="{% static 'other/loading.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/simpleui-x/elementui/theme-chalk/index.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css' %}">
     <link rel="apple-touch-icon" sizes="76x76" href="{% static 'blog/img/favicon.png' %}">
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'blog/img/favicon.png' %}">
     <style type="text/css">
         body {
             background-image: url('http://www.easytest.xyz/static/admin/simpleui-x/img/bg.svg');
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
         }
     </style>
     {% block css %}{% endblock %}
@@ -203,6 +214,10 @@
 
 </script>
 {% block javascript %} {% endblock %}
+<div id="particles-js"></div>
 </body>
 
 </html>
+
+<script type="text/javascript" src="{% static 'admin/simpleui-x/particles/particles.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/simpleui-x/particles/app.js' %}"></script>
