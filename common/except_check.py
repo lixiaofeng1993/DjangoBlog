@@ -309,6 +309,7 @@ def case_is_delete(case_run, e):
     log.error('用例 {} 已被删除！'.format(case_run['case_id']))
     case_run['msg'] = '用例 {} 可能已被删除，请返回【用例管理】页面核实.    详细报错信息：{}'.format(case_run['case_id'], e)
     case_run['error'] = ErrorCode.case_not_exit_error
+    case_run['report_path'] = ErrorCode.case_not_exit_error
     return case_run
 
 
