@@ -10,7 +10,7 @@ from django.contrib.auth import get_user_model
 from django import forms
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 class CommentPostView(FormView):

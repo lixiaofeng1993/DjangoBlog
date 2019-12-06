@@ -16,7 +16,7 @@ from blog.models import Article, Category, Tag, Links
 from comments.forms import CommentForm
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("log")
 
 
 class ArticleListView(ListView):
