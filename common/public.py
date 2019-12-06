@@ -429,18 +429,19 @@ def format_body(body):
     """
     if isinstance(body, dict):
         for key, value in body.items():
-            value = re.sub('[\n\t ]', '', value)
-            if key == 'list':  # 标识body参数为list的情况
-                try:
-                    body = eval(value)
-                except Exception:
-                    return 'error'
-            else:
-                if '[' in value or '{' in value:
+            if not isinstance(value, int):  # 排除参数是int的情况
+                value = re.sub('[\n\t ]', '', value)
+                if key == 'list':  # 标识body参数为list的情况
                     try:
-                        body[key] = eval(value)
-                    except Exception as e:
+                        body = eval(value)
+                    except Exception:
                         return 'error'
+                else:
+                    if '[' in value or '{' in value:
+                        try:
+                            body[key] = eval(value)
+                        except Exception as e:
+                            return 'error'
         return body
     else:
         return 'error'

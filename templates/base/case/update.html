@@ -1,4 +1,4 @@
-{% extends "base/base.html" %}
+{% extends "base.html" %}
 
 {% block css %}
     <style>
@@ -65,7 +65,7 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{% url 'base:index' %}">主页</a>
+                    <a href="{% url 'index' %}">主页</a>
                 </li>
                 <li class="active">
                     <a class="this">基础信息</a>
@@ -248,7 +248,7 @@
         function add_extract_row(obj) {
             var panel = $(obj).parent().parent();
             var tbody = $(panel).find("table[name='extract']").children('tbody');
-{#            var newRow = "<tr> <td>#</td><td name='var_name' contenteditable='true'></td><td> <button class='btn btn-xs btn-outline btn-danger' type='button' onclick='del_step(this)'><i class='fa fa-close'></i>&nbsp;删除行</button> </td> </tr>";#}
+            {#            var newRow = "<tr> <td>#</td><td name='var_name' contenteditable='true'></td><td> <button class='btn btn-xs btn-outline btn-danger' type='button' onclick='del_step(this)'><i class='fa fa-close'></i>&nbsp;删除行</button> </td> </tr>";#}
             var newRow = "<tr> <td>#</td><td name='var_name' contenteditable='true'></td><td name='var_value' contenteditable='true'></td> <td> <button class='btn btn-xs btn-outline btn-danger' type='button' onclick='del_step(this)'><i class='fa fa-close'></i>&nbsp;删除行</button> </td> </tr>";
             $(tbody).append(newRow);
         }
@@ -369,6 +369,16 @@
                                             var header = header_table + "</tbody></table>";
                                         } else {
                                             for (var he in eval(header_json)) {
+                                                {#                                                if (header_json[he].search('$') != -1) {#}
+                                                {#                                                    var key = header_json[he].split(',')[0];#}
+                                                {#                                                    var value = ''#}
+                                                {#                                                } else {#}
+                                                {#                                                    var key = header_json[he].split(',')[0];#}
+                                                {#                                                    var value = header_json[he].split(',')[1];#}
+                                                {#                                                }#}
+                                                {#                                                if (typeof(value) == 'undefined') {#}
+                                                {#                                                    value = ' '#}
+                                                {#                                                }#}
                                                 var tr_he = "<tr><td>#</td><td name='var_name' contenteditable='true'>" + he + "</td><td contenteditable='true' name='var_value'>" + header_json[he] + "</td><td><button class='btn btn-xs btn-outline btn-danger' type='button' onclick='del_step(this);'>&nbsp;<i class='fa fa-close'></i>&nbsp;删除行 </button> </td></tr>";
                                                 header_table = header_table + tr_he;
                                                 var header = header_table + "</tbody></table>";
@@ -606,6 +616,10 @@
                         if (i == 0) return true;
                         var name = $(this).find("td[name='var_name']").text();
                         var value = $(this).find("td[name='var_value']").text();
+                        // 参数值显示数字
+                        if (!isNaN(value)) {
+                            value = value * 1
+                        }
                         body[name] = value;
                     });
 
@@ -648,7 +662,6 @@
                     url: "/base/case_update/",
                     type: "post",
                     data: {
-                        csrfmiddlewaretoken: '{{ csrf_token }}',
                         "case_id": case_id,
                         "case_name": case_name,
                         "prj_id": prj_id,
