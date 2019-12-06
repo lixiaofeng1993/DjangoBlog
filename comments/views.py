@@ -8,6 +8,9 @@ from django.views.generic.edit import FormView
 from django.http import HttpResponseRedirect
 from django.contrib.auth import get_user_model
 from django import forms
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class CommentPostView(FormView):
@@ -62,4 +65,5 @@ class CommentPostView(FormView):
             comment.parent_comment = parent_comment
 
         comment.save(True)
+        logger.info('发布留言拉！！！ 访客：{}，发布留言成功！--> {}'.format(user.username, comment.body))
         return HttpResponseRedirect("%s#div-comment-%d" % (article.get_absolute_url(), comment.pk))

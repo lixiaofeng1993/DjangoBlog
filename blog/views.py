@@ -61,12 +61,12 @@ class ArticleListView(ListView):
         '''
         value = cache.get(cache_key)
         if value:
-            logger.info('get view cache.key:{key}'.format(key=cache_key))
+            logger.info('获取 view 缓存的 key:{key}'.format(key=cache_key))
             return value
         else:
             article_list = self.get_queryset_data()
             cache.set(cache_key, article_list)
-            logger.info('set view cache.key:{key}'.format(key=cache_key))
+            logger.info('设置 view 缓存的 key:{key}'.format(key=cache_key))
             return article_list
 
     def get_queryset(self):
@@ -136,6 +136,7 @@ class ArticleDetailView(DetailView):
         kwargs['next_article'] = self.object.next_article
         kwargs['prev_article'] = self.object.prev_article
 
+        logger.info('浏览文章详情拉！！！ 访客：{}，正在浏览文章：{}'.format(user.username, articleid))
         return super(ArticleDetailView, self).get_context_data(**kwargs)
 
 
@@ -305,29 +306,32 @@ def refresh_memcache(request):
             from DjangoBlog.utils import cache
             if cache and cache is not None:
                 cache.clear()
+            logger.info("刷新缓存数据成功.")
             return HttpResponse("ok")
         else:
             return HttpResponseForbidden()
     except Exception as e:
-        logger.error(e)
+        logger.error("刷新缓存数据发生异常：{}.".format(e))
         return HttpResponse(e)
 
 
 def page_not_found_view(request, exception, template_name='blog/error_page.html'):
     if exception:
-        logger.error(exception)
+        logger.error("404 error！ {}".format(exception))
     url = request.get_full_path()
+    logger.error("404 error！ url：{}".format(url))
     return render(request, template_name,
                   {'message': '哎呀，您访问的地址 ' + url + ' 是一个未知的地方。请点击首页看看别的？', 'statuscode': '404'}, status=404)
 
 
 def server_error_view(request, template_name='blog/error_page.html'):
+    logger.error("500 error！")
     return render(request, template_name,
                   {'message': '哎呀，出错了，我已经收集到了错误信息，之后会抓紧抢修，请点击首页看看别的？', 'statuscode': '500'}, status=500)
 
 
 def permission_denied_view(request, exception, template_name='blog/error_page.html'):
     if exception:
-        logger.error(exception)
+        logger.error("403 error！ {}".format(exception))
     return render(request, template_name,
                   {'message': '哎呀，您没有权限访问此页面，请点击首页看看别的？', 'statuscode': '403'}, status=403)
