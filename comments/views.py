@@ -65,5 +65,5 @@ class CommentPostView(FormView):
             comment.parent_comment = parent_comment
 
         comment.save(True)
-        logger.info('发布留言拉！！！ 访客：{}，发布留言成功！--> {}'.format(user.username, comment.body))
+
         return HttpResponseRedirect("%s#div-comment-%d" % (article.get_absolute_url(), comment.pk))

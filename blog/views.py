@@ -136,7 +136,6 @@ class ArticleDetailView(DetailView):
         kwargs['next_article'] = self.object.next_article
         kwargs['prev_article'] = self.object.prev_article
 
-        logger.info('浏览文章详情拉！！！ 访客：{}，正在浏览文章：{}'.format(user.username, articleid))
         return super(ArticleDetailView, self).get_context_data(**kwargs)
 
 
