@@ -318,7 +318,6 @@ def page_not_found_view(request, exception, template_name='blog/error_page.html'
     if exception:
         logger.error("404 error！ {}".format(exception))
     url = request.get_full_path()
-    logger.error("404 error！ url：{}".format(url))
     return render(request, template_name,
                   {'message': '哎呀，您访问的地址 ' + url + ' 是一个未知的地方。请点击首页看看别的？', 'statuscode': '404'}, status=404)
 
