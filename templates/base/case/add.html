@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base/base.html" %}
 
 {% block css %}
     <style>
@@ -57,7 +57,7 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{% url 'index' %}">主页</a>
+                    <a href="{% url 'base:index' %}">主页</a>
                 </li>
                 <li class="active">
                     <a class="this">基础信息</a>
@@ -508,6 +508,7 @@
                     url: "/base/case_add/",
                     type: "post",
                     data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
                         "case_name": case_name,
                         "prj_id": prj_id,
                         "description": description,
