@@ -333,7 +333,7 @@
             //编辑接口--从 case 中获取数据 "<th>备注</th>" +
             $("#add_interface").click(function () {
                 var if_id = $("#if_id").val();
-                var case_list = $("#case-list").val();
+                var case_list = $("#case-list").text();
                 console.log(if_id);
                 if (if_id == "") {
                     alert("请先选择接口");
