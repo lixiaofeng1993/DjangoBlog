@@ -27,7 +27,7 @@ from common.httprunner_execute import HttpRunerMain
 
 # from common.processingJson import write_data
 
-from common.connectMySql import SqL
+# from common.connectMySql import SqL
 
 log = logging.getLogger('log')
 
@@ -46,7 +46,7 @@ class Test_execute():
         self.step_json = []
         self.user_auth = ''  # 用户认证
         self.make = False  # 未设置默认header的情况
-        self.sql = SqL(job=True)
+        # self.sql = SqL(job=True)
 
     @property
     def test_case(self):

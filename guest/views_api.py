@@ -27,7 +27,7 @@ def add_event(request):
     status = request.POST.get('status', '')  # 状态
     address = request.POST.get('address', '')  # 地址
     start_time = request.POST.get('start_time', '')  # 发布会时间
-
+    print(eid, name,limit,start_time,status,address, 1111111111111111)
     if eid == '' or name == '' or limit == '' or status == '' or address == '' or start_time == '':
         log.info('默认服务==>  add_event，参数错误，不能为空.')
         return JsonResponse({'status': 200, 'message': 'parameter error', 'error_code': 10021})
