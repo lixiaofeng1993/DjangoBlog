@@ -246,6 +246,10 @@ def case_info_logic(case_name, content, case_id=''):
             math = att.findall(key)
             if not math:
                 return 'body中有参数不符合规则【^[\w-]+$】，请重新输入！'
+        if param.get("url", ""):  # case中修改url，更新到接口中
+            url = Interface.objects.get(if_id=param["if_id"]).url
+            if url != param["url"]:
+                Interface.objects.filter(if_id=param["if_id"]).update(url=param["url"])
     if not case_id:
         name_exit = Case.objects.filter(case_name=case_name)
     else:
@@ -384,6 +388,7 @@ def checkpoint_no_error(if_dict):
     if_dict["msg"] = ErrorCode.validators_error
     if_dict["error"] = ErrorCode.validators_error
     return if_dict
+
 
 def sql_query_error(if_dict, v):
     if_dict["result"] = 'error'
