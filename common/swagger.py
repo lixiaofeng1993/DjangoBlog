@@ -79,18 +79,21 @@ class AnalysisJson:
             elif each.get('in') == 'query':
                 name = each.get('name')
                 del each['name'], each['in']
-                query_dict[name] = json.dumps(each).replace('false', 'False').replace('true', 'True').replace('null', 'None')
+                query_dict[name] = json.dumps(each).replace('false', 'False').replace('true', 'True').replace('null',
+                                                                                                              'None')
                 params_dict['body'][params_key] = query_dict
         for each in parameters:
             if each.get('in') == 'path':
                 name = each.get('name')
                 del each['name'], each['in']
-                path_dict[name] = json.dumps(each).replace('false', 'False').replace('true', 'True').replace('null', 'None')
+                path_dict[name] = json.dumps(each).replace('false', 'False').replace('true', 'True').replace('null',
+                                                                                                             'None')
                 params_dict['body'][params_key].update(path_dict)
             if each.get('in') == 'header':
                 name = each.get('name')
                 del each['name'], each['in']
-                header_dict[name] = json.dumps(each).replace('false', 'False').replace('true', 'True').replace('null', 'None')
+                header_dict[name] = json.dumps(each).replace('false', 'False').replace('true', 'True').replace('null',
+                                                                                                               'None')
                 params_dict['header'][params_key] = header_dict
         if isinstance(params['tags'], list):
             for tag in params['tags']:
@@ -112,7 +115,3 @@ class AnalysisJson:
             interface['type'] = 'json'
         interface['prj_id'] = self.prj_id
         return interface
-
-
-if __name__ == '__main__':
-    AnalysisJson('1', '2').retrieve_data()
