@@ -2193,6 +2193,7 @@ def report_results(request):
                             "接口名称": data.get("if_name", ""),
                             "接口地址": data.get("url", ""),
                             "自定义报错信息": data.get("error", ""),
+                            "检查点": data.get("msg", ""),
                             "接口请求参数": data.get("body", ""),
                             "接口请求头": data.get("header", ""),
                             "接口返回信息": data.get("res_content", ""),
