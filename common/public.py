@@ -166,7 +166,7 @@ def validators_result(validators_list, res):
     response = res["res_content"]
     for var_field in validators_list:
         check_filed = var_field["check"]
-        expect_filed = var_field["expect"].lower()
+        expect_filed = str(var_field["expect"]).lower()
         comparator = var_field['comparator']
         checkpoint += '字段：' + check_filed + '--> 值：' + expect_filed + '    '
         check_filed_value = str(get_param(check_filed, response)).lower()
@@ -426,6 +426,18 @@ def get_param_response(param_name, dict_data, num=0, default=None):
     return default
 
 
+def str_number(params):
+    """数字需要是str的情况"""
+    if isinstance(params, dict):
+        for key, value in params.items():
+            if "str" in str(value):  # 参数值数字需要时字符串的情况，传参时使用 str(number)
+                patt = re.compile("str\((\d+)\)")
+                number_list = patt.findall(value)
+                if number_list:
+                    params[key] = str(number_list[0])
+        return params
+
+
 def format_body(body):
     """
     处理body参数中存在list或者dict后者本身为list的情况
@@ -434,11 +446,7 @@ def format_body(body):
     """
     if isinstance(body, dict):
         for key, value in body.items():
-            if "str" in str(value):  # 参数值数字需要时字符串的情况，传参时使用 str(number)
-                patt = re.compile("str\((\d+)\)")
-                number_list = patt.findall(value)
-                if number_list:
-                    body[key] = str(number_list[0])
+            body = str_number(body)
             if not isinstance(value, int):  # 排除参数是int的情况
                 value = re.sub('[\n\t ]', '', value)
                 if key == 'list':  # 标识body参数为list的情况
@@ -566,8 +574,8 @@ def DrawPie(pass_num=0, fail=0, error=0):
     plt.axis('equal')
     # plt.show()
     # 保存饼图
-    # pic_path = settings.MEDIA_ROOT
-    pic_path = '/www/wwwroot/server/DjangoBlog/media'
+    pic_path = settings.MEDIA_ROOT
+    # pic_path = '/www/wwwroot/server/DjangoBlog/media'
     imgPath = os.path.join(pic_path, str(now_time) + "pie.png")
     plt.savefig(imgPath)
     plt.tight_layout()
