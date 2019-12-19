@@ -1319,7 +1319,8 @@ def plan_run(request):
             plan_id = request.POST.get('plan_id', '')
             run_mode = request.POST.get('run_mode', '')
             plan = Plan.objects.get(plan_id=plan_id)
-            env_id = plan.environment.env_id
+            # env_id = plan.environment.env_id
+            env_id = request.POST.get('env_id', '')
             case_id_list = eval(plan.content)
             case_num = len(case_id_list)
             content = []

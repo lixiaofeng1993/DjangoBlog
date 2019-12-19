@@ -164,6 +164,7 @@ def validators_result(validators_list, res):
     result = ""
     checkpoint = ''
     response = res["res_content"]
+    sorted(response.keys(), reverse=False)  # 字典排序
     for var_field in validators_list:
         check_filed = var_field["check"]
         expect_filed = str(var_field["expect"]).lower()
@@ -574,8 +575,8 @@ def DrawPie(pass_num=0, fail=0, error=0):
     plt.axis('equal')
     # plt.show()
     # 保存饼图
-    # pic_path = settings.MEDIA_ROOT
-    pic_path = '/www/wwwroot/server/DjangoBlog/media'
+    pic_path = settings.MEDIA_ROOT
+    # pic_path = '/www/wwwroot/server/DjangoBlog/media'
     imgPath = os.path.join(pic_path, str(now_time) + "pie.png")
     plt.savefig(imgPath)
     plt.tight_layout()
