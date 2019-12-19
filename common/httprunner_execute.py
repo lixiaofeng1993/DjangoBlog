@@ -6,7 +6,6 @@
 # 说   明: 
 # 创建时间: 2019/10/20 15:13
 '''
-import re
 from common.public import str_number
 
 
