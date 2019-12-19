@@ -1,0 +1,745 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2019-12-19 22:30:53</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">0.146 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.3.2 </td>
+      <td>CPython 3.6.5 </td>
+      <td colspan="2">Windows-10-10.0.17763-SP0</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">1 (0/1)</td>
+      <td colspan="2">2 (1/1/0/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>testcase 0</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 2</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 1</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="failure" style="width:5em;">failure</th>
+      <td colspan="2">添加发布会</td>
+      <td style="text-align:center;width:6em;">85.80 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 添加发布会</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://www.easytest.xyz/api/add_event/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: python-requests/2.22.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 228
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/x-www-form-urlencoded
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          eid=53&name=%E5%BC%A0%E7%91%9E%E5%8F%91%E5%B8%83%E4%BC%9A&limit=1077&status=1&address=%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%A4%A9%E6%B4%A5%E5%B8%82%E6%99%AE%E9%99%80%E5%90%B4%E8%A1%97Y%E5%BA%A7+418506&start_time=2019-12-19+22%3A30%3A53
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://www.easytest.xyz/api/add_event/
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Thu, 19 Dec 2019 14:30:52 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 74
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;message&#39;: &#39;event id already exists&#39;, &#39;status&#39;: 200, &#39;error_code&#39;: 10022}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="failed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>add event success</td>
+                      <td>event id already exists</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>74</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>85.8</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>85.106</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+          <a class="button" href="#popup_attachment_1_1">traceback</a>
+          <div id="popup_attachment_1_1" class="overlay">
+            <div class="popup">
+              <h2>Traceback Message</h2>
+              <a class="close" href="#record_1_1">&times;</a>
+              <div class="content"><pre>Traceback (most recent call last):
+  File &#34;D:\python\lib\site-packages\httprunner\api.py&#34;, line 68, in test
+    test_runner.run_test(test_dict)
+httprunner.exceptions.ValidationFailure: 
+validate: content.message equals add event success(str)	==&gt; fail
+event id already exists(str) equals add event success(str)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &#34;D:\python\lib\site-packages\httprunner\api.py&#34;, line 70, in test
+    self.fail(str(ex))
+AssertionError: 
+validate: content.message equals add event success(str)	==&gt; fail
+event id already exists(str) equals add event success(str)
+</pre></div>
+            </div>
+          </div>
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_2">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">测试接口</td>
+      <td style="text-align:center;width:6em;">47.87 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_2_1">log-1</a>
+        <div id="popup_log_1_2_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 测试接口</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://www.easytest.xyz/api/get_event_list/?name=%E5%8F%91%E5%B8%83%E4%BC%9A
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: python-requests/2.22.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://www.easytest.xyz/api/get_event_list/?name=%E5%8F%91%E5%B8%83%E4%BC%9A
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Thu, 19 Dec 2019 14:30:52 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 1575
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                            <div>
+                              <strong>ETag</strong>: W/"965f85f51e78c9e3ca84fb47ace9ddb5"
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;status&#39;: 200, &#39;message&#39;: &#39;success&#39;, &#39;data&#39;: [{&#39;name&#39;: &#39;毕婷婷发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2990, &#39;address&#39;: &#39;宁夏回族自治区邯郸市清河李路B座 862929&#39;, &#39;id&#39;: 7, &#39;start_time&#39;: &#39;2019-12-19T14:28:23Z&#39;}, {&#39;name&#39;: &#39;蔡芳发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 1382, &#39;address&#39;: &#39;青海省海门县徐汇陆街u座 242479&#39;, &#39;id&#39;: 13, &#39;start_time&#39;: &#39;2019-12-19T14:27:10Z&#39;}, {&#39;name&#39;: &#39;刘娟发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4155, &#39;address&#39;: &#39;江西省齐齐哈尔县西夏徐路c座 774595&#39;, &#39;id&#39;: 19, &#39;start_time&#39;: &#39;2019-12-19T14:30:48Z&#39;}, {&#39;name&#39;: &#39;张玉英发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4454, &#39;address&#39;: &#39;宁夏回族自治区秀梅县高明李路V座 549304&#39;, &#39;id&#39;: 31, &#39;start_time&#39;: &#39;2019-12-19T14:29:54Z&#39;}, {&#39;name&#39;: &#39;刘玉华发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4023, &#39;address&#39;: &#39;湖北省呼和浩特市清浦宋路x座 143161&#39;, &#39;id&#39;: 34, &#39;start_time&#39;: &#39;2019-12-19T14:28:00Z&#39;}, {&#39;name&#39;: &#39;邓军发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4484, &#39;address&#39;: &#39;贵州省福州市蓟州呼和浩特路f座 280115&#39;, &#39;id&#39;: 36, &#39;start_time&#39;: &#39;2019-12-19T14:29:53Z&#39;}, {&#39;name&#39;: &#39;黄淑英发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4894, &#39;address&#39;: &#39;广东省静县永川张街k座 913104&#39;, &#39;id&#39;: 37, &#39;start_time&#39;: &#39;2019-12-19T14:29:55Z&#39;}, {&#39;name&#39;: &#39;涂亮发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2231, &#39;address&#39;: &#39;贵州省秀云县牧野北镇街o座 698315&#39;, &#39;id&#39;: 44, &#39;start_time&#39;: &#39;2019-12-19T14:28:07Z&#39;}, {&#39;name&#39;: &#39;田红霞发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2387, &#39;address&#39;: &#39;甘肃省雷市朝阳杨街g座 793229&#39;, &#39;id&#39;: 48, &#39;start_time&#39;: &#39;2019-12-19T14:29:55Z&#39;}, {&#39;name&#39;: &#39;陈玉珍发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 1881, &#39;address&#39;: &#39;四川省六盘水县高港马路i座 294810&#39;, &#39;id&#39;: 53, &#39;start_time&#39;: &#39;2019-12-19T14:28:08Z&#39;}, {&#39;name&#39;: &#39;鞠倩发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4602, &#39;address&#39;: &#39;江西省冬梅县山亭许街Q座 370750&#39;, &#39;id&#39;: 55, &#39;start_time&#39;: &#39;2019-12-19T14:29:56Z&#39;}, {&#39;name&#39;: &#39;王帆发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 1843, &#39;address&#39;: &#39;河北省玉华县锡山石家庄路B座 928348&#39;, &#39;id&#39;: 57, &#39;start_time&#39;: &#39;2019-12-19T14:30:16Z&#39;}, {&#39;name&#39;: &#39;萧桂兰发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4199, &#39;address&#39;: &#39;浙江省敏市和平王街L座 169483&#39;, &#39;id&#39;: 58, &#39;start_time&#39;: &#39;2019-12-19T14:28:17Z&#39;}, {&#39;name&#39;: &#39;林娟发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2833, &#39;address&#39;: &#39;四川省波县城北郑州路q座 773649&#39;, &#39;id&#39;: 60, &#39;start_time&#39;: &#39;2019-12-19T14:28:26Z&#39;}, {&#39;name&#39;: &#39;万波发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 1132, &#39;address&#39;: &#39;山西省帆县龙潭刘街r座 799393&#39;, &#39;id&#39;: 62, &#39;start_time&#39;: &#39;2019-12-19T14:29:57Z&#39;}, {&#39;name&#39;: &#39;何凤兰发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 1964, &#39;address&#39;: &#39;广东省齐齐哈尔县东丽董路j座 158269&#39;, &#39;id&#39;: 63, &#39;start_time&#39;: &#39;2019-12-19T14:28:02Z&#39;}, {&#39;name&#39;: &#39;赵利发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 3970, &#39;address&#39;: &#39;广东省深圳县滨城大冶路g座 588920&#39;, &#39;id&#39;: 66, &#39;start_time&#39;: &#39;2019-12-19T14:28:19Z&#39;}, {&#39;name&#39;: &#39;赵旭发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2630, &#39;address&#39;: &#39;辽宁省太原县平山曾路d座 516571&#39;, &#39;id&#39;: 67, &#39;start_time&#39;: &#39;2019-12-19T14:29:52Z&#39;}, {&#39;name&#39;: &#39;李建发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2371, &#39;address&#39;: &#39;陕西省军县静安黄街F座 817320&#39;, &#39;id&#39;: 68, &#39;start_time&#39;: &#39;2019-12-19T14:28:09Z&#39;}, {&#39;name&#39;: &#39;宋春梅发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 3712, &#39;address&#39;: &#39;云南省欣县龙潭济南路s座 601622&#39;, &#39;id&#39;: 71, &#39;start_time&#39;: &#39;2019-12-19T14:28:21Z&#39;}, {&#39;name&#39;: &#39;叶梅发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 1666, &#39;address&#39;: &#39;海南省北镇市沙湾西宁街k座 182707&#39;, &#39;id&#39;: 76, &#39;start_time&#39;: &#39;2019-12-19T14:13:57Z&#39;}, {&#39;name&#39;: &#39;叶英发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4111, &#39;address&#39;: &#39;河南省潜江市牧野福州街m座 315855&#39;, &#39;id&#39;: 78, &#39;start_time&#39;: &#39;2019-12-19T14:28:08Z&#39;}, {&#39;name&#39;: &#39;周俊发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4156, &#39;address&#39;: &#39;河北省福州市高坪向路L座 640588&#39;, &#39;id&#39;: 79, &#39;start_time&#39;: &#39;2019-12-19T14:28:06Z&#39;}, {&#39;name&#39;: &#39;吴春梅发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 1267, &#39;address&#39;: &#39;黑龍江省红市双滦兴安盟路n座 333758&#39;, &#39;id&#39;: 83, &#39;start_time&#39;: &#39;2019-12-19T14:28:23Z&#39;}, {&#39;name&#39;: &#39;吴玉英发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2172, &#39;address&#39;: &#39;宁夏回族自治区济南县新城申街X座 807828&#39;, &#39;id&#39;: 85, &#39;start_time&#39;: &#39;2019-12-19T14:28:03Z&#39;}, {&#39;name&#39;: &#39;王春梅发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 4310, &#39;address&#39;: &#39;陕西省凯县黄浦成都街Y座 293315&#39;, &#39;id&#39;: 89, &#39;start_time&#39;: &#39;2019-12-19T14:28:10Z&#39;}, {&#39;name&#39;: &#39;钱雪梅发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2154, &#39;address&#39;: &#39;湖南省佳县双滦宜都街L座 838453&#39;, &#39;id&#39;: 91, &#39;start_time&#39;: &#39;2019-12-19T14:29:58Z&#39;}, {&#39;name&#39;: &#39;张瑞发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2135, &#39;address&#39;: &#39;山东省玉华市魏都齐齐哈尔街t座 824769&#39;, &#39;id&#39;: 92, &#39;start_time&#39;: &#39;2019-12-19T14:28:26Z&#39;}, {&#39;name&#39;: &#39;马志强发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2902, &#39;address&#39;: &#39;四川省沈阳市大东北京街Y座 511752&#39;, &#39;id&#39;: 96, &#39;start_time&#39;: &#39;2019-12-19T14:28:01Z&#39;}, {&#39;name&#39;: &#39;朱丽华发布会&#39;, &#39;status&#39;: True, &#39;limit&#39;: 2488, &#39;address&#39;: &#39;西藏自治区福州市南长邹路v座 421946&#39;, &#39;id&#39;: 97, &#39;start_time&#39;: &#39;2019-12-19T14:28:22Z&#39;}]}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.status
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.data.0.id
+                      </td>
+                      <td>equals</td>
+                      <td>7</td>
+                      <td>7</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>6682</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>47.87</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>45.962</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>
