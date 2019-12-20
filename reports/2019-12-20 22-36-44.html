@@ -1,0 +1,745 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2019-12-20 22:36:44</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">0.186 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.3.2 </td>
+      <td>CPython 3.6.5 </td>
+      <td colspan="2">Windows-10-10.0.17763-SP0</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">1 (0/1)</td>
+      <td colspan="2">2 (1/1/0/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>testcase 0</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 2</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 1</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">添加发布会</td>
+      <td style="text-align:center;width:6em;">81.79 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 添加发布会</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://www.easytest.xyz/api/add_event/
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: python-requests/2.22.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 237
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/x-www-form-urlencoded
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          eid=32&name=%E9%99%88%E4%BA%91%E5%8F%91%E5%B8%83%E4%BC%9A&limit=1582&status=1&address=%E7%A6%8F%E5%BB%BA%E7%9C%81%E6%B5%8E%E5%8D%97%E5%B8%82%E5%AD%9D%E5%8D%97%E5%85%B3%E5%B2%AD%E8%A1%97T%E5%BA%A7+896223&start_time=2019-12-20+22%3A36%3A44
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://www.easytest.xyz/api/add_event/
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Fri, 20 Dec 2019 14:36:45 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 47
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;status&#39;: 200, &#39;message&#39;: &#39;add event success&#39;}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>add event success</td>
+                      <td>add event success</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>47</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>81.79</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>80.021</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_2">
+      <th class="failure" style="width:5em;">failure</th>
+      <td colspan="2">测试接口</td>
+      <td style="text-align:center;width:6em;">49.19 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_2_1">log-1</a>
+        <div id="popup_log_1_2_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 测试接口</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://www.easytest.xyz/api/get_event_list/?name=%E5%8F%91%E5%B8%83%E4%BC%9A
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: python-requests/2.22.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://www.easytest.xyz/api/get_event_list/?name=%E5%8F%91%E5%B8%83%E4%BC%9A
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Fri, 20 Dec 2019 14:36:45 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 3984
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>ETag</strong>: W/"d33127f78c074dfd92f36117815e48bd"
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                            <div>
+                              <strong>X-Frame-Options</strong>: SAMEORIGIN
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;data&#39;: [{&#39;id&#39;: 1, &#39;status&#39;: True, &#39;address&#39;: &#39;内蒙古自治区沈阳县合川杨路H座 107899&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:08Z&#39;, &#39;name&#39;: &#39;赵岩的发布会&#39;, &#39;limit&#39;: 1322}, {&#39;id&#39;: 2, &#39;status&#39;: True, &#39;address&#39;: &#39;吉林省辛集县长寿马路x座 586831&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:44:29Z&#39;, &#39;name&#39;: &#39;韦淑珍的发布会&#39;, &#39;limit&#39;: 4109}, {&#39;id&#39;: 3, &#39;status&#39;: True, &#39;address&#39;: &#39;四川省六盘水县花溪宁德街w座 454089&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:04Z&#39;, &#39;name&#39;: &#39;邱辉发布会&#39;, &#39;limit&#39;: 3374}, {&#39;id&#39;: 4, &#39;status&#39;: True, &#39;address&#39;: &#39;辽宁省淑珍市江北王街w座 829672&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:53Z&#39;, &#39;name&#39;: &#39;李鹏发布会&#39;, &#39;limit&#39;: 2418}, {&#39;id&#39;: 5, &#39;status&#39;: True, &#39;address&#39;: &#39;天津市香港市秀英阜新街g座 409870&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:42:12Z&#39;, &#39;name&#39;: &#39;阳明的发布会&#39;, &#39;limit&#39;: 4165}, {&#39;id&#39;: 6, &#39;status&#39;: True, &#39;address&#39;: &#39;香港特别行政区天津县平山范路r座 899003&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:42:03Z&#39;, &#39;name&#39;: &#39;王鹏的发布会&#39;, &#39;limit&#39;: 4651}, {&#39;id&#39;: 7, &#39;status&#39;: True, &#39;address&#39;: &#39;宁夏回族自治区邯郸市清河李路B座 862929&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:23Z&#39;, &#39;name&#39;: &#39;毕婷婷发布会&#39;, &#39;limit&#39;: 2990}, {&#39;id&#39;: 8, &#39;status&#39;: True, &#39;address&#39;: &#39;西藏自治区淑珍市普陀吴路r座 329733&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:02Z&#39;, &#39;name&#39;: &#39;卜秀兰发布会&#39;, &#39;limit&#39;: 2094}, {&#39;id&#39;: 9, &#39;status&#39;: True, &#39;address&#39;: &#39;广西壮族自治区宇县锡山重庆街j座 268595&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:45Z&#39;, &#39;name&#39;: &#39;陈瑜的发布会&#39;, &#39;limit&#39;: 1465}, {&#39;id&#39;: 10, &#39;status&#39;: True, &#39;address&#39;: &#39;青海省石家庄市璧山张街o座 753149&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:00Z&#39;, &#39;name&#39;: &#39;吴志强发布会&#39;, &#39;limit&#39;: 2601}, {&#39;id&#39;: 12, &#39;status&#39;: True, &#39;address&#39;: &#39;黑龍江省琳市东城兴城街Y座 105672&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:18Z&#39;, &#39;name&#39;: &#39;苏建军发布会&#39;, &#39;limit&#39;: 1495}, {&#39;id&#39;: 13, &#39;status&#39;: True, &#39;address&#39;: &#39;青海省海门县徐汇陆街u座 242479&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:27:10Z&#39;, &#39;name&#39;: &#39;蔡芳发布会&#39;, &#39;limit&#39;: 1382}, {&#39;id&#39;: 14, &#39;status&#39;: True, &#39;address&#39;: &#39;甘肃省呼和浩特县华龙上海街B座 159733&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:44Z&#39;, &#39;name&#39;: &#39;张欢的发布会&#39;, &#39;limit&#39;: 2425}, {&#39;id&#39;: 16, &#39;status&#39;: True, &#39;address&#39;: &#39;青海省雪县怀柔佛山街K座 359509&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:53Z&#39;, &#39;name&#39;: &#39;赵娜的发布会&#39;, &#39;limit&#39;: 4129}, {&#39;id&#39;: 17, &#39;status&#39;: True, &#39;address&#39;: &#39;山东省六安市永川梧州街V座 834811&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:39:55Z&#39;, &#39;name&#39;: &#39;曾阳的发布会&#39;, &#39;limit&#39;: 3214}, {&#39;id&#39;: 18, &#39;status&#39;: True, &#39;address&#39;: &#39;广东省沈阳县安次孟路y座 198959&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:58Z&#39;, &#39;name&#39;: &#39;姚玉发布会&#39;, &#39;limit&#39;: 1461}, {&#39;id&#39;: 19, &#39;status&#39;: True, &#39;address&#39;: &#39;江西省齐齐哈尔县西夏徐路c座 774595&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:30:48Z&#39;, &#39;name&#39;: &#39;刘娟发布会&#39;, &#39;limit&#39;: 4155}, {&#39;id&#39;: 20, &#39;status&#39;: True, &#39;address&#39;: &#39;青海省台北市高港宁德路H座 410099&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:52Z&#39;, &#39;name&#39;: &#39;张霞发布会&#39;, &#39;limit&#39;: 4913}, {&#39;id&#39;: 21, &#39;status&#39;: True, &#39;address&#39;: &#39;湖南省伟市璧山龚街J座 834309&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:57Z&#39;, &#39;name&#39;: &#39;毕欣发布会&#39;, &#39;limit&#39;: 2275}, {&#39;id&#39;: 22, &#39;status&#39;: True, &#39;address&#39;: &#39;云南省龙县黄浦六盘水路J座 117216&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:21Z&#39;, &#39;name&#39;: &#39;陈婷发布会&#39;, &#39;limit&#39;: 4254}, {&#39;id&#39;: 23, &#39;status&#39;: True, &#39;address&#39;: &#39;青海省志强县江北吴街s座 986537&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:24Z&#39;, &#39;name&#39;: &#39;王荣发布会&#39;, &#39;limit&#39;: 1098}, {&#39;id&#39;: 24, &#39;status&#39;: True, &#39;address&#39;: &#39;西藏自治区郑州市长寿潮州路s座 619698&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:59Z&#39;, &#39;name&#39;: &#39;李玉兰发布会&#39;, &#39;limit&#39;: 4589}, {&#39;id&#39;: 26, &#39;status&#39;: True, &#39;address&#39;: &#39;山东省桂兰县翔安合肥路p座 465970&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:11Z&#39;, &#39;name&#39;: &#39;周浩发布会&#39;, &#39;limit&#39;: 3762}, {&#39;id&#39;: 27, &#39;status&#39;: True, &#39;address&#39;: &#39;新疆维吾尔自治区强县南溪永安街W座 229844&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:59Z&#39;, &#39;name&#39;: &#39;惠萍发布会&#39;, &#39;limit&#39;: 4035}, {&#39;id&#39;: 29, &#39;status&#39;: True, &#39;address&#39;: &#39;甘肃省帆县沈河西宁街C座 631762&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:39:49Z&#39;, &#39;name&#39;: &#39;王荣的发布会&#39;, &#39;limit&#39;: 1237}, {&#39;id&#39;: 30, &#39;status&#39;: True, &#39;address&#39;: &#39;浙江省丽娟市蓟州南京路T座 554479&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:07Z&#39;, &#39;name&#39;: &#39;李荣发布会&#39;, &#39;limit&#39;: 2889}, {&#39;id&#39;: 31, &#39;status&#39;: True, &#39;address&#39;: &#39;宁夏回族自治区秀梅县高明李路V座 549304&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:54Z&#39;, &#39;name&#39;: &#39;张玉英发布会&#39;, &#39;limit&#39;: 4454}, {&#39;id&#39;: 32, &#39;status&#39;: True, &#39;address&#39;: &#39;福建省济南市孝南关岭街T座 896223&#39;, &#39;start_time&#39;: &#39;2019-12-20T14:36:44Z&#39;, &#39;name&#39;: &#39;陈云发布会&#39;, &#39;limit&#39;: 1582}, {&#39;id&#39;: 33, &#39;status&#39;: True, &#39;address&#39;: &#39;天津市婷县魏都兰州街O座 129318&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:07Z&#39;, &#39;name&#39;: &#39;陈想的发布会&#39;, &#39;limit&#39;: 1884}, {&#39;id&#39;: 34, &#39;status&#39;: True, &#39;address&#39;: &#39;湖北省呼和浩特市清浦宋路x座 143161&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:00Z&#39;, &#39;name&#39;: &#39;刘玉华发布会&#39;, &#39;limit&#39;: 4023}, {&#39;id&#39;: 36, &#39;status&#39;: True, &#39;address&#39;: &#39;贵州省福州市蓟州呼和浩特路f座 280115&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:53Z&#39;, &#39;name&#39;: &#39;邓军发布会&#39;, &#39;limit&#39;: 4484}, {&#39;id&#39;: 37, &#39;status&#39;: True, &#39;address&#39;: &#39;广东省静县永川张街k座 913104&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:55Z&#39;, &#39;name&#39;: &#39;黄淑英发布会&#39;, &#39;limit&#39;: 4894}, {&#39;id&#39;: 38, &#39;status&#39;: True, &#39;address&#39;: &#39;宁夏回族自治区勇市华龙高路l座 445811&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:39:53Z&#39;, &#39;name&#39;: &#39;李建军的发布会&#39;, &#39;limit&#39;: 4161}, {&#39;id&#39;: 40, &#39;status&#39;: True, &#39;address&#39;: &#39;辽宁省沈阳县沈河嘉禾街r座 983862&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:20Z&#39;, &#39;name&#39;: &#39;高玲发布会&#39;, &#39;limit&#39;: 3946}, {&#39;id&#39;: 41, &#39;status&#39;: True, &#39;address&#39;: &#39;新疆维吾尔自治区上海县清浦王街m座 341243&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:34Z&#39;, &#39;name&#39;: &#39;周云的发布会&#39;, &#39;limit&#39;: 1317}, {&#39;id&#39;: 42, &#39;status&#39;: True, &#39;address&#39;: &#39;新疆维吾尔自治区大冶县黄浦朱路P座 140886&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:47Z&#39;, &#39;name&#39;: &#39;王玉华的发布会&#39;, &#39;limit&#39;: 3757}, {&#39;id&#39;: 43, &#39;status&#39;: True, &#39;address&#39;: &#39;辽宁省潮州县海港谭路O座 860534&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:44:32Z&#39;, &#39;name&#39;: &#39;钟博的发布会&#39;, &#39;limit&#39;: 3473}, {&#39;id&#39;: 44, &#39;status&#39;: True, &#39;address&#39;: &#39;贵州省秀云县牧野北镇街o座 698315&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:07Z&#39;, &#39;name&#39;: &#39;涂亮发布会&#39;, &#39;limit&#39;: 2231}, {&#39;id&#39;: 45, &#39;status&#39;: True, &#39;address&#39;: &#39;福建省玉县孝南马鞍山路R座 413102&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:39:52Z&#39;, &#39;name&#39;: &#39;玉云的发布会&#39;, &#39;limit&#39;: 1846}, {&#39;id&#39;: 46, &#39;status&#39;: True, &#39;address&#39;: &#39;广西壮族自治区婷婷市西峰天津街C座 483909&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:02Z&#39;, &#39;name&#39;: &#39;黄红霞发布会&#39;, &#39;limit&#39;: 1391}, {&#39;id&#39;: 47, &#39;status&#39;: True, &#39;address&#39;: &#39;江苏省小红市牧野潮州街i座 621708&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:44:11Z&#39;, &#39;name&#39;: &#39;潘燕的发布会&#39;, &#39;limit&#39;: 4009}, {&#39;id&#39;: 48, &#39;status&#39;: True, &#39;address&#39;: &#39;甘肃省雷市朝阳杨街g座 793229&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:55Z&#39;, &#39;name&#39;: &#39;田红霞发布会&#39;, &#39;limit&#39;: 2387}, {&#39;id&#39;: 49, &#39;status&#39;: True, &#39;address&#39;: &#39;河北省兴城县高坪南京路K座 160573&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:35Z&#39;, &#39;name&#39;: &#39;黄刚的发布会&#39;, &#39;limit&#39;: 2943}, {&#39;id&#39;: 50, &#39;status&#39;: True, &#39;address&#39;: &#39;安徽省六安市龙潭深圳路k座 435881&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:06Z&#39;, &#39;name&#39;: &#39;赵海燕发布会&#39;, &#39;limit&#39;: 4841}, {&#39;id&#39;: 51, &#39;status&#39;: True, &#39;address&#39;: &#39;北京市桂花县秀英李街O座 563338&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:46Z&#39;, &#39;name&#39;: &#39;程洁的发布会&#39;, &#39;limit&#39;: 2536}, {&#39;id&#39;: 52, &#39;status&#39;: True, &#39;address&#39;: &#39;福建省成市新城潜江街L座 585315&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:12Z&#39;, &#39;name&#39;: &#39;李刚发布会&#39;, &#39;limit&#39;: 4964}, {&#39;id&#39;: 53, &#39;status&#39;: True, &#39;address&#39;: &#39;四川省六盘水县高港马路i座 294810&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:08Z&#39;, &#39;name&#39;: &#39;陈玉珍发布会&#39;, &#39;limit&#39;: 1881}, {&#39;id&#39;: 55, &#39;status&#39;: True, &#39;address&#39;: &#39;江西省冬梅县山亭许街Q座 370750&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:56Z&#39;, &#39;name&#39;: &#39;鞠倩发布会&#39;, &#39;limit&#39;: 4602}, {&#39;id&#39;: 56, &#39;status&#39;: True, &#39;address&#39;: &#39;香港特别行政区武汉县大东拉萨街u座 381180&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:37Z&#39;, &#39;name&#39;: &#39;贾梅的发布会&#39;, &#39;limit&#39;: 3031}, {&#39;id&#39;: 57, &#39;status&#39;: True, &#39;address&#39;: &#39;河北省玉华县锡山石家庄路B座 928348&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:30:16Z&#39;, &#39;name&#39;: &#39;王帆发布会&#39;, &#39;limit&#39;: 1843}, {&#39;id&#39;: 58, &#39;status&#39;: True, &#39;address&#39;: &#39;浙江省敏市和平王街L座 169483&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:17Z&#39;, &#39;name&#39;: &#39;萧桂兰发布会&#39;, &#39;limit&#39;: 4199}, {&#39;id&#39;: 59, &#39;status&#39;: True, &#39;address&#39;: &#39;陕西省佳市门头沟长春路p座 402831&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:42:06Z&#39;, &#39;name&#39;: &#39;聂健的发布会&#39;, &#39;limit&#39;: 1621}, {&#39;id&#39;: 60, &#39;status&#39;: True, &#39;address&#39;: &#39;四川省波县城北郑州路q座 773649&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:26Z&#39;, &#39;name&#39;: &#39;林娟发布会&#39;, &#39;limit&#39;: 2833}, {&#39;id&#39;: 62, &#39;status&#39;: True, &#39;address&#39;: &#39;山西省帆县龙潭刘街r座 799393&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:57Z&#39;, &#39;name&#39;: &#39;万波发布会&#39;, &#39;limit&#39;: 1132}, {&#39;id&#39;: 63, &#39;status&#39;: True, &#39;address&#39;: &#39;广东省齐齐哈尔县东丽董路j座 158269&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:02Z&#39;, &#39;name&#39;: &#39;何凤兰发布会&#39;, &#39;limit&#39;: 1964}, {&#39;id&#39;: 64, &#39;status&#39;: True, &#39;address&#39;: &#39;河北省太原市沙市巢湖路t座 413961&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:44:26Z&#39;, &#39;name&#39;: &#39;周阳的发布会&#39;, &#39;limit&#39;: 3173}, {&#39;id&#39;: 65, &#39;status&#39;: True, &#39;address&#39;: &#39;云南省银川市萧山沈阳街T座 544029&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:42:12Z&#39;, &#39;name&#39;: &#39;胡桂兰的发布会&#39;, &#39;limit&#39;: 1724}, {&#39;id&#39;: 66, &#39;status&#39;: True, &#39;address&#39;: &#39;广东省深圳县滨城大冶路g座 588920&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:19Z&#39;, &#39;name&#39;: &#39;赵利发布会&#39;, &#39;limit&#39;: 3970}, {&#39;id&#39;: 67, &#39;status&#39;: True, &#39;address&#39;: &#39;辽宁省太原县平山曾路d座 516571&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:52Z&#39;, &#39;name&#39;: &#39;赵旭发布会&#39;, &#39;limit&#39;: 2630}, {&#39;id&#39;: 68, &#39;status&#39;: True, &#39;address&#39;: &#39;陕西省军县静安黄街F座 817320&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:09Z&#39;, &#39;name&#39;: &#39;李建发布会&#39;, &#39;limit&#39;: 2371}, {&#39;id&#39;: 69, &#39;status&#39;: True, &#39;address&#39;: &#39;河南省鹏县蓟州李街f座 968725&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:03Z&#39;, &#39;name&#39;: &#39;李涛发布会&#39;, &#39;limit&#39;: 3438}, {&#39;id&#39;: 70, &#39;status&#39;: True, &#39;address&#39;: &#39;陕西省璐市江北宜都路C座 600992&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:09Z&#39;, &#39;name&#39;: &#39;夏淑英发布会&#39;, &#39;limit&#39;: 4058}, {&#39;id&#39;: 71, &#39;status&#39;: True, &#39;address&#39;: &#39;云南省欣县龙潭济南路s座 601622&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:21Z&#39;, &#39;name&#39;: &#39;宋春梅发布会&#39;, &#39;limit&#39;: 3712}, {&#39;id&#39;: 72, &#39;status&#39;: True, &#39;address&#39;: &#39;内蒙古自治区沈阳县清浦银川街L座 953748&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:11Z&#39;, &#39;name&#39;: &#39;翟秀云发布会&#39;, &#39;limit&#39;: 4399}, {&#39;id&#39;: 73, &#39;status&#39;: True, &#39;address&#39;: &#39;台湾省兴安盟县清河南宁街g座 532905&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:40:42Z&#39;, &#39;name&#39;: &#39;张雷的发布会&#39;, &#39;limit&#39;: 3754}, {&#39;id&#39;: 74, &#39;status&#39;: True, &#39;address&#39;: &#39;广西壮族自治区辛集市西夏毛街s座 554515&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:04Z&#39;, &#39;name&#39;: &#39;朱鑫发布会&#39;, &#39;limit&#39;: 4819}, {&#39;id&#39;: 75, &#39;status&#39;: True, &#39;address&#39;: &#39;黑龍江省辽阳市永川谢街a座 119166&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:47Z&#39;, &#39;name&#39;: &#39;杨娜发布会&#39;, &#39;limit&#39;: 1449}, {&#39;id&#39;: 76, &#39;status&#39;: True, &#39;address&#39;: &#39;海南省北镇市沙湾西宁街k座 182707&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:13:57Z&#39;, &#39;name&#39;: &#39;叶梅发布会&#39;, &#39;limit&#39;: 1666}, {&#39;id&#39;: 78, &#39;status&#39;: True, &#39;address&#39;: &#39;河南省潜江市牧野福州街m座 315855&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:08Z&#39;, &#39;name&#39;: &#39;叶英发布会&#39;, &#39;limit&#39;: 4111}, {&#39;id&#39;: 79, &#39;status&#39;: True, &#39;address&#39;: &#39;河北省福州市高坪向路L座 640588&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:06Z&#39;, &#39;name&#39;: &#39;周俊发布会&#39;, &#39;limit&#39;: 4156}, {&#39;id&#39;: 80, &#39;status&#39;: True, &#39;address&#39;: &#39;四川省长沙市清河费路b座 158743&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:05Z&#39;, &#39;name&#39;: &#39;王宁发布会&#39;, &#39;limit&#39;: 2893}, {&#39;id&#39;: 81, &#39;status&#39;: True, &#39;address&#39;: &#39;四川省桂花县梁平刘路l座 543927&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:03Z&#39;, &#39;name&#39;: &#39;柴玉兰的发布会&#39;, &#39;limit&#39;: 1456}, {&#39;id&#39;: 82, &#39;status&#39;: True, &#39;address&#39;: &#39;吉林省想县安次张路U座 542362&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:23Z&#39;, &#39;name&#39;: &#39;张洁发布会&#39;, &#39;limit&#39;: 2518}, {&#39;id&#39;: 83, &#39;status&#39;: True, &#39;address&#39;: &#39;黑龍江省红市双滦兴安盟路n座 333758&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:23Z&#39;, &#39;name&#39;: &#39;吴春梅发布会&#39;, &#39;limit&#39;: 1267}, {&#39;id&#39;: 84, &#39;status&#39;: True, &#39;address&#39;: &#39;天津市郑州县上街成都路A座 917782&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:02Z&#39;, &#39;name&#39;: &#39;徐丹的发布会&#39;, &#39;limit&#39;: 3478}, {&#39;id&#39;: 85, &#39;status&#39;: True, &#39;address&#39;: &#39;宁夏回族自治区济南县新城申街X座 807828&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:03Z&#39;, &#39;name&#39;: &#39;吴玉英发布会&#39;, &#39;limit&#39;: 2172}, {&#39;id&#39;: 86, &#39;status&#39;: True, &#39;address&#39;: &#39;湖北省雷市高明程路I座 388732&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:08Z&#39;, &#39;name&#39;: &#39;朱桂香发布会&#39;, &#39;limit&#39;: 2839}, {&#39;id&#39;: 87, &#39;status&#39;: True, &#39;address&#39;: &#39;福建省哈尔滨市长寿武汉路v座 498161&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:45Z&#39;, &#39;name&#39;: &#39;熊帆的发布会&#39;, &#39;limit&#39;: 1474}, {&#39;id&#39;: 88, &#39;status&#39;: True, &#39;address&#39;: &#39;山东省丽丽市兴山石家庄路S座 297525&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:42:24Z&#39;, &#39;name&#39;: &#39;余荣的发布会&#39;, &#39;limit&#39;: 2954}, {&#39;id&#39;: 89, &#39;status&#39;: True, &#39;address&#39;: &#39;陕西省凯县黄浦成都街Y座 293315&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:10Z&#39;, &#39;name&#39;: &#39;王春梅发布会&#39;, &#39;limit&#39;: 4310}, {&#39;id&#39;: 91, &#39;status&#39;: True, &#39;address&#39;: &#39;湖南省佳县双滦宜都街L座 838453&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:29:58Z&#39;, &#39;name&#39;: &#39;钱雪梅发布会&#39;, &#39;limit&#39;: 2154}, {&#39;id&#39;: 92, &#39;status&#39;: True, &#39;address&#39;: &#39;山东省玉华市魏都齐齐哈尔街t座 824769&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:26Z&#39;, &#39;name&#39;: &#39;张瑞发布会&#39;, &#39;limit&#39;: 2135}, {&#39;id&#39;: 93, &#39;status&#39;: True, &#39;address&#39;: &#39;青海省鹏县沙湾王路q座 140698&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:32:14Z&#39;, &#39;name&#39;: &#39;刘凤兰发布会&#39;, &#39;limit&#39;: 4924}, {&#39;id&#39;: 94, &#39;status&#39;: True, &#39;address&#39;: &#39;广西壮族自治区郑州市友好刘路B座 904734&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:44:32Z&#39;, &#39;name&#39;: &#39;周莉的发布会&#39;, &#39;limit&#39;: 2210}, {&#39;id&#39;: 95, &#39;status&#39;: True, &#39;address&#39;: &#39;山东省成县丰都海口街k座 538899&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:31:49Z&#39;, &#39;name&#39;: &#39;李静发布会&#39;, &#39;limit&#39;: 4992}, {&#39;id&#39;: 96, &#39;status&#39;: True, &#39;address&#39;: &#39;四川省沈阳市大东北京街Y座 511752&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:01Z&#39;, &#39;name&#39;: &#39;马志强发布会&#39;, &#39;limit&#39;: 2902}, {&#39;id&#39;: 97, &#39;status&#39;: True, &#39;address&#39;: &#39;西藏自治区福州市南长邹路v座 421946&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:28:22Z&#39;, &#39;name&#39;: &#39;朱丽华发布会&#39;, &#39;limit&#39;: 2488}, {&#39;id&#39;: 98, &#39;status&#39;: True, &#39;address&#39;: &#39;新疆维吾尔自治区英县金平朱街g座 122138&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:44:13Z&#39;, &#39;name&#39;: &#39;辜玉珍的发布会&#39;, &#39;limit&#39;: 4951}, {&#39;id&#39;: 99, &#39;status&#39;: True, &#39;address&#39;: &#39;贵州省兴城市合川济南街V座 968789&#39;, &#39;start_time&#39;: &#39;2019-12-19T14:43:37Z&#39;, &#39;name&#39;: &#39;郭桂芳的发布会&#39;, &#39;limit&#39;: 4929}], &#39;message&#39;: &#39;success&#39;, &#39;status&#39;: 200}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.status
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="failed">
+                      
+                        content.data.0.id
+                      </td>
+                      <td>equals</td>
+                      <td>7</td>
+                      <td>1</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>19980</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>49.19</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>46.923</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+          <a class="button" href="#popup_attachment_1_2">traceback</a>
+          <div id="popup_attachment_1_2" class="overlay">
+            <div class="popup">
+              <h2>Traceback Message</h2>
+              <a class="close" href="#record_1_2">&times;</a>
+              <div class="content"><pre>Traceback (most recent call last):
+  File &#34;D:\python\lib\site-packages\httprunner\api.py&#34;, line 68, in test
+    test_runner.run_test(test_dict)
+httprunner.exceptions.ValidationFailure: 
+validate: content.data.0.id equals 7(int)	==&gt; fail
+1(int) equals 7(int)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &#34;D:\python\lib\site-packages\httprunner\api.py&#34;, line 70, in test
+    self.fail(str(ex))
+AssertionError: 
+validate: content.data.0.id equals 7(int)	==&gt; fail
+1(int) equals 7(int)
+</pre></div>
+            </div>
+          </div>
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>
