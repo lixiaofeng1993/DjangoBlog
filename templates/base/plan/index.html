@@ -293,6 +293,7 @@
             $("#cancel_run").html("取消");
             $("#cancel_run").attr("class", "btn btn-default");
             $('#case_name_').empty();
+            $("#debug_env_id").empty();
             $.ajax({
                 type: "get",
                 url: "/base/findata/",
@@ -302,7 +303,6 @@
                 },
                 success: function (data) {
                     var listdata = eval(data);
-                    $("#debug_env_id").empty();
                     $('#case_name_').append(case_name);
                     $("#debug_env_id").append("<option value=" + env_id + ">" + env_name + "</option>");
                     $(listdata).each(function (i, item) {
