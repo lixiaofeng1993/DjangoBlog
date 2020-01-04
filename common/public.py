@@ -349,11 +349,6 @@ def replace_var(content, var_name, var_value):
         content = json.dumps(content)
     var_name = "$" + var_name
     content = content.replace(str(var_name), str(var_value))
-    if make:
-        for con in eval(content).keys():
-            print(con, name)
-            if con == str(name):
-                content[con] = int(var_value)
     return content
 
 
