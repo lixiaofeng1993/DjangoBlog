@@ -250,50 +250,36 @@ def get_extract(extract_dict, res, url=''):
     :return: 处理好的要提取的参数和值，装在字典中返回
     """
     with_extract_dict = {}
-    make = False
     for key, value in extract_dict.items():
-        if "str(" in value:
-            patt = re.compile("str\((.+)\)")
-            value = patt.findall(value)[0]
-            make = True
         patt = value.split('.')
         _extract = httprunner_extract(res, patt)
         if _extract == 'error':
             return {'error': ErrorCode.extract_value_path_error}
         else:
-            if not make:
-                if _extract.isdigit():
-                    with_extract_dict[key] = int(_extract)
-                else:
-                    try:
-                        with_extract_dict[key] = float(_extract)
-                    except ValueError:
-                        with_extract_dict[key] = _extract
-            else:
-                with_extract_dict[key] = _extract
+            with_extract_dict[key] = _extract
 
-                # if ',' in key:  # 一个接口支持同时提取多个参数
-                #     key_list = key.split(',')
-                #     if len(key_list) > 1:
-                #         for k in key_list:
-                #             key_value = the_same_one(k, res)
-                #             if isinstance(key_value, dict):
-                #                 with_extract_dict = key_value
-                #             else:
-                #                 url_key = splicing_url(url, k)
-                #                 with_extract_dict[url_key] = key_value
-                #     else:
-                #         key = key.strip(',')
-                #         key_value = get_param(key, res)
-                #         url_key = splicing_url(url, key)
-                #         with_extract_dict[url_key] = key_value
-                # else:
-                #     key_value = the_same_one(key, res)
-                #     if isinstance(key_value, dict):
-                #         with_extract_dict = key_value
-                #     else:
-                #         url_key = splicing_url(url, key)
-                #         with_extract_dict[url_key] = key_value
+            # if ',' in key:  # 一个接口支持同时提取多个参数
+            #     key_list = key.split(',')
+            #     if len(key_list) > 1:
+            #         for k in key_list:
+            #             key_value = the_same_one(k, res)
+            #             if isinstance(key_value, dict):
+            #                 with_extract_dict = key_value
+            #             else:
+            #                 url_key = splicing_url(url, k)
+            #                 with_extract_dict[url_key] = key_value
+            #     else:
+            #         key = key.strip(',')
+            #         key_value = get_param(key, res)
+            #         url_key = splicing_url(url, key)
+            #         with_extract_dict[url_key] = key_value
+            # else:
+            #     key_value = the_same_one(key, res)
+            #     if isinstance(key_value, dict):
+            #         with_extract_dict = key_value
+            #     else:
+            #         url_key = splicing_url(url, key)
+            #         with_extract_dict[url_key] = key_value
     return with_extract_dict
 
 
@@ -310,7 +296,7 @@ def httprunner_extract(res, patt):
         if patt:
             return httprunner_extract(res, patt)
         else:
-            return str(res)
+            return res
 
 
 def the_same_one(key, res):
@@ -618,8 +604,8 @@ def DrawPie(pass_num=0, fail=0, error=0):
     plt.axis('equal')
     # plt.show()
     # 保存饼图
-    # pic_path = settings.MEDIA_ROOT
-    pic_path = '/www/wwwroot/server/DjangoBlog/media'
+    pic_path = settings.MEDIA_ROOT
+    # pic_path = '/www/wwwroot/server/DjangoBlog/media'
     imgPath = os.path.join(pic_path, str(now_time) + "pie.png")
     plt.savefig(imgPath)
     plt.tight_layout()
